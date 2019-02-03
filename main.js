@@ -357,7 +357,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row bgimg\">\n  <div class=\"col-md-9 offset-md-1 welfont\"><div style=\"height:20px;\"></div>BULU小窝欢迎小伙伴们微踩</div>\n  <div class=\"col-md-2 userfont\">provider&nbsp;:&nbsp;chevysky</div>\n</div>\n"
+module.exports = "<div class=\"row bgimg\">\n  <div class=\"col-md-9 offset-md-1 welfont\"><div style=\"height:15px;\"></div>BULU小窝欢迎小伙伴们微踩</div>\n  <div class=\"col-md-2 userfont\">provider&nbsp;:&nbsp;chevysky</div>\n</div>\n"
 
 /***/ }),
 
