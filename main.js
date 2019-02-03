@@ -256,7 +256,7 @@ module.exports = "<div class=\"row\">\n  <div class=\"col-md-10 offset-md-1\">\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".setpic {\n  display: block;\n  width: 1500px;\n  height: 400px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVsdS9taWRkbGUudHJvb3BzL2Nhcm91c2VsL2U6XFx2c2NvZGVQcm9qZWN0XFxjaGV2eXNreS9zcmNcXGFwcFxcYnVsdVxcbWlkZGxlLnRyb29wc1xcY2Fyb3VzZWxcXGNhcm91c2VsLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksY0FBYztFQUNkLGFBQWE7RUFDYixhQUFhLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9idWx1L21pZGRsZS50cm9vcHMvY2Fyb3VzZWwvY2Fyb3VzZWwuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2V0cGlje1xyXG4gICAgZGlzcGxheTogYmxvY2s7IFxyXG4gICAgd2lkdGg6IDE1MDBweDtcclxuICAgIGhlaWdodDogNDAwcHg7XHJcbn0iXX0= */"
+module.exports = ".setpic {\n  display: block;\n  width: 1100px;\n  height: 400px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVsdS9taWRkbGUudHJvb3BzL2Nhcm91c2VsL2U6XFx2c2NvZGVQcm9qZWN0XFxjaGV2eXNreS9zcmNcXGFwcFxcYnVsdVxcbWlkZGxlLnRyb29wc1xcY2Fyb3VzZWxcXGNhcm91c2VsLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksY0FBYztFQUNkLGFBQWE7RUFDYixhQUFhLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9idWx1L21pZGRsZS50cm9vcHMvY2Fyb3VzZWwvY2Fyb3VzZWwuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2V0cGlje1xyXG4gICAgZGlzcGxheTogYmxvY2s7IFxyXG4gICAgd2lkdGg6IDExMDBweDtcclxuICAgIGhlaWdodDogNDAwcHg7XHJcbn0iXX0= */"
 
 /***/ }),
 
