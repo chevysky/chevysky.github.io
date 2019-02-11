@@ -507,7 +507,7 @@ var NgbaseComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-md-2 offset-md-1\">\n    <a routerLink = \"angular/ngbase\">Basic introduction</a><br>\n    <a routerLink = \"angular/basicuse\">basic use</a><br>\n    <a routerLink = \"angular/leadin\">lead in third-party libraries</a><br>\n  </div>\n  <div class=\"col-md-9\">\n    <router-outlet></router-outlet>\n  </div>\n</div>\n"
+module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 libLocation\">\n    <a routerLink = \"angular/ngbase\">Basic introduction</a><br>\n    <a routerLink = \"angular/basicuse\">basic use</a><br>\n    <a routerLink = \"angular/leadin\">lead in third-party libraries</a><br>\n  </div>\n  <div class=\"col-md-9\">\n    <router-outlet></router-outlet>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -518,7 +518,7 @@ module.exports = "<div class=\"row\">\n  <div class=\"col-md-2 offset-md-1\">\n 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2J1bHUvbWlkZGxlLnRyb29wcy93ZWIvYW5ndWxhci9uZ2xpYi9uZ2xpYi5jb21wb25lbnQuc2NzcyJ9 */"
+module.exports = ".libLocation {\n  text-align: center; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVsdS9taWRkbGUudHJvb3BzL3dlYi9hbmd1bGFyL25nbGliL0U6XFx2c2NvZGVQcm9qZWN0XFxjaGV2eXNreS9zcmNcXGFwcFxcYnVsdVxcbWlkZGxlLnRyb29wc1xcd2ViXFxhbmd1bGFyXFxuZ2xpYlxcbmdsaWIuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxrQkFBa0IsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2J1bHUvbWlkZGxlLnRyb29wcy93ZWIvYW5ndWxhci9uZ2xpYi9uZ2xpYi5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5saWJMb2NhdGlvbntcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -731,7 +731,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row bgimg\">\n  <div class=\"col-md-9 offset-md-1 welfont\"><div style=\"height:15px;\"></div>BULU小窝欢迎小伙伴们微踩</div>\n  <div class=\"col-md-2 userfont\">\n    <span (click) = 'goHomePage()'>首页&nbsp;&nbsp;</span>\n    |&nbsp;&nbsp;\n    <span>provider&nbsp;:&nbsp;chevysky</span>\n  </div>\n</div>\n"
+module.exports = "<div class=\"row bgimg\">\n  <div class=\"col-md-8 offset-md-1 welfont\"><div style=\"height:15px;\"></div>BULU小窝欢迎小伙伴们微踩</div>\n  <div class=\"col-md-3 userfont\">\n    <span (click) = 'goHomePage()'>首页&nbsp;&nbsp;</span>\n    |&nbsp;&nbsp;\n    <span>provider&nbsp;:&nbsp;chevysky</span>\n  </div>\n</div>\n"
 
 /***/ }),
 
