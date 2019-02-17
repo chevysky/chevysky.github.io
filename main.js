@@ -37,16 +37,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _router_web__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./router/web */ "./src/app/router/web.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _bulu_middle_troops_carousel_carousel_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./bulu/middle.troops/carousel/carousel.component */ "./src/app/bulu/middle.troops/carousel/carousel.component.ts");
+/* harmony import */ var _bulu_middle_troops_carousel_carousel_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./bulu/middle.troops/carousel/carousel.component */ "./src/app/bulu/middle.troops/carousel/carousel.component.ts");
 
 
 
 
 
-
-var routes = _router_web__WEBPACK_IMPORTED_MODULE_3__["webRoute"].concat([{ path: 'body/carousel', component: _bulu_middle_troops_carousel_carousel_component__WEBPACK_IMPORTED_MODULE_5__["CarouselComponent"] },
-    { path: 'homepage', component: _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"] }]);
+var routes = _router_web__WEBPACK_IMPORTED_MODULE_3__["webRoute"].concat([{ path: 'body/carousel', component: _bulu_middle_troops_carousel_carousel_component__WEBPACK_IMPORTED_MODULE_4__["CarouselComponent"] }]);
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
     }
@@ -145,6 +142,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _bulu_middle_troops_web_vue_vuebase_vuebase_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./bulu/middle.troops/web/vue/vuebase/vuebase.component */ "./src/app/bulu/middle.troops/web/vue/vuebase/vuebase.component.ts");
 /* harmony import */ var _bulu_middle_troops_web_angular_basicuse_basicuse_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./bulu/middle.troops/web/angular/basicuse/basicuse.component */ "./src/app/bulu/middle.troops/web/angular/basicuse/basicuse.component.ts");
 /* harmony import */ var _bulu_middle_troops_web_angular_leadin_leadin_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./bulu/middle.troops/web/angular/leadin/leadin.component */ "./src/app/bulu/middle.troops/web/angular/leadin/leadin.component.ts");
+/* harmony import */ var _bulu_middle_troops_web_vue_vueroute_vueroute_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./bulu/middle.troops/web/vue/vueroute/vueroute.component */ "./src/app/bulu/middle.troops/web/vue/vueroute/vueroute.component.ts");
+/* harmony import */ var _bulu_middle_troops_web_vue_vueaxios_vueaxios_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./bulu/middle.troops/web/vue/vueaxios/vueaxios.component */ "./src/app/bulu/middle.troops/web/vue/vueaxios/vueaxios.component.ts");
+
+
 
 
 
@@ -179,7 +180,9 @@ var AppModule = /** @class */ (function () {
                 _bulu_middle_troops_web_vue_vuelib_vuelib_component__WEBPACK_IMPORTED_MODULE_14__["VuelibComponent"],
                 _bulu_middle_troops_web_vue_vuebase_vuebase_component__WEBPACK_IMPORTED_MODULE_15__["VuebaseComponent"],
                 _bulu_middle_troops_web_angular_basicuse_basicuse_component__WEBPACK_IMPORTED_MODULE_16__["BasicuseComponent"],
-                _bulu_middle_troops_web_angular_leadin_leadin_component__WEBPACK_IMPORTED_MODULE_17__["LeadinComponent"]
+                _bulu_middle_troops_web_angular_leadin_leadin_component__WEBPACK_IMPORTED_MODULE_17__["LeadinComponent"],
+                _bulu_middle_troops_web_vue_vueroute_vueroute_component__WEBPACK_IMPORTED_MODULE_18__["VuerouteComponent"],
+                _bulu_middle_troops_web_vue_vueaxios_vueaxios_component__WEBPACK_IMPORTED_MODULE_19__["VueaxiosComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -219,7 +222,7 @@ module.exports = "<div class=\"row setrow\"></div>\n<div class=\"row setbg\">\n 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".setbg {\n  background-color: #acdac4; }\n\n.setrow {\n  background-color: #ebcb17;\n  height: 20px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVsdS9taWRkbGUudHJvb3BzL2JvZHllci9FOlxcdnNjb2RlUHJvamVjdFxcY2hldnlza3kvc3JjXFxhcHBcXGJ1bHVcXG1pZGRsZS50cm9vcHNcXGJvZHllclxcYm9keWVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0EseUJBQW9DLEVBQUE7O0FBR3BDO0VBQ0kseUJBQW1DO0VBQ25DLFlBQVksRUFBQSIsImZpbGUiOiJzcmMvYXBwL2J1bHUvbWlkZGxlLnRyb29wcy9ib2R5ZXIvYm9keWVyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNldGJne1xyXG5iYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMTcyLCAyMTgsIDE5Nik7XHJcbn1cclxuXHJcbi5zZXRyb3d7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjM1LCAyMDMsIDIzKTtcclxuICAgIGhlaWdodDogMjBweDtcclxufSJdfQ== */"
+module.exports = ".setbg {\n  background-image: url('bodybg.jpg');\n  background-repeat: no-repeat;\n  background-size: 100% 100%; }\n\n.setrow {\n  background-color: #ebcb17;\n  height: 20px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVsdS9taWRkbGUudHJvb3BzL2JvZHllci9FOlxcdnNjb2RlUHJvamVjdFxcY2hldnlza3kvc3JjXFxhcHBcXGJ1bHVcXG1pZGRsZS50cm9vcHNcXGJvZHllclxcYm9keWVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBRUEsbUNBQTJEO0VBQzNELDRCQUE0QjtFQUM1QiwwQkFBMEIsRUFBQTs7QUFHMUI7RUFDSSx5QkFBbUM7RUFDbkMsWUFBWSxFQUFBIiwiZmlsZSI6InNyYy9hcHAvYnVsdS9taWRkbGUudHJvb3BzL2JvZHllci9ib2R5ZXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2V0Ymd7XHJcbi8vYmFja2dyb3VuZC1jb2xvcjogcmdiKDE3MiwgMjE4LCAxOTYpO1xyXG5iYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4uLy4uLy4uLy4uL2Fzc2V0cy9idWx1L2JvZHliZy5qcGcnKTtcclxuYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuYmFja2dyb3VuZC1zaXplOiAxMDAlIDEwMCU7XHJcbn1cclxuXHJcbi5zZXRyb3d7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjM1LCAyMDMsIDIzKTtcclxuICAgIGhlaWdodDogMjBweDtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -244,7 +247,7 @@ var BodyerComponent = /** @class */ (function () {
         this.router = router;
     }
     BodyerComponent.prototype.ngOnInit = function () {
-        this.router.navigate(['body/carousel']); //OR this.router.navigateByUrl('body/carousel')
+        //this.router.navigate(['body/carousel']);//OR this.router.navigateByUrl('body/carousel')
     };
     BodyerComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -330,7 +333,7 @@ var CarouselComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "  <br>\n  <b>循环ngFor</b><br>\n  *ngFor = \"let name of objectName\" 页面中循环的使用<br>\n  <b>条件判断ngIf</b><br>\n  *ngIf = \"variable\" 页面中使用ngIf,variable 为Boolean值时 false隐藏 true显示,\n  当为其它变量时,变量不为undefind显示;<br>\n  <b>绑定点击事件</b><br>\n  (click) = \"incident()\" 绑定点击事件<br>\n  <b>从组件接收主组件传递的数据</b><br>\n   {{textTransmitValueInComponent}}<br>\n   从组件的ts中定义变量用@Input装饰：<br>\n   @Input() hero : variableType;<br>\n   @Input() isClicked : boolean;<br>\n  <b>文本格式化</b><br>\n  {{textFormat}}<br>\n  <b>数据双向绑定</b><br>\n  {{textNgModel}}<br>"
+module.exports = "  <b>循环ngFor</b><br>\n  *ngFor = \"let name of objectName\" 页面中循环的使用<br>\n  <b>条件判断ngIf</b><br>\n  *ngIf = \"variable\" 页面中使用ngIf,variable 为Boolean值时 false隐藏 true显示,\n  当为其它变量时,变量不为undefind显示;<br>\n  <b>绑定点击事件</b><br>\n  (click) = \"incident()\" 绑定点击事件<br>\n  <b>从组件接收主组件传递的数据</b><br>\n   {{textTransmitValueInComponent}}<br>\n   从组件的ts中定义变量用@Input装饰：<br>\n   @Input() hero : variableType;<br>\n   @Input() isClicked : boolean;<br>\n  <b>文本格式化</b><br>\n  {{textFormat}}<br>\n  <b>数据双向绑定</b><br>\n  {{textNgModel}}<br>"
 
 /***/ }),
 
@@ -507,7 +510,7 @@ var NgbaseComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 libLocation\">\n    <a routerLink = \"angular/ngbase\">Basic introduction</a><br>\n    <a routerLink = \"angular/basicuse\">basic use</a><br>\n    <a routerLink = \"angular/leadin\">lead in third-party libraries</a><br>\n  </div>\n  <div class=\"col-md-9\">\n    <router-outlet></router-outlet>\n  </div>\n</div>\n"
+module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 libLocation\">\n    <a routerLink = \"angular/ngbase\">Basic introduction</a><br>\n    <a routerLink = \"angular/basicuse\">basic use</a><br>\n    <a routerLink = \"angular/leadin\">lead in third-party libraries</a><br>\n  </div>\n  <div class=\"col-md-9 bfont\">\n    <router-outlet></router-outlet>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -518,7 +521,7 @@ module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 libLocation\">\n 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".libLocation {\n  text-align: center; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVsdS9taWRkbGUudHJvb3BzL3dlYi9hbmd1bGFyL25nbGliL0U6XFx2c2NvZGVQcm9qZWN0XFxjaGV2eXNreS9zcmNcXGFwcFxcYnVsdVxcbWlkZGxlLnRyb29wc1xcd2ViXFxhbmd1bGFyXFxuZ2xpYlxcbmdsaWIuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxrQkFBa0IsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2J1bHUvbWlkZGxlLnRyb29wcy93ZWIvYW5ndWxhci9uZ2xpYi9uZ2xpYi5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5saWJMb2NhdGlvbntcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxufSJdfQ== */"
+module.exports = ".libLocation {\n  text-align: center; }\n\n.bfont {\n  color: #edf5ec; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVsdS9taWRkbGUudHJvb3BzL3dlYi9hbmd1bGFyL25nbGliL0U6XFx2c2NvZGVQcm9qZWN0XFxjaGV2eXNreS9zcmNcXGFwcFxcYnVsdVxcbWlkZGxlLnRyb29wc1xcd2ViXFxhbmd1bGFyXFxuZ2xpYlxcbmdsaWIuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxrQkFBa0IsRUFBQTs7QUFHdEI7RUFDRSxjQUF3QixFQUFBIiwiZmlsZSI6InNyYy9hcHAvYnVsdS9taWRkbGUudHJvb3BzL3dlYi9hbmd1bGFyL25nbGliL25nbGliLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmxpYkxvY2F0aW9ue1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcblxyXG4uYmZvbnR7XHJcbiAgY29sb3I6cmdiKDIzNywgMjQ1LCAyMzYpO1xyXG59Il19 */"
 
 /***/ }),
 
@@ -556,6 +559,63 @@ var NglibComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/bulu/middle.troops/web/vue/vueaxios/vueaxios.component.html":
+/*!*****************************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/web/vue/vueaxios/vueaxios.component.html ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h4>VUE用AXIOS实现与JAVA后端调用</h4>\n安装AXIOS npm install axios<br>\n在main.js中引入axios：import axios from 'axios'<br>\n由于axios不能直接使用Vue.use()，所以可以在引入axios后修改原型链，或者结合Vuex封装一个action;<br>\n<h4>修改原型链</h4>\nVue.prototype.$ajax = axios<br>\n<h4>axios 配置</h4>\naxios.defaults.timeout = 5000;<br>\n//axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';<br>\naxios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8';<br>\n// axios.defaults.headers.post['Content-Type'] = 'json';<br>\n// axios.defaults.baseURL = 'http://localhost:8080/项目名/';<br>\naxios.defaults.baseURL = 'http://localhost:8080/';<br>\n<h4>向后端发送请求</h4>\nmethods:{{text_1}}<br>\n  sendAjax(){{text_1}}<br>\n      this.$ajax.post('/user/vue',{{text_1}}<br>\n          name:'chevysky',<br>\n          sex:'man',<br>\n          age:16<br>\n      }).then(function(res){{text_1}}<br>\n          console.log(res);<br>\n          console.log(res.data);<br>\n          alert(res.data);<br>\n      })<br>\n  },<br>\n  sendNoParams(){{text_1}}<br>\n      this.$ajax.post('/user/vues').then(function(res){{text_1}}<br>\n          alert('请求成功');<br>\n      })<br>\n  }<br>\n}<br>\n<a href=\"javascript:0\">这个时候会出现跨域访问的问题，参考SpringBoot的跨域配置。</a>"
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/web/vue/vueaxios/vueaxios.component.scss":
+/*!*****************************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/web/vue/vueaxios/vueaxios.component.scss ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2J1bHUvbWlkZGxlLnRyb29wcy93ZWIvdnVlL3Z1ZWF4aW9zL3Z1ZWF4aW9zLmNvbXBvbmVudC5zY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/web/vue/vueaxios/vueaxios.component.ts":
+/*!***************************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/web/vue/vueaxios/vueaxios.component.ts ***!
+  \***************************************************************************/
+/*! exports provided: VueaxiosComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VueaxiosComponent", function() { return VueaxiosComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var VueaxiosComponent = /** @class */ (function () {
+    function VueaxiosComponent() {
+        this.text_1 = "{";
+    }
+    VueaxiosComponent.prototype.ngOnInit = function () {
+    };
+    VueaxiosComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-vueaxios',
+            template: __webpack_require__(/*! ./vueaxios.component.html */ "./src/app/bulu/middle.troops/web/vue/vueaxios/vueaxios.component.html"),
+            styles: [__webpack_require__(/*! ./vueaxios.component.scss */ "./src/app/bulu/middle.troops/web/vue/vueaxios/vueaxios.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], VueaxiosComponent);
+    return VueaxiosComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/bulu/middle.troops/web/vue/vuebase/vuebase.component.html":
 /*!***************************************************************************!*\
   !*** ./src/app/bulu/middle.troops/web/vue/vuebase/vuebase.component.html ***!
@@ -563,7 +623,7 @@ var NglibComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  vuebase works!\n</p>\n"
+module.exports = "<div [innerHTML] = \"showData\"></div>"
 
 /***/ }),
 
@@ -590,12 +650,57 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VuebaseComponent", function() { return VuebaseComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
 
 
 var VuebaseComponent = /** @class */ (function () {
-    function VuebaseComponent() {
+    function VuebaseComponent(routeinfo) {
+        this.routeinfo = routeinfo;
+        this.opName = "";
+        this.intro = "<h4>VUE 项目的安装和启动</h4>" +
+            "npm 安装vue-cli脚手架 : npm install -g vue-cli<br>" +
+            "查看版本: vue -V<br><br>" +
+            "使用脚手架安装项目： vue init webpack demo 项目是基于webpack的<br>" +
+            "Project name（工程名）:回车<br>" +
+            "Project description（工程介绍）：回车<br>" +
+            "Author：作者名<br>" +
+            "Vue build（是否安装编译器）:回车<br>" +
+            "Install vue-router（是否安装Vue路由）：回车<br>" +
+            "Use ESLint to lint your code（是否使用ESLint检查js代码）：n<br>" +
+            "Set up unit tests（安装单元测试工具）：n<br>" +
+            "Setup e2e tests with Nightwatch（是否安装端到端测试工具）：n<br>" +
+            "Should we run npm install for you after the project has been created? (recommended)：回车。<br><br>" +
+            "进入项目目录：cd demo<br>" +
+            "安装项目所需要的依赖：npm install<br>" +
+            "启动项目：npm run dev<br>" +
+            "<h4>启动项目遇到的问题</h4>" +
+            "You may use special comments to disable some warnings.<br>" +
+            "Use // eslint-disable-next-line to ignore the next line.<br>" +
+            "Use /* eslint-disable */ to ignore all warnings in a file.<br>" +
+            "<b>解决方法</b><br>" +
+            "注释build/webpack.base.conf.js文件module->rules中有关eslint的规则<br>" +
+            "...(config.dev.useEslint ? [createLintingRule()] : [])," +
+            "<h4>ElementUI引入</h4>" +
+            "npm install element-ui  -save<br>" +
+            "在main.js中添加代码<br>" +
+            "import ElementUI from 'element-ui'<br>" +
+            "Vue.use(ElementUI)";
     }
     VuebaseComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.routeinfo.queryParams.subscribe(function (queryParams) {
+            _this.opName = queryParams.opName;
+            _this.getShowData();
+        }); //接收路由传的参数
+    };
+    VuebaseComponent.prototype.getShowData = function () {
+        switch (this.opName) {
+            case "intro":
+                this.showData = this.intro;
+                break;
+            default: this.showData = "";
+        }
     };
     VuebaseComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -603,7 +708,7 @@ var VuebaseComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./vuebase.component.html */ "./src/app/bulu/middle.troops/web/vue/vuebase/vuebase.component.html"),
             styles: [__webpack_require__(/*! ./vuebase.component.scss */ "./src/app/bulu/middle.troops/web/vue/vuebase/vuebase.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]])
     ], VuebaseComponent);
     return VuebaseComponent;
 }());
@@ -619,7 +724,7 @@ var VuebaseComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-md-3\">\n    <a routerLink = \"vue/base\">Basic introduction</a><br>\n  </div>\n  <div class=\"col-md-9\">\n    <router-outlet></router-outlet>\n  </div>\n</div>"
+module.exports = "<div class=\"row\">\n  <div class=\"col-md-3\">\n    <a href=\"javascrip:0\" (click)=\"goDeatil('intro')\">Basic introduction</a><br>\n    <a routerLink = \"routeuse\">Basic use of router</a>\n    <a routerLink = \"axios\">Call the background</a>\n  </div>\n  <div class=\"col-md-9 bfont\">\n    <router-outlet></router-outlet>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -630,7 +735,7 @@ module.exports = "<div class=\"row\">\n  <div class=\"col-md-3\">\n    <a router
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2J1bHUvbWlkZGxlLnRyb29wcy93ZWIvdnVlL3Z1ZWxpYi92dWVsaWIuY29tcG9uZW50LnNjc3MifQ== */"
+module.exports = ".bfont {\n  color: #edf5ec; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVsdS9taWRkbGUudHJvb3BzL3dlYi92dWUvdnVlbGliL0U6XFx2c2NvZGVQcm9qZWN0XFxjaGV2eXNreS9zcmNcXGFwcFxcYnVsdVxcbWlkZGxlLnRyb29wc1xcd2ViXFx2dWVcXHZ1ZWxpYlxcdnVlbGliLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksY0FBd0IsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2J1bHUvbWlkZGxlLnRyb29wcy93ZWIvdnVlL3Z1ZWxpYi92dWVsaWIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYmZvbnR7XHJcbiAgICBjb2xvcjpyZ2IoMjM3LCAyNDUsIDIzNik7XHJcbiAgfSJdfQ== */"
 
 /***/ }),
 
@@ -646,12 +751,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VuelibComponent", function() { return VuelibComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
 
 
 var VuelibComponent = /** @class */ (function () {
-    function VuelibComponent() {
+    function VuelibComponent(router) {
+        this.router = router;
     }
     VuelibComponent.prototype.ngOnInit = function () {
+    };
+    VuelibComponent.prototype.goDeatil = function (name) {
+        this.router.navigate(['vue/lib/vue/base'], {
+            queryParams: {
+                opName: name
+            }
+        });
     };
     VuelibComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -659,9 +774,77 @@ var VuelibComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./vuelib.component.html */ "./src/app/bulu/middle.troops/web/vue/vuelib/vuelib.component.html"),
             styles: [__webpack_require__(/*! ./vuelib.component.scss */ "./src/app/bulu/middle.troops/web/vue/vuelib/vuelib.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
     ], VuelibComponent);
     return VuelibComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/web/vue/vueroute/vueroute.component.html":
+/*!*****************************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/web/vue/vueroute/vueroute.component.html ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h4>VUE路由</h4>\nmain.js中引入路由 import router from './router'<br>\n{{text_zero}}<br>\n {{text_ze}}<br>\n  router,<br>\n  {{text_first}}<br>\n  {{test_second}}<br>\n在src/router/index.js中给各个组件配置路由<br><br>\n{{text_third}}<br>\n{{text_fourth}}<br>\n{{text_five}}<br><br>\n{{text_six}}<br>\n{{text_seven}}<br><br>\n页面布局可以参考AngularJS的router<br>\n一个页面的head/body/foot 对应vue里路由的视图命名。<br>\ntext_1<br>\n      path:'/body',<br>\n      name:'bodyer',<br>\n      {{text_se}}<br>\n        head:headhtml,<br>\n        body:bodyhtml,<br>\n        foot:foothtml<br>\n      }<br>\n    }<br>\n    <span class=\"fcolor\">{{text_eight}}</span><br>"
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/web/vue/vueroute/vueroute.component.scss":
+/*!*****************************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/web/vue/vueroute/vueroute.component.scss ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".fcolor {\n  color: red; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVsdS9taWRkbGUudHJvb3BzL3dlYi92dWUvdnVlcm91dGUvRTpcXHZzY29kZVByb2plY3RcXGNoZXZ5c2t5L3NyY1xcYXBwXFxidWx1XFxtaWRkbGUudHJvb3BzXFx3ZWJcXHZ1ZVxcdnVlcm91dGVcXHZ1ZXJvdXRlLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksVUFBVSxFQUFBIiwiZmlsZSI6InNyYy9hcHAvYnVsdS9taWRkbGUudHJvb3BzL3dlYi92dWUvdnVlcm91dGUvdnVlcm91dGUuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZmNvbG9ye1xyXG4gICAgY29sb3I6IHJlZDtcclxufSJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/web/vue/vueroute/vueroute.component.ts":
+/*!***************************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/web/vue/vueroute/vueroute.component.ts ***!
+  \***************************************************************************/
+/*! exports provided: VuerouteComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VuerouteComponent", function() { return VuerouteComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var VuerouteComponent = /** @class */ (function () {
+    function VuerouteComponent() {
+        this.text_1 = "{";
+        this.text_zero = "new Vue({";
+        this.text_ze = " el: '#app',";
+        this.text_first = "  components: { App },";
+        this.test_second = " template: '<App/>'})";
+        this.text_third = "<template>中路由跳转：<router-link to='/path'></router-link>";
+        this.text_fourth = "默认渲染成带有正确链接的 <a> 标签，可以通过配置 tag 属性生成别的标签.";
+        this.text_five = "<router-link to='/path' tag='li'></router-link>";
+        this.text_six = "<script>中路由跳转：this.$router.push('/path');";
+        this.text_seven = "路由跳转组件显示的位置 <router-view></router-view>";
+        this.text_se = "components:{";
+        this.text_eight = "备注说明：例如在App.vue中有路由<router-view name='head'>/<router-view name='body'>而在App.vue中又引入了其它模块，那么在其它模块中的路由调用是可以影响到App.vue中的路由显示的。";
+    }
+    VuerouteComponent.prototype.ngOnInit = function () {
+    };
+    VuerouteComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-vueroute',
+            template: __webpack_require__(/*! ./vueroute.component.html */ "./src/app/bulu/middle.troops/web/vue/vueroute/vueroute.component.html"),
+            styles: [__webpack_require__(/*! ./vueroute.component.scss */ "./src/app/bulu/middle.troops/web/vue/vueroute/vueroute.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], VuerouteComponent);
+    return VuerouteComponent;
 }());
 
 
@@ -769,7 +952,7 @@ var HeaderComponent = /** @class */ (function () {
     HeaderComponent.prototype.ngOnInit = function () {
     };
     HeaderComponent.prototype.goHomePage = function () {
-        this.router.navigateByUrl('homepage');
+        this.router.navigateByUrl('');
     };
     HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -802,6 +985,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _bulu_middle_troops_web_angular_leadin_leadin_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../bulu/middle.troops/web/angular/leadin/leadin.component */ "./src/app/bulu/middle.troops/web/angular/leadin/leadin.component.ts");
 /* harmony import */ var _bulu_middle_troops_web_vue_vuelib_vuelib_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../bulu/middle.troops/web/vue/vuelib/vuelib.component */ "./src/app/bulu/middle.troops/web/vue/vuelib/vuelib.component.ts");
 /* harmony import */ var _bulu_middle_troops_web_vue_vuebase_vuebase_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../bulu/middle.troops/web/vue/vuebase/vuebase.component */ "./src/app/bulu/middle.troops/web/vue/vuebase/vuebase.component.ts");
+/* harmony import */ var _bulu_middle_troops_web_vue_vueroute_vueroute_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../bulu/middle.troops/web/vue/vueroute/vueroute.component */ "./src/app/bulu/middle.troops/web/vue/vueroute/vueroute.component.ts");
+/* harmony import */ var _bulu_middle_troops_web_vue_vueaxios_vueaxios_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../bulu/middle.troops/web/vue/vueaxios/vueaxios.component */ "./src/app/bulu/middle.troops/web/vue/vueaxios/vueaxios.component.ts");
+
+
 
 
 
@@ -821,9 +1008,11 @@ var webRoute = [
     {
         path: 'vue/lib',
         component: _bulu_middle_troops_web_vue_vuelib_vuelib_component__WEBPACK_IMPORTED_MODULE_4__["VuelibComponent"],
-        children: [{
-                path: 'vue/base', component: _bulu_middle_troops_web_vue_vuebase_vuebase_component__WEBPACK_IMPORTED_MODULE_5__["VuebaseComponent"],
-            }]
+        children: [
+            { path: 'vue/base', component: _bulu_middle_troops_web_vue_vuebase_vuebase_component__WEBPACK_IMPORTED_MODULE_5__["VuebaseComponent"] },
+            { path: 'routeuse', component: _bulu_middle_troops_web_vue_vueroute_vueroute_component__WEBPACK_IMPORTED_MODULE_6__["VuerouteComponent"] },
+            { path: 'axios', component: _bulu_middle_troops_web_vue_vueaxios_vueaxios_component__WEBPACK_IMPORTED_MODULE_7__["VueaxiosComponent"] }
+        ]
     }
 ];
 
