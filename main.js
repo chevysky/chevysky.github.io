@@ -37,13 +37,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _router_web__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./router/web */ "./src/app/router/web.ts");
-/* harmony import */ var _bulu_middle_troops_carousel_carousel_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./bulu/middle.troops/carousel/carousel.component */ "./src/app/bulu/middle.troops/carousel/carousel.component.ts");
+/* harmony import */ var _router_java__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./router/java */ "./src/app/router/java.ts");
+/* harmony import */ var _bulu_middle_troops_carousel_carousel_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./bulu/middle.troops/carousel/carousel.component */ "./src/app/bulu/middle.troops/carousel/carousel.component.ts");
 
 
 
 
 
-var routes = _router_web__WEBPACK_IMPORTED_MODULE_3__["webRoute"].concat([{ path: 'body/carousel', component: _bulu_middle_troops_carousel_carousel_component__WEBPACK_IMPORTED_MODULE_4__["CarouselComponent"] }]);
+
+var routes = _router_web__WEBPACK_IMPORTED_MODULE_3__["webRoute"].concat(_router_java__WEBPACK_IMPORTED_MODULE_4__["javaRoue"], [{ path: 'body/carousel', component: _bulu_middle_troops_carousel_carousel_component__WEBPACK_IMPORTED_MODULE_5__["CarouselComponent"] }]);
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
     }
@@ -144,6 +146,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _bulu_middle_troops_web_angular_leadin_leadin_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./bulu/middle.troops/web/angular/leadin/leadin.component */ "./src/app/bulu/middle.troops/web/angular/leadin/leadin.component.ts");
 /* harmony import */ var _bulu_middle_troops_web_vue_vueroute_vueroute_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./bulu/middle.troops/web/vue/vueroute/vueroute.component */ "./src/app/bulu/middle.troops/web/vue/vueroute/vueroute.component.ts");
 /* harmony import */ var _bulu_middle_troops_web_vue_vueaxios_vueaxios_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./bulu/middle.troops/web/vue/vueaxios/vueaxios.component */ "./src/app/bulu/middle.troops/web/vue/vueaxios/vueaxios.component.ts");
+/* harmony import */ var _bulu_middle_troops_java_springboot_splib_splib_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./bulu/middle.troops/java/springboot/splib/splib.component */ "./src/app/bulu/middle.troops/java/springboot/splib/splib.component.ts");
+/* harmony import */ var _bulu_middle_troops_java_springboot_spdetail_spdetail_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./bulu/middle.troops/java/springboot/spdetail/spdetail.component */ "./src/app/bulu/middle.troops/java/springboot/spdetail/spdetail.component.ts");
+
+
 
 
 
@@ -182,7 +188,9 @@ var AppModule = /** @class */ (function () {
                 _bulu_middle_troops_web_angular_basicuse_basicuse_component__WEBPACK_IMPORTED_MODULE_16__["BasicuseComponent"],
                 _bulu_middle_troops_web_angular_leadin_leadin_component__WEBPACK_IMPORTED_MODULE_17__["LeadinComponent"],
                 _bulu_middle_troops_web_vue_vueroute_vueroute_component__WEBPACK_IMPORTED_MODULE_18__["VuerouteComponent"],
-                _bulu_middle_troops_web_vue_vueaxios_vueaxios_component__WEBPACK_IMPORTED_MODULE_19__["VueaxiosComponent"]
+                _bulu_middle_troops_web_vue_vueaxios_vueaxios_component__WEBPACK_IMPORTED_MODULE_19__["VueaxiosComponent"],
+                _bulu_middle_troops_java_springboot_splib_splib_component__WEBPACK_IMPORTED_MODULE_20__["SplibComponent"],
+                _bulu_middle_troops_java_springboot_spdetail_spdetail_component__WEBPACK_IMPORTED_MODULE_21__["SpdetailComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -211,7 +219,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row setrow\"></div>\n<div class=\"row setbg\">\n  <div class=\"col-md-9\">\n    <!-- 显示目录的部分 -->\n    <router-outlet></router-outlet>\n  </div>\n  <div class=\"col-sm-3 lib\">\n    <br>\n        <accordion [closeOthers]=\"true\">\n            <accordion-group heading=\"前端\">\n              <a routerLink = \"angular/nglib\">Angular | ngx-bootstrap</a><br>\n              <a routerLink = \"vue/lib\">Vue | ElementUI</a><br>\n            </accordion-group>\n            <accordion-group heading=\"后端\">\n              <p>Content 1</p>\n            </accordion-group>\n            <accordion-group heading=\"数据库\">\n              <p>Content 2</p>\n            </accordion-group>\n            <accordion-group heading=\"随笔\">\n              <p>content</p>\n            </accordion-group>\n          </accordion>\n  </div>\n</div>"
+module.exports = "<div class=\"row setrow\"></div>\n<div class=\"row setbg\">\n  <div class=\"col-md-9\">\n    <!-- 显示目录的部分 -->\n    <router-outlet></router-outlet>\n  </div>\n  <div class=\"col-sm-3 libheight\">\n    <br>\n        <accordion [closeOthers]=\"true\">\n            <accordion-group heading=\"前端\">\n              <a routerLink = \"angular/nglib\">Angular | ngx-bootstrap</a><br>\n              <a routerLink = \"vue/lib\">Vue | ElementUI</a><br>\n            </accordion-group>\n            <accordion-group heading=\"后端\">\n             <a routerLink = \"java/lib\">SpringBoot</a><br>\n            </accordion-group>\n            <accordion-group heading=\"数据库\">\n              <p>暂无内容</p>\n            </accordion-group>\n            <accordion-group heading=\"随笔\">\n              <p>暂无内容</p>\n            </accordion-group>\n          </accordion>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -222,7 +230,7 @@ module.exports = "<div class=\"row setrow\"></div>\n<div class=\"row setbg\">\n 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".setbg {\n  background-image: url('bodybg.jpg');\n  background-repeat: no-repeat;\n  background-size: 100% 100%; }\n\n.setrow {\n  background-color: #ebcb17;\n  height: 10px; }\n\n.lib {\n  height: 420px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVsdS9taWRkbGUudHJvb3BzL2JvZHllci9FOlxcdnNjb2RlUHJvamVjdFxcY2hldnlza3kvc3JjXFxhcHBcXGJ1bHVcXG1pZGRsZS50cm9vcHNcXGJvZHllclxcYm9keWVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBRUEsbUNBQTJEO0VBQzNELDRCQUE0QjtFQUM1QiwwQkFBMEIsRUFBQTs7QUFHMUI7RUFDSSx5QkFBbUM7RUFDbkMsWUFBWSxFQUFBOztBQUdoQjtFQUNJLGFBQWEsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2J1bHUvbWlkZGxlLnRyb29wcy9ib2R5ZXIvYm9keWVyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNldGJne1xyXG4vL2JhY2tncm91bmQtY29sb3I6IHJnYigxNzIsIDIxOCwgMTk2KTtcclxuYmFja2dyb3VuZC1pbWFnZTogdXJsKCcuLi8uLi8uLi8uLi9hc3NldHMvYnVsdS9ib2R5YmcuanBnJyk7XHJcbmJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbmJhY2tncm91bmQtc2l6ZTogMTAwJSAxMDAlO1xyXG59XHJcblxyXG4uc2V0cm93e1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDIzNSwgMjAzLCAyMyk7XHJcbiAgICBoZWlnaHQ6IDEwcHg7XHJcbn1cclxuXHJcbi5saWJ7XHJcbiAgICBoZWlnaHQ6IDQyMHB4O1xyXG59Il19 */"
+module.exports = ".setbg {\n  background-image: url('bodybg.jpg');\n  background-repeat: no-repeat;\n  background-size: 100% 100%; }\n\n.setrow {\n  background-color: #ebcb17;\n  height: 10px; }\n\n.libheight {\n  height: 420px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVsdS9taWRkbGUudHJvb3BzL2JvZHllci9FOlxcdnNjb2RlUHJvamVjdFxcY2hldnlza3kvc3JjXFxhcHBcXGJ1bHVcXG1pZGRsZS50cm9vcHNcXGJvZHllclxcYm9keWVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBRUEsbUNBQTJEO0VBQzNELDRCQUE0QjtFQUM1QiwwQkFBMEIsRUFBQTs7QUFHMUI7RUFDSSx5QkFBbUM7RUFDbkMsWUFBWSxFQUFBOztBQUdoQjtFQUNJLGFBQWEsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2J1bHUvbWlkZGxlLnRyb29wcy9ib2R5ZXIvYm9keWVyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNldGJne1xyXG4vL2JhY2tncm91bmQtY29sb3I6IHJnYigxNzIsIDIxOCwgMTk2KTtcclxuYmFja2dyb3VuZC1pbWFnZTogdXJsKCcuLi8uLi8uLi8uLi9hc3NldHMvYnVsdS9ib2R5YmcuanBnJyk7XHJcbmJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbmJhY2tncm91bmQtc2l6ZTogMTAwJSAxMDAlO1xyXG59XHJcblxyXG4uc2V0cm93e1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDIzNSwgMjAzLCAyMyk7XHJcbiAgICBoZWlnaHQ6IDEwcHg7XHJcbn1cclxuXHJcbi5saWJoZWlnaHR7XHJcbiAgICBoZWlnaHQ6IDQyMHB4O1xyXG59XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -320,6 +328,283 @@ var CarouselComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
     ], CarouselComponent);
     return CarouselComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/java/springboot/domain.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/java/springboot/domain.ts ***!
+  \**************************************************************/
+/*! exports provided: domain */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "domain", function() { return domain; });
+//跨域配置
+var domain = '<h4>方案一</h4>' +
+    'CrossOriginConfig.java<br>' +
+    'package cn.bulu.config;<br>' +
+    'import org.springframework.context.annotation.Bean;<br>' +
+    'import org.springframework.context.annotation.Configuration;<br>' +
+    'import org.springframework.web.cors.CorsConfiguration;<br>' +
+    'import org.springframework.web.cors.UrlBasedCorsConfigurationSource;<br>' +
+    'import org.springframework.web.filter.CorsFilter;<br>' +
+    '@Configuration<br>' +
+    'public class CrossOriginConfig{<br><br>' +
+    'private CorsConfiguration buildConfig() {<br>' +
+    'CorsConfiguration corsConfiguration = new CorsConfiguration();<br>' +
+    '//允许所有的域名<br>' +
+    'corsConfiguration.addAllowedOrigin("*");<br>' +
+    '//允许任何头<br>' +
+    'corsConfiguration.addAllowedHeader("*");<br>' +
+    '//允许任何方法post/get等<br>' +
+    'corsConfiguration.addAllowedMethod("*");<br>' +
+    'return corsConfiguration;<br>' +
+    '}<br><br>' +
+    '@Bean<br>' +
+    'public CorsFilter corsFilter() {<br>' +
+    'UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();<br>' +
+    'source.registerCorsConfiguration("/**", buildConfig());<br>' +
+    'return new CorsFilter(source);<br>' +
+    '}<br><br>' +
+    '}';
+
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/java/springboot/interceptor.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/java/springboot/interceptor.ts ***!
+  \*******************************************************************/
+/*! exports provided: interceptor */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "interceptor", function() { return interceptor; });
+var interceptor = 'import com.scxd.beans.extendbeans.Authority;<br>' +
+    'import org.springframework.stereotype.Component;<br>' +
+    'import org.springframework.web.servlet.HandlerInterceptor;<br>' +
+    'import org.springframework.web.servlet.ModelAndView;<br>' +
+    'import javax.servlet.http.HttpServletRequest;<br>' +
+    'import javax.servlet.http.HttpServletResponse;<br>' +
+    'import javax.servlet.http.HttpSession;<br>' +
+    'import java.io.IOException;<br>' +
+    '用户登录拦截器，拦截之后的具体操作<br>' +
+    '@Component<br>' +
+    'public class LoginInterceptor implements HandlerInterceptor {<br><br>' +
+    '@Override<br>' +
+    'public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o){<br><br>' +
+    'try{<br>' +
+    '从session中获取登录后存入的用户信息，判断当前是否有用户登录<br>' +
+    'HttpSession session = httpServletRequest.getSession();<br>' +
+    'Authority authority = (Authority)session.getAttribute("authority");<br>' +
+    'String type = httpServletRequest.getHeader("X-Requested-With");// XMLHttpRequest<br>' +
+    'String basePath = httpServletRequest.getScheme() + "://" + httpServletRequest.getServerName() + ":" +<br>' +
+    'httpServletRequest.getServerPort() + httpServletRequest.getContextPath() + "/static/pages/backside/login.html";<br><br>' +
+    'if(authority!=null){<br>' +
+    'return true;<br>' +
+    '}<br>' +
+    'else{由于AJAX不支持重定向所以这里给其返回一个标记也就是TIMEOUT让前端自己跳到login.html页面<br>' +
+    'if (type.equals("XMLHttpRequest")){<br>' +
+    'httpServletResponse.setHeader("SESSIONSTATUS","TIMEOUT");<br>' +
+    'httpServletResponse.setHeader("CONTEXTPATH",basePath);<br>' +
+    'httpServletResponse.setStatus(HttpServletResponse.SC_FORBIDDEN);<br>' +
+    'return false;<br>' +
+    '}else{<br>' +
+    'httpServletResponse.sendRedirect(basePath);<br>' +
+    'return false;<br>' +
+    '}<br>' +
+    '}<br>' +
+    '}catch(IllegalStateException e){<br>' +
+    'e.printStackTrace();<br>' +
+    'return false;<br>' +
+    '}catch (IOException e){<br>' +
+    'e.printStackTrace();<br>' +
+    'return false;<br>' +
+    '}<br>' +
+    '}<br>' +
+    '访问controller时的操作<br>' +
+    '@Override<br>' +
+    'public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o,ModelAndView modelAndView)throws Exception{<br>' +
+    '//System.out.println("$$$$$$$$$$");<br>' +
+    '}<br>' +
+    '访问结束时做的操作<br>' +
+    '@Override<br>' +
+    'public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {<br>' +
+    '//System.out.println("$$$$$$$$$$");<br>' +
+    '}<br>' +
+    '}<br><br>' +
+    '拦截器配置文件<br>' +
+    'import org.springframework.context.annotation.Configuration;<br>' +
+    'import org.springframework.util.ResourceUtils;<br>' +
+    'import org.springframework.web.servlet.config.annotation.*;<br>' +
+    'import java.util.ArrayList;<br>' +
+    'import java.util.List;<br><br>' +
+    '@Configuration<br>' +
+    '//@EnableWebMvc<br>' +
+    'public class IntereceptorConfig implements WebMvcConfigurer {<br><br>' +
+    '@Override<br>' +
+    'public void addInterceptors(InterceptorRegistry registry) {<br>' +
+    '此处的集合装的是一系列不应该被拦截的地址<br>' +
+    'List<String> pathPatterns = new ArrayList<>();<br>' +
+    'pathPatterns.add("/path1/path2");<br>' +
+    'pathPatterns.add("/path1/path2");<br>' +
+    'pathPatterns.add("/path1/path2");<br>' +
+    '//这里的LoginInterceptor对应上面的拦截器具体操作类<br>' +
+    'InterceptorRegistration registration = registry.addInterceptor(new LoginInterceptor());<br>' +
+    'registration.addPathPatterns("/**");<br>' +
+    'registration.excludePathPatterns(pathPatterns);<br>' +
+    '}<br><br>' +
+    '}';
+
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/java/springboot/spdetail/spdetail.component.html":
+/*!*************************************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/java/springboot/spdetail/spdetail.component.html ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div [innerHTML] = 'showData'></div>\n"
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/java/springboot/spdetail/spdetail.component.scss":
+/*!*************************************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/java/springboot/spdetail/spdetail.component.scss ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2J1bHUvbWlkZGxlLnRyb29wcy9qYXZhL3NwcmluZ2Jvb3Qvc3BkZXRhaWwvc3BkZXRhaWwuY29tcG9uZW50LnNjc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/java/springboot/spdetail/spdetail.component.ts":
+/*!***********************************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/java/springboot/spdetail/spdetail.component.ts ***!
+  \***********************************************************************************/
+/*! exports provided: SpdetailComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SpdetailComponent", function() { return SpdetailComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _domain__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../domain */ "./src/app/bulu/middle.troops/java/springboot/domain.ts");
+/* harmony import */ var _interceptor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../interceptor */ "./src/app/bulu/middle.troops/java/springboot/interceptor.ts");
+
+
+
+
+
+var SpdetailComponent = /** @class */ (function () {
+    function SpdetailComponent(routeinfo) {
+        this.routeinfo = routeinfo;
+        this.opName = "";
+        this.brace = "{";
+    }
+    SpdetailComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.routeinfo.queryParams.subscribe(function (queryParams) {
+            _this.opName = queryParams.opName;
+        });
+        this.setShowData();
+    };
+    SpdetailComponent.prototype.setShowData = function () {
+        switch (this.opName) {
+            case 'domain':
+                this.showData = _domain__WEBPACK_IMPORTED_MODULE_3__["domain"];
+                break;
+            case 'interceptor':
+                this.showData = _interceptor__WEBPACK_IMPORTED_MODULE_4__["interceptor"];
+                break;
+        }
+    };
+    SpdetailComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-spdetail',
+            template: __webpack_require__(/*! ./spdetail.component.html */ "./src/app/bulu/middle.troops/java/springboot/spdetail/spdetail.component.html"),
+            styles: [__webpack_require__(/*! ./spdetail.component.scss */ "./src/app/bulu/middle.troops/java/springboot/spdetail/spdetail.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]])
+    ], SpdetailComponent);
+    return SpdetailComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/java/springboot/splib/splib.component.html":
+/*!*******************************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/java/springboot/splib/splib.component.html ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 detail-lib\">\n    <a href=\"javascrip:0\" (click)=\"goDeatil('domain')\">Cross domain config</a><br>\n    <a href=\"javascrip:0\" (click)=\"goDeatil('interceptor')\">interceptor</a>\n  </div>\n  <div class=\"col-md-9 detail-font\">\n    <router-outlet></router-outlet>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/java/springboot/splib/splib.component.scss":
+/*!*******************************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/java/springboot/splib/splib.component.scss ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2J1bHUvbWlkZGxlLnRyb29wcy9qYXZhL3NwcmluZ2Jvb3Qvc3BsaWIvc3BsaWIuY29tcG9uZW50LnNjc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/java/springboot/splib/splib.component.ts":
+/*!*****************************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/java/springboot/splib/splib.component.ts ***!
+  \*****************************************************************************/
+/*! exports provided: SplibComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SplibComponent", function() { return SplibComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
+
+
+var SplibComponent = /** @class */ (function () {
+    function SplibComponent(route) {
+        this.route = route;
+    }
+    SplibComponent.prototype.ngOnInit = function () {
+    };
+    SplibComponent.prototype.goDeatil = function (name) {
+        this.route.navigate(['java/lib/detail'], {
+            queryParams: {
+                opName: name
+            }
+        });
+    };
+    SplibComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-splib',
+            template: __webpack_require__(/*! ./splib.component.html */ "./src/app/bulu/middle.troops/java/springboot/splib/splib.component.html"),
+            styles: [__webpack_require__(/*! ./splib.component.scss */ "./src/app/bulu/middle.troops/java/springboot/splib/splib.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+    ], SplibComponent);
+    return SplibComponent;
 }());
 
 
@@ -510,7 +795,7 @@ var NgbaseComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 libLocation\">\n    <a routerLink = \"angular/ngbase\">Basic introduction</a><br>\n    <a routerLink = \"angular/basicuse\">basic use</a><br>\n    <a routerLink = \"angular/leadin\">lead in third-party libraries</a><br>\n  </div>\n  <div class=\"col-md-9 bfont\">\n    <router-outlet></router-outlet>\n  </div>\n</div>\n"
+module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 detail-lib\">\n    <a routerLink = \"angular/ngbase\">Basic introduction</a><br>\n    <a routerLink = \"angular/basicuse\">basic use</a><br>\n    <a routerLink = \"angular/leadin\">lead in third-party libraries</a><br>\n  </div>\n  <div class=\"col-md-9 detail-font\">\n    <router-outlet></router-outlet>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -521,7 +806,7 @@ module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 libLocation\">\n 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".libLocation {\n  text-align: center; }\n\n.bfont {\n  color: #edf5ec; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVsdS9taWRkbGUudHJvb3BzL3dlYi9hbmd1bGFyL25nbGliL0U6XFx2c2NvZGVQcm9qZWN0XFxjaGV2eXNreS9zcmNcXGFwcFxcYnVsdVxcbWlkZGxlLnRyb29wc1xcd2ViXFxhbmd1bGFyXFxuZ2xpYlxcbmdsaWIuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxrQkFBa0IsRUFBQTs7QUFHdEI7RUFDRSxjQUF3QixFQUFBIiwiZmlsZSI6InNyYy9hcHAvYnVsdS9taWRkbGUudHJvb3BzL3dlYi9hbmd1bGFyL25nbGliL25nbGliLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmxpYkxvY2F0aW9ue1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcblxyXG4uYmZvbnR7XHJcbiAgY29sb3I6cmdiKDIzNywgMjQ1LCAyMzYpO1xyXG59Il19 */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2J1bHUvbWlkZGxlLnRyb29wcy93ZWIvYW5ndWxhci9uZ2xpYi9uZ2xpYi5jb21wb25lbnQuc2NzcyJ9 */"
 
 /***/ }),
 
@@ -724,7 +1009,7 @@ var VuebaseComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-md-3\">\n    <a href=\"javascrip:0\" (click)=\"goDeatil('intro')\">Basic introduction</a><br>\n    <a routerLink = \"routeuse\">Basic use of router</a>\n    <a routerLink = \"axios\">Call the background</a>\n  </div>\n  <div class=\"col-md-9 bfont\">\n    <router-outlet></router-outlet>\n  </div>\n</div>"
+module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 detail-lib\">\n    <a href=\"javascrip:0\" (click)=\"goDeatil('intro')\">Basic introduction</a><br>\n    <a routerLink = \"routeuse\">Basic use of router</a><br>\n    <a routerLink = \"axios\">Call the background</a>\n  </div>\n  <div class=\"col-md-9 detail-font\">\n    <router-outlet></router-outlet>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -735,7 +1020,7 @@ module.exports = "<div class=\"row\">\n  <div class=\"col-md-3\">\n    <a href=\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".bfont {\n  color: #edf5ec; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVsdS9taWRkbGUudHJvb3BzL3dlYi92dWUvdnVlbGliL0U6XFx2c2NvZGVQcm9qZWN0XFxjaGV2eXNreS9zcmNcXGFwcFxcYnVsdVxcbWlkZGxlLnRyb29wc1xcd2ViXFx2dWVcXHZ1ZWxpYlxcdnVlbGliLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksY0FBd0IsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2J1bHUvbWlkZGxlLnRyb29wcy93ZWIvdnVlL3Z1ZWxpYi92dWVsaWIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYmZvbnR7XHJcbiAgICBjb2xvcjpyZ2IoMjM3LCAyNDUsIDIzNik7XHJcbiAgfSJdfQ== */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2J1bHUvbWlkZGxlLnRyb29wcy93ZWIvdnVlL3Z1ZWxpYi92dWVsaWIuY29tcG9uZW50LnNjc3MifQ== */"
 
 /***/ }),
 
@@ -965,6 +1250,33 @@ var HeaderComponent = /** @class */ (function () {
     return HeaderComponent;
 }());
 
+
+
+/***/ }),
+
+/***/ "./src/app/router/java.ts":
+/*!********************************!*\
+  !*** ./src/app/router/java.ts ***!
+  \********************************/
+/*! exports provided: javaRoue */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "javaRoue", function() { return javaRoue; });
+/* harmony import */ var _bulu_middle_troops_java_springboot_splib_splib_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../bulu/middle.troops/java/springboot/splib/splib.component */ "./src/app/bulu/middle.troops/java/springboot/splib/splib.component.ts");
+/* harmony import */ var _bulu_middle_troops_java_springboot_spdetail_spdetail_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../bulu/middle.troops/java/springboot/spdetail/spdetail.component */ "./src/app/bulu/middle.troops/java/springboot/spdetail/spdetail.component.ts");
+
+
+var javaRoue = [
+    {
+        path: 'java/lib',
+        component: _bulu_middle_troops_java_springboot_splib_splib_component__WEBPACK_IMPORTED_MODULE_0__["SplibComponent"],
+        children: [
+            { path: 'detail', component: _bulu_middle_troops_java_springboot_spdetail_spdetail_component__WEBPACK_IMPORTED_MODULE_1__["SpdetailComponent"] }
+        ]
+    }
+];
 
 
 /***/ }),
