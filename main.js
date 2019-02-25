@@ -38,14 +38,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _router_web__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./router/web */ "./src/app/router/web.ts");
 /* harmony import */ var _router_java__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./router/java */ "./src/app/router/java.ts");
-/* harmony import */ var _bulu_middle_troops_carousel_carousel_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./bulu/middle.troops/carousel/carousel.component */ "./src/app/bulu/middle.troops/carousel/carousel.component.ts");
+/* harmony import */ var _router_database__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./router/database */ "./src/app/router/database.ts");
+/* harmony import */ var _bulu_middle_troops_carousel_carousel_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./bulu/middle.troops/carousel/carousel.component */ "./src/app/bulu/middle.troops/carousel/carousel.component.ts");
 
 
 
 
 
 
-var routes = _router_web__WEBPACK_IMPORTED_MODULE_3__["webRoute"].concat(_router_java__WEBPACK_IMPORTED_MODULE_4__["javaRoue"], [{ path: 'body/carousel', component: _bulu_middle_troops_carousel_carousel_component__WEBPACK_IMPORTED_MODULE_5__["CarouselComponent"] }]);
+
+var routes = _router_web__WEBPACK_IMPORTED_MODULE_3__["webRoute"].concat(_router_java__WEBPACK_IMPORTED_MODULE_4__["javaRoue"], _router_database__WEBPACK_IMPORTED_MODULE_5__["databaseRoute"], [{ path: 'body/homepage', component: _bulu_middle_troops_carousel_carousel_component__WEBPACK_IMPORTED_MODULE_6__["CarouselComponent"] }]);
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
     }
@@ -148,6 +150,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _bulu_middle_troops_web_vue_vueaxios_vueaxios_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./bulu/middle.troops/web/vue/vueaxios/vueaxios.component */ "./src/app/bulu/middle.troops/web/vue/vueaxios/vueaxios.component.ts");
 /* harmony import */ var _bulu_middle_troops_java_springboot_splib_splib_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./bulu/middle.troops/java/springboot/splib/splib.component */ "./src/app/bulu/middle.troops/java/springboot/splib/splib.component.ts");
 /* harmony import */ var _bulu_middle_troops_java_springboot_spdetail_spdetail_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./bulu/middle.troops/java/springboot/spdetail/spdetail.component */ "./src/app/bulu/middle.troops/java/springboot/spdetail/spdetail.component.ts");
+/* harmony import */ var _bulu_middle_troops_database_oracle_oracle_lib_oracle_lib_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./bulu/middle.troops/database/oracle/oracle.lib/oracle.lib.component */ "./src/app/bulu/middle.troops/database/oracle/oracle.lib/oracle.lib.component.ts");
+/* harmony import */ var _bulu_middle_troops_database_oracle_oracle_detail_oracle_detail_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./bulu/middle.troops/database/oracle/oracle.detail/oracle.detail.component */ "./src/app/bulu/middle.troops/database/oracle/oracle.detail/oracle.detail.component.ts");
+/* harmony import */ var _bulu_middle_troops_java_distributed_distributed_distributed_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./bulu/middle.troops/java/distributed/distributed/distributed.component */ "./src/app/bulu/middle.troops/java/distributed/distributed/distributed.component.ts");
+
+
+
 
 
 
@@ -190,14 +198,17 @@ var AppModule = /** @class */ (function () {
                 _bulu_middle_troops_web_vue_vueroute_vueroute_component__WEBPACK_IMPORTED_MODULE_18__["VuerouteComponent"],
                 _bulu_middle_troops_web_vue_vueaxios_vueaxios_component__WEBPACK_IMPORTED_MODULE_19__["VueaxiosComponent"],
                 _bulu_middle_troops_java_springboot_splib_splib_component__WEBPACK_IMPORTED_MODULE_20__["SplibComponent"],
-                _bulu_middle_troops_java_springboot_spdetail_spdetail_component__WEBPACK_IMPORTED_MODULE_21__["SpdetailComponent"]
+                _bulu_middle_troops_java_springboot_spdetail_spdetail_component__WEBPACK_IMPORTED_MODULE_21__["SpdetailComponent"],
+                _bulu_middle_troops_database_oracle_oracle_lib_oracle_lib_component__WEBPACK_IMPORTED_MODULE_22__["OracleComponent"],
+                _bulu_middle_troops_database_oracle_oracle_detail_oracle_detail_component__WEBPACK_IMPORTED_MODULE_23__["OracleDetailComponent"],
+                _bulu_middle_troops_java_distributed_distributed_distributed_component__WEBPACK_IMPORTED_MODULE_24__["DistributedComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
                 ngx_bootstrap__WEBPACK_IMPORTED_MODULE_5__["AccordionModule"].forRoot(),
-                ngx_bootstrap__WEBPACK_IMPORTED_MODULE_5__["CarouselModule"].forRoot()
+                ngx_bootstrap__WEBPACK_IMPORTED_MODULE_5__["CarouselModule"].forRoot(),
             ],
             providers: [
                 { provide: ngx_bootstrap_carousel__WEBPACK_IMPORTED_MODULE_6__["CarouselConfig"], useValue: { interval: 2000, noPause: true, showIndicators: true } }
@@ -219,7 +230,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row setrow\"></div>\n<div class=\"row setbg\">\n  <div class=\"col-md-9\">\n    <!-- 显示目录的部分 -->\n    <router-outlet></router-outlet>\n  </div>\n  <div class=\"col-sm-3 libheight\">\n    <br>\n        <accordion [closeOthers]=\"true\">\n            <accordion-group heading=\"前端\">\n              <a routerLink = \"angular/nglib\">Angular | ngx-bootstrap</a><br>\n              <a routerLink = \"vue/lib\">Vue | ElementUI</a><br>\n            </accordion-group>\n            <accordion-group heading=\"后端\">\n             <a routerLink = \"java/lib\">SpringBoot</a><br>\n            </accordion-group>\n            <accordion-group heading=\"数据库\">\n              <p>暂无内容</p>\n            </accordion-group>\n            <accordion-group heading=\"随笔\">\n              <p>暂无内容</p>\n            </accordion-group>\n          </accordion>\n  </div>\n</div>"
+module.exports = "<div class=\"row setrow\"></div>\n<div class=\"row setbg\">\n  <div class=\"col-md-9\">\n    <!-- 显示目录的部分 -->\n    <router-outlet></router-outlet>\n  </div>\n  <div class=\"col-sm-3 libheight\">\n    <br>\n        <accordion [closeOthers]=\"true\">\n            <accordion-group heading=\"前端\">\n              <a routerLink = \"angular/nglib\">Angular | ngx-bootstrap</a><br>\n              <a routerLink = \"vue/lib\">Vue | ElementUI</a><br>\n            </accordion-group>\n            <accordion-group heading=\"后端\">\n             <a routerLink = \"java/lib\">SpringBoot</a><br>\n             <a routerLink = \"distributed\">Distributed</a>\n            </accordion-group>\n            <accordion-group heading=\"数据库\">\n                <p>暂无内容</p>\n              <!-- <a routerLink = \"oracle\">Relational database</a><br>\n              <a routerLink = \"\">non relational database</a> -->\n            </accordion-group>\n            <accordion-group heading=\"随笔\">\n              <p>暂无内容</p>\n            </accordion-group>\n          </accordion>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -230,7 +241,7 @@ module.exports = "<div class=\"row setrow\"></div>\n<div class=\"row setbg\">\n 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".setbg {\n  background-image: url('bodybg.jpg');\n  background-repeat: no-repeat;\n  background-size: 100% 100%; }\n\n.setrow {\n  background-color: #ebcb17;\n  height: 10px; }\n\n.libheight {\n  height: 420px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVsdS9taWRkbGUudHJvb3BzL2JvZHllci9FOlxcdnNjb2RlUHJvamVjdFxcY2hldnlza3kvc3JjXFxhcHBcXGJ1bHVcXG1pZGRsZS50cm9vcHNcXGJvZHllclxcYm9keWVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBRUEsbUNBQTJEO0VBQzNELDRCQUE0QjtFQUM1QiwwQkFBMEIsRUFBQTs7QUFHMUI7RUFDSSx5QkFBbUM7RUFDbkMsWUFBWSxFQUFBOztBQUdoQjtFQUNJLGFBQWEsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2J1bHUvbWlkZGxlLnRyb29wcy9ib2R5ZXIvYm9keWVyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNldGJne1xyXG4vL2JhY2tncm91bmQtY29sb3I6IHJnYigxNzIsIDIxOCwgMTk2KTtcclxuYmFja2dyb3VuZC1pbWFnZTogdXJsKCcuLi8uLi8uLi8uLi9hc3NldHMvYnVsdS9ib2R5YmcuanBnJyk7XHJcbmJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbmJhY2tncm91bmQtc2l6ZTogMTAwJSAxMDAlO1xyXG59XHJcblxyXG4uc2V0cm93e1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDIzNSwgMjAzLCAyMyk7XHJcbiAgICBoZWlnaHQ6IDEwcHg7XHJcbn1cclxuXHJcbi5saWJoZWlnaHR7XHJcbiAgICBoZWlnaHQ6IDQyMHB4O1xyXG59XHJcbiJdfQ== */"
+module.exports = ".setbg {\n  background-image: url('bodybg.jpg');\n  background-repeat: no-repeat;\n  background-size: 100% 100%; }\n\n.setrow {\n  background-color: #ebcb17;\n  height: 10px; }\n\n.libheight {\n  position: fixed;\n  right: 0px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVsdS9taWRkbGUudHJvb3BzL2JvZHllci9FOlxcdnNjb2RlUHJvamVjdFxcY2hldnlza3kvc3JjXFxhcHBcXGJ1bHVcXG1pZGRsZS50cm9vcHNcXGJvZHllclxcYm9keWVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBRUEsbUNBQTJEO0VBQzNELDRCQUE0QjtFQUM1QiwwQkFBMEIsRUFBQTs7QUFHMUI7RUFDSSx5QkFBbUM7RUFDbkMsWUFBWSxFQUFBOztBQUdoQjtFQUNJLGVBQWU7RUFBQyxVQUFVLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9idWx1L21pZGRsZS50cm9vcHMvYm9keWVyL2JvZHllci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5zZXRiZ3tcclxuLy8gYmFja2dyb3VuZC1jb2xvcjogcmdiKDExLCAyMTEsIDcxKTtcclxuYmFja2dyb3VuZC1pbWFnZTogdXJsKCcuLi8uLi8uLi8uLi9hc3NldHMvYnVsdS9ib2R5YmcuanBnJyk7XHJcbmJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbmJhY2tncm91bmQtc2l6ZTogMTAwJSAxMDAlO1xyXG59XHJcblxyXG4uc2V0cm93e1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDIzNSwgMjAzLCAyMyk7XHJcbiAgICBoZWlnaHQ6IDEwcHg7XHJcbn1cclxuXHJcbi5saWJoZWlnaHR7XHJcbiAgICBwb3NpdGlvbjogZml4ZWQ7cmlnaHQ6IDBweDtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -255,7 +266,14 @@ var BodyerComponent = /** @class */ (function () {
         this.router = router;
     }
     BodyerComponent.prototype.ngOnInit = function () {
-        //this.router.navigate(['body/carousel']);//OR this.router.navigateByUrl('body/carousel')
+        this.router.navigate(['body/homepage']);
+    };
+    BodyerComponent.prototype.goDirectory = function (dirName) {
+        this.router.navigate(['directory'], {
+            queryParams: {
+                dirName: dirName
+            }
+        });
     };
     BodyerComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -334,6 +352,318 @@ var CarouselComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/bulu/middle.troops/database/oracle/oracle.detail/oracle.detail.component.html":
+/*!***********************************************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/database/oracle/oracle.detail/oracle.detail.component.html ***!
+  \***********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  oracle.detail works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/database/oracle/oracle.detail/oracle.detail.component.scss":
+/*!***********************************************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/database/oracle/oracle.detail/oracle.detail.component.scss ***!
+  \***********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2J1bHUvbWlkZGxlLnRyb29wcy9kYXRhYmFzZS9vcmFjbGUvb3JhY2xlLmRldGFpbC9vcmFjbGUuZGV0YWlsLmNvbXBvbmVudC5zY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/database/oracle/oracle.detail/oracle.detail.component.ts":
+/*!*********************************************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/database/oracle/oracle.detail/oracle.detail.component.ts ***!
+  \*********************************************************************************************/
+/*! exports provided: OracleDetailComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OracleDetailComponent", function() { return OracleDetailComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var OracleDetailComponent = /** @class */ (function () {
+    function OracleDetailComponent() {
+    }
+    OracleDetailComponent.prototype.ngOnInit = function () {
+    };
+    OracleDetailComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-oracle.detail',
+            template: __webpack_require__(/*! ./oracle.detail.component.html */ "./src/app/bulu/middle.troops/database/oracle/oracle.detail/oracle.detail.component.html"),
+            styles: [__webpack_require__(/*! ./oracle.detail.component.scss */ "./src/app/bulu/middle.troops/database/oracle/oracle.detail/oracle.detail.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], OracleDetailComponent);
+    return OracleDetailComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/database/oracle/oracle.lib/oracle.lib.component.html":
+/*!*****************************************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/database/oracle/oracle.lib/oracle.lib.component.html ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n    <div class=\"col-md-3 detail-lib\">\n        <button type=\"button\" class=\"btn btn-outline-primary\">Primary</button>\n        <button type=\"button\" class=\"btn btn-outline-secondary\">Secondary</button>\n        <button type=\"button\" class=\"btn btn-outline-success\">Success</button>\n        <button type=\"button\" class=\"btn btn-outline-danger\">Danger</button>\n        <button type=\"button\" class=\"btn btn-outline-warning\">Warning</button>\n        <button type=\"button\" class=\"btn btn-outline-info\">Info</button>\n        <button type=\"button\" class=\"btn btn-outline-light\">Light</button>\n        <button type=\"button\" class=\"btn btn-outline-dark\">Dark</button>\n      <a href=\"javascrip:0\" (click)=\"goDeatil('config')\">DataSource Config</a><br>\n    </div>\n    <div class=\"col-md-9 detail-font\">\n      <div [innerHTML] = 'showData'></div>\n      <router-outlet></router-outlet>\n    </div>\n  </div>\n"
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/database/oracle/oracle.lib/oracle.lib.component.scss":
+/*!*****************************************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/database/oracle/oracle.lib/oracle.lib.component.scss ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2J1bHUvbWlkZGxlLnRyb29wcy9kYXRhYmFzZS9vcmFjbGUvb3JhY2xlLmxpYi9vcmFjbGUubGliLmNvbXBvbmVudC5zY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/database/oracle/oracle.lib/oracle.lib.component.ts":
+/*!***************************************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/database/oracle/oracle.lib/oracle.lib.component.ts ***!
+  \***************************************************************************************/
+/*! exports provided: OracleComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OracleComponent", function() { return OracleComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var OracleComponent = /** @class */ (function () {
+    function OracleComponent() {
+    }
+    OracleComponent.prototype.ngOnInit = function () {
+    };
+    OracleComponent.prototype.goDetail = function (name) {
+        switch (name) {
+            case 'goDeatil': this.showData = '';
+        }
+    };
+    OracleComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-oracle.lib',
+            template: __webpack_require__(/*! ./oracle.lib.component.html */ "./src/app/bulu/middle.troops/database/oracle/oracle.lib/oracle.lib.component.html"),
+            styles: [__webpack_require__(/*! ./oracle.lib.component.scss */ "./src/app/bulu/middle.troops/database/oracle/oracle.lib/oracle.lib.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], OracleComponent);
+    return OracleComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/java/distributed/distributed/distributed.component.html":
+/*!********************************************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/java/distributed/distributed/distributed.component.html ***!
+  \********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 detail-lib\">\n    <br>\n      <button type=\"button\" class=\"btn btn-outline-secondary btn-lg btn-block\" (click)=\"goDetail('dubbo')\">dubbo + zookeeper</button>\n  </div>\n  <div class=\"col-md-9 detail-font\">\n    <div [innerHTML] = 'showData'></div>\n    <span *ngIf = \"dubboShow\">\n      第六步：<a href=\"javascripts:0\" (click)=\"goOtherLib('java/lib','domain')\">跨域配置</a><br>\n      第七步：前端调用，如在地址栏输入http://localhost:8023/user/info\n    </span>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/java/distributed/distributed/distributed.component.scss":
+/*!********************************************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/java/distributed/distributed/distributed.component.scss ***!
+  \********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2J1bHUvbWlkZGxlLnRyb29wcy9qYXZhL2Rpc3RyaWJ1dGVkL2Rpc3RyaWJ1dGVkL2Rpc3RyaWJ1dGVkLmNvbXBvbmVudC5zY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/java/distributed/distributed/distributed.component.ts":
+/*!******************************************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/java/distributed/distributed/distributed.component.ts ***!
+  \******************************************************************************************/
+/*! exports provided: DistributedComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DistributedComponent", function() { return DistributedComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _dubbo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../dubbo */ "./src/app/bulu/middle.troops/java/distributed/dubbo.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
+
+
+
+var DistributedComponent = /** @class */ (function () {
+    function DistributedComponent(route) {
+        this.route = route;
+        this.showData = _dubbo__WEBPACK_IMPORTED_MODULE_2__["dubbo"]; //赋初始值显示dubbo + zookeeper分布式架构内容
+        this.dubboShow = true;
+    }
+    DistributedComponent.prototype.ngOnInit = function () {
+    };
+    DistributedComponent.prototype.goDetail = function (name) {
+        this.controlShow();
+        switch (name) {
+            case 'dubbo':
+                this.showData = _dubbo__WEBPACK_IMPORTED_MODULE_2__["dubbo"];
+                this.dubboShow = true;
+                break;
+        }
+    };
+    DistributedComponent.prototype.goOtherLib = function (path, name) {
+        this.route.navigate([path], {
+            queryParams: {
+                opName: name
+            }
+        });
+    };
+    //所有ngIf控制的内容全部隐藏全部隐藏
+    DistributedComponent.prototype.controlShow = function () {
+        this.dubboShow = false;
+    };
+    DistributedComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-distributed',
+            template: __webpack_require__(/*! ./distributed.component.html */ "./src/app/bulu/middle.troops/java/distributed/distributed/distributed.component.html"),
+            styles: [__webpack_require__(/*! ./distributed.component.scss */ "./src/app/bulu/middle.troops/java/distributed/distributed/distributed.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
+    ], DistributedComponent);
+    return DistributedComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/java/distributed/dubbo.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/java/distributed/dubbo.ts ***!
+  \**************************************************************/
+/*! exports provided: dubbo */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dubbo", function() { return dubbo; });
+var dubbo = '<h4 class="title-font">简单的dubbo + zookeeper分布式架构搭建</h4>' +
+    '<a href="https://github.com/chevysky/tiny-dubbo">github代码所在地</a><br>' +
+    '第一步：<a href="javascripts:0">下载安装zookeeper</a><br>' +
+    '第二步：<a href="javascripts:0">下载安装dubbo-admin</a><br>' +
+    '第三部：编写一个公共的API包，内容为传递数据的实体类和接口定义，用于消费端consumer的调用和提供端provider去实现。注：传递的实体类需要序列化，所以需要在实体类中实现java.io.Serializable<br>' +
+    '编写完成，maven打包，并将其添加到maven仓库：<br>' +
+    'mvn install:install-file -Dfile=C:\\Users\\Administrator\\.m2\\commom-0.0.1-SNAPSHOT.jar -DgroupId=com.dobbo -DartifactId=commom -Dversion=0.0.1-SNAPSHOT -Dpackaging=jar<br>' +
+    '第四部：搭建springboot项目，编辑提供者provider<br>' +
+    '<div class="condent">' +
+    '在application.properties中做配置：<br>' +
+    '#服务端口<br>' +
+    'server.port=8022<br>' +
+    '#数据库连接<br>' +
+    'spring.datasource.driver-class-name=com.mysql.jdbc.Driver<br>' +
+    'spring.datasource.username=****<br>' +
+    'spring.datasource.password=****<br>' +
+    'spring.datasource.url=jdbc:mysql://localhost:3306/****?characterEncoding=utf-8<br>' +
+    'spring.datasource.type=com.alibaba.druid.pool.DruidDataSource<br>' +
+    '#dubbo服务端口，我们无需知道dubbo服务运行在哪个端口，故将其设为随机端口<br>' +
+    'dubbo.protocol.port= -1<br>' +
+    '#dubbo服务名称<br>' +
+    'dubbo.application.name=provider<br>' +
+    '#dubbo服务所在包路径<br>' +
+    'dubbo.scan.base-packages=com.dubbo.provider.service<br>' +
+    '#注册中心地址<br>' +
+    'dubbo.registry.address=zookeeper://127.0.0.1:2181<br>' +
+    '#设置服务的日志输出级别为debug级<br>' +
+    'logging.level.com.dubbo.provider=debug<br>' +
+    '</div>' +
+    '<div class="word">' +
+    '将加入mvan本地库的公共API jar包引入到provider中：<br>' +
+    '&lt;dependency>&lt;!--存放公共服务接口--><br>' +
+    '&lt;groupId>com.dobbo&lt;/groupId><br>' +
+    '&lt;artifactId>commom&lt;/artifactId><br>' +
+    '&lt;version>0.0.1-SNAPSHOT&lt;/version><br>' +
+    '&lt;/dependency><br>' +
+    '</div>' +
+    '<div class="code">' +
+    '编写公共服务接口的实现类：<br>' +
+    'package com.dubbo.provider.service;<br>' +
+    'import com.alibaba.dubbo.config.annotation.Service;<br>' +
+    'import com.dobbo.commom.UserService;<br>' +
+    'import com.dobbo.commom.UserEntity;<br>' +
+    '@Service<br>' +
+    'public class UserServiceImpl implements UserService {<br>' +
+    '@Override{<br>' +
+    'public UserEntity getUserInfo() {<br>' +
+    '&nbsp;&nbsp;UserEntity user = new UserEntity();<br>' +
+    '&nbsp;&nbsp;具体的业务操作...<br>' +
+    '&nbsp;&nbsp;return user;<br>' +
+    '&nbsp;}<br>' +
+    '}<br>' +
+    '<div class="remark">备注：在项目启动类上加dubbo的注解@EnableDubbo目的在于识别dubbo的Service注解</div>' +
+    '</div>' +
+    '第五部：搭建springboot项目，编辑消费端consumer：<br>' +
+    '<div class="content">' +
+    '将加入mvan本地库的公共API jar包引入到consumer中<br>' +
+    'application.properpies文件配置：<br>' +
+    '#服务端口<br>' +
+    'server.port=8023<br>' +
+    '#数据库连接<br>' +
+    'spring.datasource.driver-class-name=com.mysql.jdbc.Driver<br>' +
+    'spring.datasource.username=****<br>' +
+    'spring.datasource.password=****<br>' +
+    'spring.datasource.url=jdbc:mysql://localhost:3306/****?characterEncoding=utf-8<br>' +
+    'spring.datasource.type=com.alibaba.druid.pool.DruidDataSource<br>' +
+    '#消费者名称<br>' +
+    'dubbo.application.name=consumer<br>' +
+    '#需要使用到提供者服务的包路径<br>' +
+    'dubbo.scan.base-packages=com.dubbo.consumer.controller<br>' +
+    '#注册中心地址<br>' +
+    'dubbo.registry.address=zookeeper://127.0.0.1:2181<br>' +
+    '#DUBBO 2.5.8重构了telnet端口与DUBBO协议的端口是不同的端口，默认为22222，这里可以手动修改避免端口被占用<br>' +
+    'dubbo.application.qos-enable=true<br>' +
+    'dubbo.application.qos-port=33333<br>' +
+    '#拒绝远端主机发出的命令，只允许服务本机执行,true有可能带来安全风险<br>' +
+    'dubbo.application.qos-accept-foreign-ip=false<br>' +
+    '</div>' +
+    '<div class="word">编辑消费端的controller调取服务接口：<br><br>' +
+    'package com.dubbo.consumer.controller;<br>' +
+    'import com.alibaba.dubbo.config.annotation.Reference;<br>' +
+    'import com.dobbo.commom.UserEntity;<br>' +
+    'import com.dobbo.commom.UserService;<br>' +
+    'import org.springframework.web.bind.annotation.RequestMapping;<br>' +
+    'import org.springframework.web.bind.annotation.RestController;<br>' +
+    '@RestController<br>' +
+    '@RequestMapping("/user")<br>' +
+    'public class UserController {<br>' +
+    '@Reference<br>' +
+    'private UserService userService;<br>' +
+    '@RequestMapping(value = "/info")<br>' +
+    'public UserEntity getUserInfo()throws Exception{<br>' +
+    'UserEntity user = userService.getUserInfo();<br>' +
+    'System.out.println(user);<br>' +
+    'return user;<br>' +
+    '}<br>' +
+    '}<br>' +
+    '</div>';
+
+
+/***/ }),
+
 /***/ "./src/app/bulu/middle.troops/java/springboot/domain.ts":
 /*!**************************************************************!*\
   !*** ./src/app/bulu/middle.troops/java/springboot/domain.ts ***!
@@ -344,8 +674,7 @@ var CarouselComponent = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "domain", function() { return domain; });
-//跨域配置
-var domain = '<h4>方案一</h4>' +
+var domain = '<h4 class="title-font">跨域配置</h4>' +
     'CrossOriginConfig.java<br>' +
     'package cn.bulu.config;<br>' +
     'import org.springframework.context.annotation.Bean;<br>' +
@@ -386,7 +715,8 @@ var domain = '<h4>方案一</h4>' +
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "interceptor", function() { return interceptor; });
-var interceptor = 'import com.scxd.beans.extendbeans.Authority;<br>' +
+var interceptor = '<h4 class="title-font">拦截器配置</h4>' +
+    'import com.scxd.beans.extendbeans.Authority;<br>' +
     'import org.springframework.stereotype.Component;<br>' +
     'import org.springframework.web.servlet.HandlerInterceptor;<br>' +
     'import org.springframework.web.servlet.ModelAndView;<br>' +
@@ -451,7 +781,7 @@ var interceptor = 'import com.scxd.beans.extendbeans.Authority;<br>' +
     '@Override<br>' +
     'public void addInterceptors(InterceptorRegistry registry) {<br>' +
     '此处的集合装的是一系列不应该被拦截的地址<br>' +
-    'List<String> pathPatterns = new ArrayList<>();<br>' +
+    'List&lt;String> pathPatterns = new ArrayList<>();<br>' +
     'pathPatterns.add("/path1/path2");<br>' +
     'pathPatterns.add("/path1/path2");<br>' +
     'pathPatterns.add("/path1/path2");<br>' +
@@ -500,35 +830,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _domain__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../domain */ "./src/app/bulu/middle.troops/java/springboot/domain.ts");
-/* harmony import */ var _interceptor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../interceptor */ "./src/app/bulu/middle.troops/java/springboot/interceptor.ts");
 
 
 
-
-
+// import { domain } from '../domain'
+// import { interceptor } from '../interceptor'
 var SpdetailComponent = /** @class */ (function () {
     function SpdetailComponent(routeinfo) {
         this.routeinfo = routeinfo;
-        this.opName = "";
-        this.brace = "{";
     }
     SpdetailComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.routeinfo.queryParams.subscribe(function (queryParams) {
-            _this.opName = queryParams.opName;
-        });
-        this.setShowData();
-    };
-    SpdetailComponent.prototype.setShowData = function () {
-        switch (this.opName) {
-            case 'domain':
-                this.showData = _domain__WEBPACK_IMPORTED_MODULE_3__["domain"];
-                break;
-            case 'interceptor':
-                this.showData = _interceptor__WEBPACK_IMPORTED_MODULE_4__["interceptor"];
-                break;
-        }
+        // this.routeinfo.queryParams.subscribe(queryParams =>{
+        //   this.opName = queryParams.opName;
+        // })
+        // this.setShowData();
     };
     SpdetailComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -552,7 +867,7 @@ var SpdetailComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 detail-lib\">\n    <a href=\"javascrip:0\" (click)=\"goDeatil('domain')\">Cross domain config</a><br>\n    <a href=\"javascrip:0\" (click)=\"goDeatil('interceptor')\">interceptor</a>\n  </div>\n  <div class=\"col-md-9 detail-font\">\n    <router-outlet></router-outlet>\n  </div>\n</div>"
+module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 detail-lib\">\n    <br>\n      <button type=\"button\" class=\"btn btn-outline-primary btn-lg btn-block\" \n      (click)=\"goDeatil('domain')\">Cross domain config</button>\n      <button type=\"button\" class=\"btn btn-outline-secondary btn-lg btn-block\" \n      (click)=\"goDeatil('interceptor')\">interceptor</button>\n  </div>\n  <div class=\"col-md-9 detail-font\">\n    <div [innerHTML] = 'showData'></div>\n    <router-outlet></router-outlet>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -580,21 +895,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _domain__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../domain */ "./src/app/bulu/middle.troops/java/springboot/domain.ts");
+/* harmony import */ var _interceptor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../interceptor */ "./src/app/bulu/middle.troops/java/springboot/interceptor.ts");
+
+
 
 
 
 var SplibComponent = /** @class */ (function () {
-    function SplibComponent(route) {
+    function SplibComponent(route, routerinfo) {
         this.route = route;
+        this.routerinfo = routerinfo;
     }
     SplibComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.routerinfo.queryParams.subscribe(function (queryParams) {
+            _this.goDeatil(queryParams.opName);
+        });
     };
     SplibComponent.prototype.goDeatil = function (name) {
-        this.route.navigate(['java/lib/detail'], {
-            queryParams: {
-                opName: name
-            }
-        });
+        switch (name) {
+            case 'domain':
+                this.showData = _domain__WEBPACK_IMPORTED_MODULE_3__["domain"];
+                break;
+            case 'interceptor':
+                this.showData = _interceptor__WEBPACK_IMPORTED_MODULE_4__["interceptor"];
+                break;
+            default:
+                this.showData = _domain__WEBPACK_IMPORTED_MODULE_3__["domain"];
+        }
     };
     SplibComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -602,7 +931,7 @@ var SplibComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./splib.component.html */ "./src/app/bulu/middle.troops/java/springboot/splib/splib.component.html"),
             styles: [__webpack_require__(/*! ./splib.component.scss */ "./src/app/bulu/middle.troops/java/springboot/splib/splib.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]])
     ], SplibComponent);
     return SplibComponent;
 }());
@@ -680,7 +1009,7 @@ var BasicuseComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<b>ngx-bootstranp</b><br>\n首先下载ngx-bootstrap：npm install ngx-bootstrap --save<br>\n下载后，在module.ts中导入ngx-bootstrap/modal类<br>\n{{textNgxbtImport}}<br>\n{{textNgxbtImports}}<br>\n<b>引入bootstrap样式</b><br>\n方法一：在style.scss或style.css根样式中引入：@import url(\"../node_modules/bootstrap/dist/css/bootstrap.min.css\")<br>\n方法二：在package.json或angular.json中引入：在styles数组中添加\"./node_modules/bootstrap/dist/css/bootstrap.min.css\"<br>\n"
+module.exports = "<b>ngx-bootstranp</b><br>\n首先下载ngx-bootstrap：npm install ngx-bootstrap --save<br>\n下载后，在module.ts中导入ngx-bootstrap/modal类<br>\n{{textNgxbtImport}}<br>\n{{textNgxbtImports}}<br>\n<b>引入bootstrap样式</b><br>\n方法一：在style.scss或style.css根样式中引入：@import url(\"../node_modules/bootstrap/dist/css/bootstrap.min.css\")<br>\n方法二：在package.json或angular.json中引入：在styles数组中添加\"./node_modules/bootstrap/dist/css/bootstrap.min.css\"<br>\n<div style=\"height: 170px\"></div>\n"
 
 /***/ }),
 
@@ -795,7 +1124,7 @@ var NgbaseComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 detail-lib\">\n    <a routerLink = \"angular/ngbase\">Basic introduction</a><br>\n    <a routerLink = \"angular/basicuse\">basic use</a><br>\n    <a routerLink = \"angular/leadin\">lead in third-party libraries</a><br>\n  </div>\n  <div class=\"col-md-9 detail-font\">\n    <router-outlet></router-outlet>\n  </div>\n</div>\n"
+module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 detail-lib\">\n    <br> \n      <button type=\"button\" class=\"btn btn-outline-primary btn-lg btn-block\" \n      routerLink = \"angular/ngbase\">Basic Introduction</button>\n      <button type=\"button\" class=\"btn btn-outline-secondary btn-lg btn-block\"\n      routerLink = \"angular/basicuse\">Basic Use</button>\n      <button type=\"button\" class=\"btn btn-outline-success btn-lg btn-block\"\n      routerLink = \"angular/leadin\">Bootstrap</button>\n  </div>\n  <div class=\"col-md-9 detail-font\">\n    <router-outlet></router-outlet>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -822,12 +1151,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NglibComponent", function() { return NglibComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
 
 
 var NglibComponent = /** @class */ (function () {
-    function NglibComponent() {
+    function NglibComponent(router) {
+        this.router = router;
     }
     NglibComponent.prototype.ngOnInit = function () {
+        this.router.navigate(['angular/nglib/angular/ngbase']);
     };
     NglibComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -835,7 +1168,7 @@ var NglibComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./nglib.component.html */ "./src/app/bulu/middle.troops/web/angular/nglib/nglib.component.html"),
             styles: [__webpack_require__(/*! ./nglib.component.scss */ "./src/app/bulu/middle.troops/web/angular/nglib/nglib.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
     ], NglibComponent);
     return NglibComponent;
 }());
@@ -851,7 +1184,7 @@ var NglibComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h4>VUE用AXIOS实现与JAVA后端调用</h4>\n安装AXIOS npm install axios<br>\n在main.js中引入axios：import axios from 'axios'<br>\n由于axios不能直接使用Vue.use()，所以可以在引入axios后修改原型链，或者结合Vuex封装一个action;<br>\n<h4>修改原型链</h4>\nVue.prototype.$ajax = axios<br>\n<h4>axios 配置</h4>\naxios.defaults.timeout = 5000;<br>\n//axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';<br>\naxios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8';<br>\n// axios.defaults.headers.post['Content-Type'] = 'json';<br>\n// axios.defaults.baseURL = 'http://localhost:8080/项目名/';<br>\naxios.defaults.baseURL = 'http://localhost:8080/';<br>\n<h4>向后端发送请求</h4>\nmethods:{{text_1}}<br>\n  sendAjax(){{text_1}}<br>\n      this.$ajax.post('/user/vue',{{text_1}}<br>\n          name:'chevysky',<br>\n          sex:'man',<br>\n          age:16<br>\n      }).then(function(res){{text_1}}<br>\n          console.log(res);<br>\n          console.log(res.data);<br>\n          alert(res.data);<br>\n      })<br>\n  },<br>\n  sendNoParams(){{text_1}}<br>\n      this.$ajax.post('/user/vues').then(function(res){{text_1}}<br>\n          alert('请求成功');<br>\n      })<br>\n  }<br>\n}<br>\n<a href=\"javascript:0\">这个时候会出现跨域访问的问题，参考SpringBoot的跨域配置。</a>"
+module.exports = "<h4>VUE用AXIOS实现与JAVA后端调用</h4>\n安装AXIOS npm install axios<br>\n在main.js中引入axios：import axios from 'axios'<br>\n由于axios不能直接使用Vue.use()，所以可以在引入axios后修改原型链，或者结合Vuex封装一个action;<br>\n<h4>修改原型链</h4>\nVue.prototype.$ajax = axios<br>\n<h4>axios 配置</h4>\naxios.defaults.timeout = 5000;<br>\n//axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';<br>\naxios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8';<br>\n// axios.defaults.headers.post['Content-Type'] = 'json';<br>\n// axios.defaults.baseURL = 'http://localhost:8080/项目名/';<br>\naxios.defaults.baseURL = 'http://localhost:8080/';<br>\n<h4>向后端发送请求</h4>\nmethods:{{text_1}}<br>\n  sendAjax(){{text_1}}<br>\n      this.$ajax.post('/user/vue',{{text_1}}<br>\n          name:'chevysky',<br>\n          sex:'man',<br>\n          age:16<br>\n      }).then(function(res){{text_1}}<br>\n          console.log(res);<br>\n          console.log(res.data);<br>\n          alert(res.data);<br>\n      })<br>\n  },<br>\n  sendNoParams(){{text_1}}<br>\n      this.$ajax.post('/user/vues').then(function(res){{text_1}}<br>\n          alert('请求成功');<br>\n      })<br>\n  }<br>\n}<br>\n<a href=\"javascript:0\" (click) = \"goOtherPage('/java/lib','domain')\">这个时候会出现跨域访问的问题，参考SpringBoot的跨域配置。</a>"
 
 /***/ }),
 
@@ -878,13 +1211,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VueaxiosComponent", function() { return VueaxiosComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
 
 
 var VueaxiosComponent = /** @class */ (function () {
-    function VueaxiosComponent() {
+    function VueaxiosComponent(router) {
+        this.router = router;
         this.text_1 = "{";
     }
     VueaxiosComponent.prototype.ngOnInit = function () {
+    };
+    VueaxiosComponent.prototype.goOtherPage = function (path, name) {
+        this.router.navigate([path], {
+            queryParams: {
+                opName: name
+            }
+        });
     };
     VueaxiosComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -892,7 +1235,7 @@ var VueaxiosComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./vueaxios.component.html */ "./src/app/bulu/middle.troops/web/vue/vueaxios/vueaxios.component.html"),
             styles: [__webpack_require__(/*! ./vueaxios.component.scss */ "./src/app/bulu/middle.troops/web/vue/vueaxios/vueaxios.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
     ], VueaxiosComponent);
     return VueaxiosComponent;
 }());
@@ -1009,7 +1352,7 @@ var VuebaseComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 detail-lib\">\n    <a href=\"javascrip:0\" (click)=\"goDeatil('intro')\">Basic introduction</a><br>\n    <a routerLink = \"routeuse\">Basic use of router</a><br>\n    <a routerLink = \"axios\">Call the background</a>\n  </div>\n  <div class=\"col-md-9 detail-font\">\n    <router-outlet></router-outlet>\n  </div>\n</div>"
+module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 detail-lib\">\n    <br>\n      <button type=\"button\" class=\"btn btn-outline-primary btn-lg btn-block\"\n      (click)=\"goDeatil('intro')\">Basic introduction</button>\n      <button type=\"button\" class=\"btn btn-outline-secondary btn-lg btn-block\"\n      routerLink = \"routeuse\">Basic use of router</button>\n      <button type=\"button\" class=\"btn btn-outline-success btn-lg btn-block\"\n      routerLink = \"axios\">Call the background</button>\n  </div>\n  <div class=\"col-md-9 detail-font\">\n    <router-outlet></router-outlet>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -1045,6 +1388,7 @@ var VuelibComponent = /** @class */ (function () {
         this.router = router;
     }
     VuelibComponent.prototype.ngOnInit = function () {
+        this.goDeatil('intro');
     };
     VuelibComponent.prototype.goDeatil = function (name) {
         this.router.navigate(['vue/lib/vue/base'], {
@@ -1237,7 +1581,7 @@ var HeaderComponent = /** @class */ (function () {
     HeaderComponent.prototype.ngOnInit = function () {
     };
     HeaderComponent.prototype.goHomePage = function () {
-        this.router.navigateByUrl('');
+        this.router.navigateByUrl('body/homepage');
     };
     HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1254,6 +1598,33 @@ var HeaderComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/router/database.ts":
+/*!************************************!*\
+  !*** ./src/app/router/database.ts ***!
+  \************************************/
+/*! exports provided: databaseRoute */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "databaseRoute", function() { return databaseRoute; });
+/* harmony import */ var _bulu_middle_troops_database_oracle_oracle_lib_oracle_lib_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../bulu/middle.troops/database/oracle/oracle.lib/oracle.lib.component */ "./src/app/bulu/middle.troops/database/oracle/oracle.lib/oracle.lib.component.ts");
+/* harmony import */ var _bulu_middle_troops_database_oracle_oracle_detail_oracle_detail_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../bulu/middle.troops/database/oracle/oracle.detail/oracle.detail.component */ "./src/app/bulu/middle.troops/database/oracle/oracle.detail/oracle.detail.component.ts");
+
+
+var databaseRoute = [
+    {
+        path: 'oracle',
+        component: _bulu_middle_troops_database_oracle_oracle_lib_oracle_lib_component__WEBPACK_IMPORTED_MODULE_0__["OracleComponent"],
+        children: [
+            { path: 'detail', component: _bulu_middle_troops_database_oracle_oracle_detail_oracle_detail_component__WEBPACK_IMPORTED_MODULE_1__["OracleDetailComponent"] }
+        ]
+    }
+];
+
+
+/***/ }),
+
 /***/ "./src/app/router/java.ts":
 /*!********************************!*\
   !*** ./src/app/router/java.ts ***!
@@ -1266,6 +1637,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "javaRoue", function() { return javaRoue; });
 /* harmony import */ var _bulu_middle_troops_java_springboot_splib_splib_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../bulu/middle.troops/java/springboot/splib/splib.component */ "./src/app/bulu/middle.troops/java/springboot/splib/splib.component.ts");
 /* harmony import */ var _bulu_middle_troops_java_springboot_spdetail_spdetail_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../bulu/middle.troops/java/springboot/spdetail/spdetail.component */ "./src/app/bulu/middle.troops/java/springboot/spdetail/spdetail.component.ts");
+/* harmony import */ var _bulu_middle_troops_java_distributed_distributed_distributed_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../bulu/middle.troops/java/distributed/distributed/distributed.component */ "./src/app/bulu/middle.troops/java/distributed/distributed/distributed.component.ts");
+
 
 
 var javaRoue = [
@@ -1275,6 +1648,10 @@ var javaRoue = [
         children: [
             { path: 'detail', component: _bulu_middle_troops_java_springboot_spdetail_spdetail_component__WEBPACK_IMPORTED_MODULE_1__["SpdetailComponent"] }
         ]
+    },
+    {
+        path: 'distributed',
+        component: _bulu_middle_troops_java_distributed_distributed_distributed_component__WEBPACK_IMPORTED_MODULE_2__["DistributedComponent"]
     }
 ];
 
