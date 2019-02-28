@@ -153,6 +153,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _bulu_middle_troops_database_oracle_oracle_lib_oracle_lib_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./bulu/middle.troops/database/oracle/oracle.lib/oracle.lib.component */ "./src/app/bulu/middle.troops/database/oracle/oracle.lib/oracle.lib.component.ts");
 /* harmony import */ var _bulu_middle_troops_database_oracle_oracle_detail_oracle_detail_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./bulu/middle.troops/database/oracle/oracle.detail/oracle.detail.component */ "./src/app/bulu/middle.troops/database/oracle/oracle.detail/oracle.detail.component.ts");
 /* harmony import */ var _bulu_middle_troops_java_distributed_distributed_distributed_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./bulu/middle.troops/java/distributed/distributed/distributed.component */ "./src/app/bulu/middle.troops/java/distributed/distributed/distributed.component.ts");
+/* harmony import */ var _bulu_middle_troops_java_toolkit_kit_kit_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./bulu/middle.troops/java/toolkit/kit/kit.component */ "./src/app/bulu/middle.troops/java/toolkit/kit/kit.component.ts");
+
 
 
 
@@ -202,6 +204,7 @@ var AppModule = /** @class */ (function () {
                 _bulu_middle_troops_database_oracle_oracle_lib_oracle_lib_component__WEBPACK_IMPORTED_MODULE_22__["OracleComponent"],
                 _bulu_middle_troops_database_oracle_oracle_detail_oracle_detail_component__WEBPACK_IMPORTED_MODULE_23__["OracleDetailComponent"],
                 _bulu_middle_troops_java_distributed_distributed_distributed_component__WEBPACK_IMPORTED_MODULE_24__["DistributedComponent"],
+                _bulu_middle_troops_java_toolkit_kit_kit_component__WEBPACK_IMPORTED_MODULE_25__["KitComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -209,6 +212,7 @@ var AppModule = /** @class */ (function () {
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
                 ngx_bootstrap__WEBPACK_IMPORTED_MODULE_5__["AccordionModule"].forRoot(),
                 ngx_bootstrap__WEBPACK_IMPORTED_MODULE_5__["CarouselModule"].forRoot(),
+                ngx_bootstrap__WEBPACK_IMPORTED_MODULE_5__["TabsModule"].forRoot()
             ],
             providers: [
                 { provide: ngx_bootstrap_carousel__WEBPACK_IMPORTED_MODULE_6__["CarouselConfig"], useValue: { interval: 2000, noPause: true, showIndicators: true } }
@@ -230,7 +234,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row setrow\"></div>\n<div class=\"row setbg\">\n  <div class=\"col-md-9\">\n    <!-- 显示目录的部分 -->\n    <router-outlet></router-outlet>\n  </div>\n  <div class=\"col-sm-3 libheight\">\n    <br>\n        <accordion [closeOthers]=\"true\">\n            <accordion-group heading=\"前端\">\n              <a routerLink = \"angular/nglib\">Angular | ngx-bootstrap</a><br>\n              <a routerLink = \"vue/lib\">Vue | ElementUI</a><br>\n            </accordion-group>\n            <accordion-group heading=\"后端\">\n             <a routerLink = \"java/lib\">SpringBoot</a><br>\n             <a routerLink = \"distributed\">Distributed</a>\n            </accordion-group>\n            <accordion-group heading=\"数据库\">\n                <p>暂无内容</p>\n              <!-- <a routerLink = \"oracle\">Relational database</a><br>\n              <a routerLink = \"\">non relational database</a> -->\n            </accordion-group>\n            <accordion-group heading=\"随笔\">\n              <p>暂无内容</p>\n            </accordion-group>\n          </accordion>\n  </div>\n</div>"
+module.exports = "<div class=\"row setrow\"></div>\n<div class=\"row setbg\">\n  <div class=\"col-md-9\">\n    <!-- 显示目录的部分 -->\n    <router-outlet></router-outlet>\n  </div>\n  <div class=\"col-sm-3 libheight\">\n    <br>\n        <accordion [closeOthers]=\"true\">\n            <accordion-group heading=\"前端\">\n              <a routerLink = \"angular/nglib/angular/ngbase\">Angular | ngx-bootstrap</a><br>\n              <a routerLink = \"vue/lib/vue/base\">Vue | ElementUI</a><br>\n            </accordion-group>\n            <accordion-group heading=\"后端\">\n             <a routerLink = \"java/lib\">SpringBoot</a><br>\n             <a routerLink = \"distributed\">Distributed</a><br>\n             <a routerLink = \"java/kit\">Developer Kit</a><br>\n            </accordion-group>\n            <accordion-group heading=\"数据库\">\n                <p>暂无内容</p>\n              <!-- <a routerLink = \"oracle\">Relational database</a><br>\n              <a routerLink = \"\">non relational database</a> -->\n            </accordion-group>\n            <accordion-group heading=\"随笔\">\n              <p>暂无内容</p>\n            </accordion-group>\n          </accordion>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -795,6 +799,250 @@ var interceptor = '<h4 class="title-font">拦截器配置</h4>' +
 
 /***/ }),
 
+/***/ "./src/app/bulu/middle.troops/java/springboot/shiro.config.ts":
+/*!********************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/java/springboot/shiro.config.ts ***!
+  \********************************************************************/
+/*! exports provided: shiroConfig */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "shiroConfig", function() { return shiroConfig; });
+var shiroConfig = '/**<br>' +
+    '* shiro配置<br>' +
+    '*/<br>' +
+    '@SpringBootConfiguration<br>' +
+    'public class ShiroConfiguration {<br><br>' +
+    '/**<br>' +
+    '* 哈希密码比较器<br>' +
+    '*/<br>' +
+    '@Bean<br>' +
+    'public HashedCredentialsMatcher hashMatcher(){<br>' +
+    'HashedCredentialsMatcher hashMatcher = new HashedCredentialsMatcher();<br>' +
+    'hashMatcher.setHashAlgorithmName("md5");//设置算法：散列算法 md5<br>' +
+    'hashMatcher.setHashIterations(2);//设置迭代次数：如散列两次，相当于 md5( md5(""));<br>' +
+    'return hashMatcher;<br>' +
+    '}<br><br>' +
+    '/**<br>' +
+    '* 注入身份认证realm<br>' +
+    '*/<br>' +
+    '@Bean<br>' +
+    '@DependsOn("hashMatcher")<br>' +
+    'public ShiroRealm shiroRealm(){<br>' +
+    'ShiroRealm shiroRealm = new ShiroRealm();//ShiroRealm是自己创建的Realm<br>' +
+    'shiroRealm.setCredentialsMatcher(hashMatcher());//设置哈希密码比较器<br>' +
+    'return shiroRealm;<br>' +
+    '}<br><br>' +
+    '/**<br>' +
+    '* 登录成功的时候，服务器生成了remember me 的Cookie,可以在下次访问的时候，<br>' +
+    '* 服务器根据Cookie判断而不用再登录<br>' +
+    '* 配置Cookie<br>' +
+    '*/<br>' +
+    '@Bean<br>' +
+    'public SimpleCookie rememberMeCookie(){<br>' +
+    '//这个参数是cookie的名称，对应前端的checkbox的name = rememberMe<br>' +
+    'SimpleCookie simpleCookie = new SimpleCookie("rememberMe");<br>' +
+    '//如果httyOnly设置为true，则客户端不会暴露给客户端脚本代码，使用HttpOnly cookie有助于减少某些类型的跨站点脚本攻击；<br>' +
+    'simpleCookie.setHttpOnly(true);<br>' +
+    'simpleCookie.setMaxAge(600);//记住我cookie生效时间,单位是秒<br>' +
+    'return simpleCookie;<br>' +
+    '}<br><br>' +
+    '/**<br>' +
+    '* cookie管理器;<br>' +
+    '*/<br>' +
+    '@Bean<br>' +
+    '@DependsOn("rememberMeCookie")<br>' +
+    'public CookieRememberMeManager rememberMeManager(){<br>' +
+    'CookieRememberMeManager rememberMeManager = new CookieRememberMeManager();<br>' +
+    '//rememberme cookie加密的密钥 建议每个项目都不一样 默认AES算法 密钥长度（128 256 512 位），通过以下代码可以获取<br>' +
+    '//KeyGenerator keygen = KeyGenerator.getInstance("AES");<br>' +
+    '//SecretKey deskey = keygen.generateKey();<br>' +
+    '//System.out.println(Base64.encodeToString(deskey.getEncoded()));<br>' +
+    'byte[] cipherKey = Base64.decode("wGiHplamyXlVB11UXWol8g==");<br>' +
+    'rememberMeManager.setCipherKey(cipherKey);<br>' +
+    'rememberMeManager.setCookie(rememberMeCookie());<br>' +
+    'return rememberMeManager;<br>' +
+    '}<br><br>' +
+    '/**<br>' +
+    '* 注入安全事务管理器（SecurityManager）<br>' +
+    '* 注：package org.apache.shiro.mgt.SecurityManager<br>' +
+    '*/<br>' +
+    '@Bean<br>' +
+    '@DependsOn({"shiroRealm","rememberMeManager"})<br>' +
+    'public SecurityManager securityManager(){<br>' +
+    'DefaultWebSecurityManager webSecurityManager = new DefaultWebSecurityManager();<br>' +
+    'webSecurityManager.setRealm(shiroRealm());//配置自定义的realm<br>' +
+    'webSecurityManager.setRememberMeManager(rememberMeManager());<br>' +
+    'return webSecurityManager;<br>' +
+    '}<br><br>' +
+    '/**<br>' +
+    '* 过滤器(shiroFilter)<br>' +
+    '*/<br>' +
+    '@Bean<br>' +
+    '@DependsOn("securityManager")<br>' +
+    'public ShiroFilterFactoryBean shiroFilter(SecurityManager securityManager){<br>' +
+    'ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();<br>' +
+    'shiroFilterFactoryBean.setSecurityManager(securityManager);//设置安全管理器<br>' +
+    'shiroFilterFactoryBean.setLoginUrl("/index.html");//配置shiro默认登录界面地址，前后端分离中登录界面跳转应由前端路由控制，后台仅返回json数据<br>' +
+    'shiroFilterFactoryBean.setSuccessUrl("/index");//登陆成功后的页面,或者前端自己设置<br>' +
+    'shiroFilterFactoryBean.setUnauthorizedUrl("/403");<br>' +
+    'Map<String,String> filterChainDefinitionMap=new LinkedHashMap<>();<br>' +
+    'filterChainDefinitionMap.put("/static/**", "anon"); // 配置不会被拦截的链接 顺序判断 这里是放出静态资源<br>' +
+    '//filterChainDefinitionMap.put("/**", "authc");// /设置拦截的接口<br>' +
+    'shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);<br>' +
+    'return shiroFilterFactoryBean;<br>' +
+    '}<br><br>' +
+    '/**<br>' +
+    '* 开启shiro aop注解支持<br>' +
+    '* 使用代理方式;所以需要开启代码支持;否则@RequiresRoles等注解无法生效<br>' +
+    '*/<br>' +
+    '@Bean<br>' +
+    '@DependsOn("securityManager")<br>' +
+    'public AuthorizationAttributeSourceAdvisor attributeSourceAdvisor(SecurityManager securityManager){<br>' +
+    'AuthorizationAttributeSourceAdvisor attributeSourceAdvisor =<br>' +
+    'new AuthorizationAttributeSourceAdvisor();<br>' +
+    'attributeSourceAdvisor.setSecurityManager(securityManager);<br>' +
+    'return attributeSourceAdvisor;<br>' +
+    '}<br><br>' +
+    '/**<br>' +
+    '* Shiro生命周期处理器<br>' +
+    '*/<br>' +
+    '@Bean<br>' +
+    'public LifecycleBeanPostProcessor lifecycleBeanPostProcessor(){<br>' +
+    'return new LifecycleBeanPostProcessor();<br>' +
+    '}<br><br>' +
+    '/**<br>' +
+    '* 自动创建代理 不然AOP注解不会生效<br>' +
+    '*/<br>' +
+    '@Bean<br>' +
+    '@DependsOn("lifecycleBeanPostProcessor")<br>' +
+    'public DefaultAdvisorAutoProxyCreator autoProxyCreator(){<br>' +
+    'DefaultAdvisorAutoProxyCreator advisorAutoProxyCreator = new DefaultAdvisorAutoProxyCreator();<br>' +
+    'advisorAutoProxyCreator.setProxyTargetClass(true);<br>' +
+    'return advisorAutoProxyCreator;<br>' +
+    '}<br><br>';
+
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/java/springboot/shiro.realm.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/java/springboot/shiro.realm.ts ***!
+  \*******************************************************************/
+/*! exports provided: shiroRealm */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "shiroRealm", function() { return shiroRealm; });
+var shiroRealm = 'import org.apache.shiro.authc.*;<br>' +
+    'import org.apache.shiro.authz.AuthorizationInfo;<br>' +
+    'import org.apache.shiro.authz.SimpleAuthorizationInfo;<br>' +
+    'import org.apache.shiro.realm.AuthorizingRealm;<br>' +
+    'import org.apache.shiro.subject.PrincipalCollection;<br><br>' +
+    '/**<br>' +
+    '* shiro realm 自定义<br>' +
+    '*/<br>' +
+    'public class ShiroRealm extends AuthorizingRealm {<br><br>' +
+    '@Autowired<br>' +
+    'private UserDao userDao;<br><br>' +
+    '/**<br>' +
+    '* 获取前端登录的用户信息（通常是用户名和密码）<br>' +
+    '* 之后去数据库查询当前用户的角色信息，权限信息<br>' +
+    '*/<br>' +
+    '@Override<br>' +
+    'protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {<br><br>' +
+    'SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();<br>' +
+    'String username = (String)principalCollection.getPrimaryPrincipal();<br>' +
+    '//通过用户名去获取权限和角色信息<br>' +
+    'Set&lt;String> roles = null;<br>' +
+    'authorizationInfo.setRoles(roles);//将角色名组成的set存入<br>' +
+    'Set&lt;String> permissions = null;<br>' +
+    'authorizationInfo.setStringPermissions(permissions);//将权限名所组成的set存入<br>' +
+    '//或者用循环然后一条条添加 authorizationInfo.addRole(role);<br>' +
+    '//authorizationInfo.addStringPermission(permission);<br>' +
+    'return authorizationInfo;<br>' +
+    '}<br><br>' +
+    '/**<br>' +
+    '* 获取前端的登录信息，之后去数据库查询用户信息，进行比对认证<br>' +
+    '*/<br>' +
+    '@Override<br>' +
+    'protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {<br>' +
+    '//源码中用户名返回的是String类型<br>' +
+    'String username = (String)authenticationToken.getPrincipal();<br>' +
+    '//去数据库获取用户信息<br>' +
+    'UserEntity user = userDao.selectUserByUsername(username);<br>' +
+    'if (user == null){//用户不存在<br>' +
+    'throw new UnknownAccountException();<br>' +
+    '}else {//用户存在，判断密码<br>' +
+    '//获取密码的时候，可以点击getCredentials()查看源码，源码中返回的char[]<br>' +
+    'String password = new String((char[]) authenticationToken.getCredentials());<br>' +
+    'if (user.getLoginpwd().equals(password)){//密码正确，判断用户锁定状态<br>' +
+    'if (user.getState() == 0){//用户被锁定<br>' +
+    'throw new LockedAccountException();<br>' +
+    '}else {//所有认证通过，账号、密码保存到登陆信息info中,可查看源码调整<br>' +
+    'SimpleAuthenticationInfo authenticationInfo =<br>' +
+    'new SimpleAuthenticationInfo(username,password,getName());<br>' +
+    'return authenticationInfo;<br>' +
+    '}<br>' +
+    '}else {//密码错误，抛出认证错误异常<br>' +
+    'throw new IncorrectCredentialsException();<br>' +
+    '}<br>' +
+    '}<br>' +
+    '}<br>' +
+    '}<br>';
+
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/java/springboot/shiro.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/java/springboot/shiro.ts ***!
+  \*************************************************************/
+/*! exports provided: shiro */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "shiro", function() { return shiro; });
+var shiro = 'import org.apache.shiro.SecurityUtils;<br>' +
+    'import org.apache.shiro.authc.*;<br>' +
+    'import org.apache.shiro.subject.Subject;<br>' +
+    '@RestController<br>' +
+    '@RequestMapping("user")<br>' +
+    'public class UserController {<br>' +
+    ' /**<br>' +
+    '* 用户登录，将用户名密码存入shiro<br>' +
+    '*/<br>' +
+    '@RequestMapping(value = "login")<br>' +
+    'public String userLogin(@RequestBody Map map)throws Exception{<br><br>' +
+    'Subject subject = SecurityUtils.getSubject();<br>' +
+    'String username = (String)map.get("username");<br>' +
+    'String password = (String)map.get("password");<br>' +
+    'UsernamePasswordToken token = new UsernamePasswordToken(username,password);<br><br>' +
+    'try {<br>' +
+    '   subject.login(token);<br>' +
+    'return "登录成功";<br>' +
+    '}catch (UnknownAccountException e){<br>' +
+    'return "用户不存在";<br>' +
+    '}catch (IncorrectCredentialsException e){<br>' +
+    'return "密码错误";<br>' +
+    '}catch (LockedAccountException e){<br>' +
+    'return "该账户被锁定";<br>' +
+    '}catch (DisabledAccountException e){<br>' +
+    'return "该账户被禁用";<br>' +
+    '}<br>' +
+    '}<br>' +
+    '}<br>' +
+    '参考链接：<br>' +
+    '<a href="https://www.cnblogs.com/expiator/p/8651798.html">https://www.cnblogs.com/expiator/p/8651798.html<br>' +
+    '<a href="https://blog.csdn.net/u011456867/article/details/80483854">https://blog.csdn.net/u011456867/article/details/80483854<br>' +
+    '<a href="https://www.cnblogs.com/starktan/p/9608692.html">https://www.cnblogs.com/starktan/p/9608692.html<br>';
+
+
+/***/ }),
+
 /***/ "./src/app/bulu/middle.troops/java/springboot/spdetail/spdetail.component.html":
 /*!*************************************************************************************!*\
   !*** ./src/app/bulu/middle.troops/java/springboot/spdetail/spdetail.component.html ***!
@@ -867,7 +1115,7 @@ var SpdetailComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 detail-lib\">\n    <br>\n      <button type=\"button\" class=\"btn btn-outline-primary btn-lg btn-block\" \n      (click)=\"goDeatil('domain')\">Cross domain config</button>\n      <button type=\"button\" class=\"btn btn-outline-secondary btn-lg btn-block\" \n      (click)=\"goDeatil('interceptor')\">interceptor</button>\n  </div>\n  <div class=\"col-md-9 detail-font\">\n    <div [innerHTML] = 'showData'></div>\n    <router-outlet></router-outlet>\n  </div>\n</div>"
+module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 detail-lib\">\n    <br>\n      <button type=\"button\" class=\"btn btn-outline-primary btn-lg btn-block\" \n      (click)=\"goDeatil('domain')\">Cross domain config</button>\n      <button type=\"button\" class=\"btn btn-outline-secondary btn-lg btn-block\" \n      (click)=\"goDeatil('interceptor')\">interceptor</button>\n      <button type=\"button\" class=\"btn btn-outline-success btn-lg btn-block\"\n      (click)=\"goDeatil('shiro')\">shiro</button>\n      \n  </div>\n  <div class=\"col-md-9 detail-font\">\n    <div *ngIf = \"shiroShow\">\n      <h4 style=\"color:black\">SHIRO基本使用</h4>\n      <a href=\"https://github.com/chevysky/fireworm.git\">github代码所在地</a>\n      <div>\n          <tabset>\n              <tab heading=\"controller\" id=\"tab1\"><div [innerHTML] = 'part1'></div>></tab>\n              <tab heading=\"shiroRealm\"><div [innerHTML] = 'part2'></div></tab>\n              <tab heading=\"shiro configuration\"><div [innerHTML] = 'part3'></div></tab>\n            </tabset>\n      </div>\n    </div>\n    <div [innerHTML] = 'showData'></div>\n    <router-outlet></router-outlet>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -878,7 +1126,7 @@ module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 detail-lib\">\n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2J1bHUvbWlkZGxlLnRyb29wcy9qYXZhL3NwcmluZ2Jvb3Qvc3BsaWIvc3BsaWIuY29tcG9uZW50LnNjc3MifQ== */"
+module.exports = ".partbg {\n  background-color: cyan; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVsdS9taWRkbGUudHJvb3BzL2phdmEvc3ByaW5nYm9vdC9zcGxpYi9FOlxcdnNjb2RlUHJvamVjdFxcY2hldnlza3kvc3JjXFxhcHBcXGJ1bHVcXG1pZGRsZS50cm9vcHNcXGphdmFcXHNwcmluZ2Jvb3RcXHNwbGliXFxzcGxpYi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLHNCQUFzQixFQUFBIiwiZmlsZSI6InNyYy9hcHAvYnVsdS9taWRkbGUudHJvb3BzL2phdmEvc3ByaW5nYm9vdC9zcGxpYi9zcGxpYi5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5wYXJ0Ymd7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBjeWFuO1xyXG59Il19 */"
 
 /***/ }),
 
@@ -897,6 +1145,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _domain__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../domain */ "./src/app/bulu/middle.troops/java/springboot/domain.ts");
 /* harmony import */ var _interceptor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../interceptor */ "./src/app/bulu/middle.troops/java/springboot/interceptor.ts");
+/* harmony import */ var _shiro__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shiro */ "./src/app/bulu/middle.troops/java/springboot/shiro.ts");
+/* harmony import */ var _shiro_realm__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shiro.realm */ "./src/app/bulu/middle.troops/java/springboot/shiro.realm.ts");
+/* harmony import */ var _shiro_config__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../shiro.config */ "./src/app/bulu/middle.troops/java/springboot/shiro.config.ts");
+
+
+
 
 
 
@@ -906,6 +1160,7 @@ var SplibComponent = /** @class */ (function () {
     function SplibComponent(route, routerinfo) {
         this.route = route;
         this.routerinfo = routerinfo;
+        this.shiroShow = false;
     }
     SplibComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -916,14 +1171,31 @@ var SplibComponent = /** @class */ (function () {
     SplibComponent.prototype.goDeatil = function (name) {
         switch (name) {
             case 'domain':
+                this.initShow();
                 this.showData = _domain__WEBPACK_IMPORTED_MODULE_3__["domain"];
                 break;
             case 'interceptor':
+                this.initShow();
                 this.showData = _interceptor__WEBPACK_IMPORTED_MODULE_4__["interceptor"];
                 break;
+            case 'shiro':
+                this.initShow();
+                this.part1 = _shiro__WEBPACK_IMPORTED_MODULE_5__["shiro"];
+                this.part2 = _shiro_realm__WEBPACK_IMPORTED_MODULE_6__["shiroRealm"];
+                this.part3 = _shiro_config__WEBPACK_IMPORTED_MODULE_7__["shiroConfig"];
+                this.shiroShow = true;
+                this.showData = '';
+                break;
             default:
+                this.initShow();
                 this.showData = _domain__WEBPACK_IMPORTED_MODULE_3__["domain"];
         }
+    };
+    SplibComponent.prototype.initShow = function () {
+        this.shiroShow = false;
+        this.part1 = '';
+        this.part2 = '';
+        this.part3 = '';
     };
     SplibComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -934,6 +1206,97 @@ var SplibComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]])
     ], SplibComponent);
     return SplibComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/java/toolkit/jpa-entity.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/java/toolkit/jpa-entity.ts ***!
+  \***************************************************************/
+/*! exports provided: jpaEntity */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "jpaEntity", function() { return jpaEntity; });
+var jpaEntity = '<h4>IDEA 从数据库生成Spring Data JPA 实体类</h4>' +
+    'FIRST：调出 Persistence 窗口，左上角File—>Project Structure—>model—> + —>JPA<br>' +
+    'SECOND：左侧点击选择Persistence,这时在项目结构显示的下方会显示Persistence的信息，鼠标右键项目名称，' +
+    '选择Generate Persistence Mapping -> By Database Schema<br>' +
+    '选择数据源Choose Data Source 若是还没有配置数据库可以点击该项后的...，弹出Data Source and Driver窗口，' +
+    '点击+，按要求配置好用户名、密码、数据库地址，注意这个时候点击测试连接的按钮若是为灰色，则可能是没有下载连接驱动，点击下方的下载按钮，之后测试连接；<br>' +
+    'THIRD：配置好了数据源后，选择实体类生成的位置，即package包的位置,之后可以配置实体类名字的前后缀，点击刷新按钮' +
+    '下方显示出数据库中的表，选择对应的表生成即可。';
+
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/java/toolkit/kit/kit.component.html":
+/*!************************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/java/toolkit/kit/kit.component.html ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 detail-lib\">\n    <br>\n      <button type=\"button\" class=\"btn btn-outline-primary btn-lg btn-block\" \n      (click)=\"getShowData('jpa-entity')\">JPA export entity</button>\n  </div>\n  <div class=\"col-md-9 detail-font\">\n    <div [innerHTML] = 'showData'></div>\n    <div *ngIf = \"jpaEntityShow\" style=\"height:170px\"></div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/java/toolkit/kit/kit.component.scss":
+/*!************************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/java/toolkit/kit/kit.component.scss ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2J1bHUvbWlkZGxlLnRyb29wcy9qYXZhL3Rvb2xraXQva2l0L2tpdC5jb21wb25lbnQuc2NzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/java/toolkit/kit/kit.component.ts":
+/*!**********************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/java/toolkit/kit/kit.component.ts ***!
+  \**********************************************************************/
+/*! exports provided: KitComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KitComponent", function() { return KitComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _jpa_entity__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../jpa-entity */ "./src/app/bulu/middle.troops/java/toolkit/jpa-entity.ts");
+
+
+
+var KitComponent = /** @class */ (function () {
+    function KitComponent() {
+        this.showData = '';
+        this.jpaEntityShow = false;
+    }
+    KitComponent.prototype.ngOnInit = function () {
+        this.getShowData('jpa-entity');
+    };
+    KitComponent.prototype.getShowData = function (name) {
+        switch (name) {
+            case 'jpa-entity':
+                this.showData = _jpa_entity__WEBPACK_IMPORTED_MODULE_2__["jpaEntity"];
+                this.jpaEntityShow = true;
+                break;
+        }
+    };
+    KitComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-kit',
+            template: __webpack_require__(/*! ./kit.component.html */ "./src/app/bulu/middle.troops/java/toolkit/kit/kit.component.html"),
+            styles: [__webpack_require__(/*! ./kit.component.scss */ "./src/app/bulu/middle.troops/java/toolkit/kit/kit.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], KitComponent);
+    return KitComponent;
 }());
 
 
@@ -1160,7 +1523,7 @@ var NglibComponent = /** @class */ (function () {
         this.router = router;
     }
     NglibComponent.prototype.ngOnInit = function () {
-        this.router.navigate(['angular/nglib/angular/ngbase']);
+        //this.router.navigate(['angular/nglib/angular/ngbase']);
     };
     NglibComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1327,7 +1690,7 @@ var VuebaseComponent = /** @class */ (function () {
             case "intro":
                 this.showData = this.intro;
                 break;
-            default: this.showData = "";
+            default: this.showData = this.intro;
         }
     };
     VuebaseComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -1388,7 +1751,7 @@ var VuelibComponent = /** @class */ (function () {
         this.router = router;
     }
     VuelibComponent.prototype.ngOnInit = function () {
-        this.goDeatil('intro');
+        //this.goDeatil('intro');
     };
     VuelibComponent.prototype.goDeatil = function (name) {
         this.router.navigate(['vue/lib/vue/base'], {
@@ -1498,7 +1861,7 @@ module.exports = "<div class=\"row bgset\">\n  <div class=\"col-md-12 fontset\">
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".bgset {\n  background-color: black;\n  height: 50px; }\n\n.fontset {\n  line-height: 50px;\n  font-size: 5px;\n  color: darkviolet;\n  text-align: center; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVsdS9yZWFyLmd1YXJkL2Zvb3Rlci9FOlxcdnNjb2RlUHJvamVjdFxcY2hldnlza3kvc3JjXFxhcHBcXGJ1bHVcXHJlYXIuZ3VhcmRcXGZvb3RlclxcZm9vdGVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksdUJBQXVCO0VBQ3ZCLFlBQVksRUFBQTs7QUFHaEI7RUFDSSxpQkFBaUI7RUFDakIsY0FBYztFQUNkLGlCQUFpQjtFQUNqQixrQkFBa0IsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2J1bHUvcmVhci5ndWFyZC9mb290ZXIvZm9vdGVyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmJnc2V0ey8v6IOM5pmv6K6+572uXHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcclxuICAgIGhlaWdodDogNTBweDtcclxufVxyXG5cclxuLmZvbnRzZXR7Ly/lrZfkvZPorr7nva5cclxuICAgIGxpbmUtaGVpZ2h0OiA1MHB4O1xyXG4gICAgZm9udC1zaXplOiA1cHg7XHJcbiAgICBjb2xvcjogZGFya3Zpb2xldDtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxufSJdfQ== */"
+module.exports = ".bgset {\n  background-color: #39ec29;\n  height: 50px; }\n\n.fontset {\n  line-height: 50px;\n  font-size: 10px;\n  font-weight: bold;\n  color: darkviolet;\n  text-align: center; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVsdS9yZWFyLmd1YXJkL2Zvb3Rlci9FOlxcdnNjb2RlUHJvamVjdFxcY2hldnlza3kvc3JjXFxhcHBcXGJ1bHVcXHJlYXIuZ3VhcmRcXGZvb3RlclxcZm9vdGVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0kseUJBQWtDO0VBQ2xDLFlBQVksRUFBQTs7QUFHaEI7RUFDSSxpQkFBaUI7RUFDakIsZUFBZTtFQUNmLGlCQUFpQjtFQUNqQixpQkFBaUI7RUFDakIsa0JBQWtCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9idWx1L3JlYXIuZ3VhcmQvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5iZ3NldHsvL+iDjOaZr+iuvue9rlxyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDU3LCAyMzYsIDQxKTtcclxuICAgIGhlaWdodDogNTBweDtcclxufVxyXG5cclxuLmZvbnRzZXR7Ly/lrZfkvZPorr7nva5cclxuICAgIGxpbmUtaGVpZ2h0OiA1MHB4O1xyXG4gICAgZm9udC1zaXplOiAxMHB4O1xyXG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgICBjb2xvcjogZGFya3Zpb2xldDtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -1638,6 +2001,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _bulu_middle_troops_java_springboot_splib_splib_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../bulu/middle.troops/java/springboot/splib/splib.component */ "./src/app/bulu/middle.troops/java/springboot/splib/splib.component.ts");
 /* harmony import */ var _bulu_middle_troops_java_springboot_spdetail_spdetail_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../bulu/middle.troops/java/springboot/spdetail/spdetail.component */ "./src/app/bulu/middle.troops/java/springboot/spdetail/spdetail.component.ts");
 /* harmony import */ var _bulu_middle_troops_java_distributed_distributed_distributed_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../bulu/middle.troops/java/distributed/distributed/distributed.component */ "./src/app/bulu/middle.troops/java/distributed/distributed/distributed.component.ts");
+/* harmony import */ var _bulu_middle_troops_java_toolkit_kit_kit_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../bulu/middle.troops/java/toolkit/kit/kit.component */ "./src/app/bulu/middle.troops/java/toolkit/kit/kit.component.ts");
+
 
 
 
@@ -1652,6 +2017,10 @@ var javaRoue = [
     {
         path: 'distributed',
         component: _bulu_middle_troops_java_distributed_distributed_distributed_component__WEBPACK_IMPORTED_MODULE_2__["DistributedComponent"]
+    },
+    {
+        path: 'java/kit',
+        component: _bulu_middle_troops_java_toolkit_kit_kit_component__WEBPACK_IMPORTED_MODULE_3__["KitComponent"]
     }
 ];
 
