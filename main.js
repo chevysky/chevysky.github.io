@@ -301,7 +301,7 @@ var BodyerComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-md-10 offset-md-1\">\n      <carousel class=\"finger\">\n          <slide (click) = \"goDetail('angular/nglib')\">\n            <img src=\"../../../../assets/bulu/database.jpg\" alt=\"first slide\" class=\"setpic\">\n            <div class=\"carousel-caption d-none d-md-block\">\n              <h3>Angular basic introduction</h3>\n              <p>介绍angular项目的搭建，及ngx-bootstrap的使用</p>\n            </div>\n          </slide>\n          <slide (click) = \"goDetail('vue/lib')\">\n            <img src=\"../../../../assets/bulu/second.jpg\" alt=\"second slide\" class=\"setpic\">\n            <div class=\"carousel-caption d-none d-md-block\">\n              <h3>Vue basic introduction</h3>\n              <p>介绍Vue项目的搭建，及ElementUI的使用</p>\n            </div>\n          </slide>\n          <slide>\n            <img src=\"../../../../assets/bulu/third.jpg\" alt=\"third slide\" class=\"setpic\">\n            <div class=\"carousel-caption d-none d-md-block\">\n              <h3>空白页</h3>\n              <p>暂无内容</p>\n            </div>\n          </slide>\n        </carousel>\n  </div>\n</div>\n"
+module.exports = "<div class=\"row\">\n  <div class=\"col-md-10 offset-md-1\">\n      <carousel class=\"finger\">\n          <slide (click) = \"goDetail('angular/nglib/angular/ngbase')\">\n            <img src=\"../../../../assets/bulu/database.jpg\" alt=\"first slide\" class=\"setpic\">\n            <div class=\"carousel-caption d-none d-md-block\">\n              <h3>Angular basic introduction</h3>\n              <p>介绍angular项目的搭建，及ngx-bootstrap的使用</p>\n            </div>\n          </slide>\n          <slide (click) = \"goDetail('vue/lib/vue/base')\">\n            <img src=\"../../../../assets/bulu/second.jpg\" alt=\"second slide\" class=\"setpic\">\n            <div class=\"carousel-caption d-none d-md-block\">\n              <h3>Vue basic introduction</h3>\n              <p>介绍Vue项目的搭建，及ElementUI的使用</p>\n            </div>\n          </slide>\n          <slide (click) = \"goDetail('distributed','dubbo')\">\n            <img src=\"../../../../assets/bulu/third.jpg\" alt=\"third slide\" class=\"setpic\">\n            <div class=\"carousel-caption d-none d-md-block\">\n              <h3>Dubbo + zookeeper</h3>\n              <p>分布式架构基础搭建</p>\n            </div>\n          </slide>\n        </carousel>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -338,8 +338,12 @@ var CarouselComponent = /** @class */ (function () {
     }
     CarouselComponent.prototype.ngOnInit = function () {
     };
-    CarouselComponent.prototype.goDetail = function (path) {
-        this.router.navigateByUrl(path);
+    CarouselComponent.prototype.goDetail = function (path, opName) {
+        this.router.navigate([path], {
+            queryParams: {
+                opName: opName
+            }
+        });
     };
     CarouselComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -480,7 +484,7 @@ var OracleComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 detail-lib\">\n    <br>\n      <button type=\"button\" class=\"btn btn-outline-secondary btn-lg btn-block\" (click)=\"goDetail('dubbo')\">dubbo + zookeeper</button>\n  </div>\n  <div class=\"col-md-9 detail-font\">\n    <div [innerHTML] = 'showData'></div>\n    <span *ngIf = \"dubboShow\">\n      第六步：<a href=\"javascripts:0\" (click)=\"goOtherLib('java/lib','domain')\">跨域配置</a><br>\n      第七步：前端调用，如在地址栏输入http://localhost:8023/user/info\n    </span>\n  </div>\n</div>\n"
+module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 detail-lib\">\n    <br>\n      <button type=\"button\" class=\"btn btn-secondary btn-lg btn-block\" (click)=\"goDetail('dubbo')\">dubbo + zookeeper</button>\n  </div>\n  <div class=\"col-md-9 detail-font\">\n    <div [innerHTML] = 'showData'></div>\n    <span *ngIf = \"dubboShow\">\n      第六步：<a href=\"javascripts:0\" (click)=\"goOtherLib('java/lib','domain')\">跨域配置</a><br>\n      第七步：前端调用，如在地址栏输入http://localhost:8023/user/info\n    </span>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -514,17 +518,26 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var DistributedComponent = /** @class */ (function () {
-    function DistributedComponent(route) {
+    function DistributedComponent(route, routeinfo) {
         this.route = route;
+        this.routeinfo = routeinfo;
         this.showData = _dubbo__WEBPACK_IMPORTED_MODULE_2__["dubbo"]; //赋初始值显示dubbo + zookeeper分布式架构内容
         this.dubboShow = true;
     }
     DistributedComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.routeinfo.queryParams.subscribe(function (queryParams) {
+            _this.goDetail(queryParams.opName);
+        });
     };
     DistributedComponent.prototype.goDetail = function (name) {
         this.controlShow();
         switch (name) {
             case 'dubbo':
+                this.showData = _dubbo__WEBPACK_IMPORTED_MODULE_2__["dubbo"];
+                this.dubboShow = true;
+                break;
+            default:
                 this.showData = _dubbo__WEBPACK_IMPORTED_MODULE_2__["dubbo"];
                 this.dubboShow = true;
                 break;
@@ -547,7 +560,7 @@ var DistributedComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./distributed.component.html */ "./src/app/bulu/middle.troops/java/distributed/distributed/distributed.component.html"),
             styles: [__webpack_require__(/*! ./distributed.component.scss */ "./src/app/bulu/middle.troops/java/distributed/distributed/distributed.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
     ], DistributedComponent);
     return DistributedComponent;
 }());
@@ -709,6 +722,41 @@ var domain = '<h4 class="title-font">跨域配置</h4>' +
 
 /***/ }),
 
+/***/ "./src/app/bulu/middle.troops/java/springboot/exception.ts":
+/*!*****************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/java/springboot/exception.ts ***!
+  \*****************************************************************/
+/*! exports provided: exception */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "exception", function() { return exception; });
+var exception = '<h4 class="title-font">@ControllerAdvice全局异常处理</h4>' +
+    'import org.springframework.web.bind.annotation.ControllerAdvice;<br>' +
+    'import org.springframework.web.bind.annotation.ExceptionHandler;<br>' +
+    '/**<br>' +
+    '* 全局异常处理，支持的限定范围<br>' +
+    '* 按注解：@ControllerAdvice(annotations = RestController.class)<br>' +
+    '* 按包名：@ControllerAdvice("org.example.controllers")<br>' +
+    '* 按类型：@ControllerAdvice(assignableTypes = {ControllerInterface.class, AbstractController.class})<br>' +
+    '*/<br>' +
+    '@ControllerAdvice<br>' +
+    'public class ExceptionHandle {<br><br>' +
+    '@ExceptionHandler (value = Exception.class)//指定捕获的异常,多个异常value = {Exception.class,IOException.class}<br>' +
+    '@ResponseBody//将内容转换成JSON格式<br>' +
+    'public Map exceptionHandler(HttpServletRequest request,Exception e){<br>' +
+    '//根据不同的异常做处理<br>' +
+    'request.getRequestURL();//获取请求路径<br>' +
+    '//也就是可以通过HTTP来获取前端传递的数据<br>' +
+    'e.getMessage();//获取异常信息<br>' +
+    'return new HashMap();//这里返回的map是自己需要去封装的返回数据类<br>' +
+    '}<br>' +
+    '}<br>';
+
+
+/***/ }),
+
 /***/ "./src/app/bulu/middle.troops/java/springboot/interceptor.ts":
 /*!*******************************************************************!*\
   !*** ./src/app/bulu/middle.troops/java/springboot/interceptor.ts ***!
@@ -855,11 +903,12 @@ var shiroConfig = '/**<br>' +
     '@DependsOn("rememberMeCookie")<br>' +
     'public CookieRememberMeManager rememberMeManager(){<br>' +
     'CookieRememberMeManager rememberMeManager = new CookieRememberMeManager();<br>' +
-    '//rememberme cookie加密的密钥 建议每个项目都不一样 默认AES算法 密钥长度（128 256 512 位），通过以下代码可以获取<br>' +
+    '//rememberme cookie加密的密钥 默认AES算法 密钥长度（128 256 512 位），通过以下代码可以获取<br>' +
+    '//若是出现秘钥长度不正确的异常可以试试 8的倍数 或者64<br>' +
     '//KeyGenerator keygen = KeyGenerator.getInstance("AES");<br>' +
     '//SecretKey deskey = keygen.generateKey();<br>' +
     '//System.out.println(Base64.encodeToString(deskey.getEncoded()));<br>' +
-    'byte[] cipherKey = Base64.decode("wGiHplamyXlVB11UXWol8g==");<br>' +
+    'byte[] cipherKey = Base64.decode("NTAyNzhic2t5NTAyNzg3MDIwODUwNG5za3k3MDIwODUwNDI3NDIwbXNreTI3NDIw");<br>' +
     'rememberMeManager.setCipherKey(cipherKey);<br>' +
     'rememberMeManager.setCookie(rememberMeCookie());<br>' +
     'return rememberMeManager;<br>' +
@@ -1115,7 +1164,7 @@ var SpdetailComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 detail-lib\">\n    <br>\n      <button type=\"button\" class=\"btn btn-outline-primary btn-lg btn-block\" \n      (click)=\"goDeatil('domain')\">Cross domain config</button>\n      <button type=\"button\" class=\"btn btn-outline-secondary btn-lg btn-block\" \n      (click)=\"goDeatil('interceptor')\">interceptor</button>\n      <button type=\"button\" class=\"btn btn-outline-success btn-lg btn-block\"\n      (click)=\"goDeatil('shiro')\">shiro</button>\n      \n  </div>\n  <div class=\"col-md-9 detail-font\">\n    <div *ngIf = \"shiroShow\">\n      <h4 style=\"color:black\">SHIRO基本使用</h4>\n      <a href=\"https://github.com/chevysky/fireworm.git\">github代码所在地</a>\n      <div>\n          <tabset>\n              <tab heading=\"controller\" id=\"tab1\"><div [innerHTML] = 'part1'></div>></tab>\n              <tab heading=\"shiroRealm\"><div [innerHTML] = 'part2'></div></tab>\n              <tab heading=\"shiro configuration\"><div [innerHTML] = 'part3'></div></tab>\n            </tabset>\n      </div>\n    </div>\n    <div [innerHTML] = 'showData'></div>\n    <router-outlet></router-outlet>\n  </div>\n</div>"
+module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 detail-lib\">\n    <br>\n      <button type=\"button\" class=\"btn btn-primary btn-lg btn-block\" \n      (click)=\"goDeatil('domain')\">Cross domain config</button>\n      <button type=\"button\" class=\"btn btn-secondary btn-lg btn-block\" \n      (click)=\"goDeatil('interceptor')\">interceptor</button>\n      <button type=\"button\" class=\"btn btn-success btn-lg btn-block\"\n      (click)=\"goDeatil('shiro')\">shiro</button>\n      <button type=\"button\" class=\"btn btn-danger btn-lg btn-block\"\n      (click)=\"goDeatil('exception')\">exception</button>\n  </div>\n  <div class=\"col-md-9 detail-font\">\n    <div *ngIf = \"shiroShow\">\n      <h4 style=\"color:black\">SHIRO基本使用</h4>\n      <a href=\"https://github.com/chevysky/fireworm.git\">github代码所在地</a>\n      <div>\n          <tabset>\n              <tab heading=\"controller\" id=\"tab1\"><div [innerHTML] = 'part1'></div>></tab>\n              <tab heading=\"shiroRealm\"><div [innerHTML] = 'part2'></div></tab>\n              <tab heading=\"shiro configuration\"><div [innerHTML] = 'part3'></div></tab>\n            </tabset>\n      </div>\n    </div>\n    <div [innerHTML] = 'showData'></div>\n    <router-outlet></router-outlet>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -1148,6 +1197,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shiro__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shiro */ "./src/app/bulu/middle.troops/java/springboot/shiro.ts");
 /* harmony import */ var _shiro_realm__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shiro.realm */ "./src/app/bulu/middle.troops/java/springboot/shiro.realm.ts");
 /* harmony import */ var _shiro_config__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../shiro.config */ "./src/app/bulu/middle.troops/java/springboot/shiro.config.ts");
+/* harmony import */ var _exception__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../exception */ "./src/app/bulu/middle.troops/java/springboot/exception.ts");
+
 
 
 
@@ -1169,25 +1220,25 @@ var SplibComponent = /** @class */ (function () {
         });
     };
     SplibComponent.prototype.goDeatil = function (name) {
+        this.initShow();
         switch (name) {
             case 'domain':
-                this.initShow();
                 this.showData = _domain__WEBPACK_IMPORTED_MODULE_3__["domain"];
                 break;
             case 'interceptor':
-                this.initShow();
                 this.showData = _interceptor__WEBPACK_IMPORTED_MODULE_4__["interceptor"];
                 break;
             case 'shiro':
-                this.initShow();
                 this.part1 = _shiro__WEBPACK_IMPORTED_MODULE_5__["shiro"];
                 this.part2 = _shiro_realm__WEBPACK_IMPORTED_MODULE_6__["shiroRealm"];
                 this.part3 = _shiro_config__WEBPACK_IMPORTED_MODULE_7__["shiroConfig"];
                 this.shiroShow = true;
                 this.showData = '';
                 break;
+            case 'exception':
+                this.showData = _exception__WEBPACK_IMPORTED_MODULE_8__["exception"];
+                break;
             default:
-                this.initShow();
                 this.showData = _domain__WEBPACK_IMPORTED_MODULE_3__["domain"];
         }
     };
@@ -1212,6 +1263,37 @@ var SplibComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/bulu/middle.troops/java/toolkit/jdk.ts":
+/*!********************************************************!*\
+  !*** ./src/app/bulu/middle.troops/java/toolkit/jdk.ts ***!
+  \********************************************************/
+/*! exports provided: jdk */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "jdk", function() { return jdk; });
+var jdk = '<h4 class="title-font">String StringBuilder StringBuffer</h4>' +
+    'String是字符串常量，适用于少量的字符串操作。StringBuilder和StringBuffer是字符串变量<br>' +
+    'StringBuffer的方法被synchronized修饰，所以线程是安全的，在多线程运行中，建议StringBuffer，' +
+    '在单线程中建议采用运行速度较快的StringBuilder<br>' +
+    '字符串拼接的方法：加号（+）、String.concat()、StringUtils.join()、StringBuilder和StringBuffer的append()' +
+    '+和concat()适用于小数据量操作，+号在拼接字符串时是在new StringBuilder()，所以在循环中拼接字符串不建议使用加号，' +
+    '这样频繁的new 对象造成资源浪费，应该采用StringBuilder的append()<br>' +
+    'concat()其实质是数组的拷贝，在内存中的处理都是原子性操作速度非常快，但在返回时new了一个对象，最终限制了其速度<br>' +
+    'StringBuffer 和 StringBuilder 的append方法都继承自AbstractStringBuilder，整个逻辑都只做字符数组的加长，拷贝，到最后也不会创建新的String对象，所以速度很快' +
+    '适用于大数据量的操作<br>' +
+    'StringUtils.join() 方法 适用于将ArrayList转换成字符串，速度快，可以省掉循环读取ArrayList的代码<br>' +
+    'StringBuilder置空的方法：1、重新new对象（不建议）2、delete(start,end) 3、setLength(0),后两种方法速度较快' +
+    '<h4 class="title-font">HashMap</h4>' +
+    '将map数据置空：map.clear() <br>' +
+    '将一个map中的数据添加进来：putAll()<br>' +
+    '是否包含某个key：containsKey()<br>' +
+    '是否包含某个value：containsValue()';
+
+
+/***/ }),
+
 /***/ "./src/app/bulu/middle.troops/java/toolkit/jpa-entity.ts":
 /*!***************************************************************!*\
   !*** ./src/app/bulu/middle.troops/java/toolkit/jpa-entity.ts ***!
@@ -1222,7 +1304,7 @@ var SplibComponent = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "jpaEntity", function() { return jpaEntity; });
-var jpaEntity = '<h4>IDEA 从数据库生成Spring Data JPA 实体类</h4>' +
+var jpaEntity = '<h4 class="title-font">IDEA 从数据库生成Spring Data JPA 实体类</h4>' +
     'FIRST：调出 Persistence 窗口，左上角File—>Project Structure—>model—> + —>JPA<br>' +
     'SECOND：左侧点击选择Persistence,这时在项目结构显示的下方会显示Persistence的信息，鼠标右键项目名称，' +
     '选择Generate Persistence Mapping -> By Database Schema<br>' +
@@ -1241,7 +1323,7 @@ var jpaEntity = '<h4>IDEA 从数据库生成Spring Data JPA 实体类</h4>' +
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 detail-lib\">\n    <br>\n      <button type=\"button\" class=\"btn btn-outline-primary btn-lg btn-block\" \n      (click)=\"getShowData('jpa-entity')\">JPA export entity</button>\n  </div>\n  <div class=\"col-md-9 detail-font\">\n    <div [innerHTML] = 'showData'></div>\n    <div *ngIf = \"jpaEntityShow\" style=\"height:170px\"></div>\n  </div>\n</div>"
+module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 detail-lib\">\n    <br>\n      <button type=\"button\" class=\"btn btn-primary btn-lg btn-block\" \n      (click)=\"getShowData('jpa-entity')\">JPA export entity</button>\n      <button type=\"button\" class=\"btn btn-success btn-lg btn-block\"\n      (click)=\"getShowData('jdk')\">JDK Source Code</button>\n  </div>\n  <div class=\"col-md-9 detail-font\">\n    <div [innerHTML] = 'showData'></div>\n    <div *ngIf = \"jpaEntityShow\" style=\"height:170px\"></div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -1269,6 +1351,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _jpa_entity__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../jpa-entity */ "./src/app/bulu/middle.troops/java/toolkit/jpa-entity.ts");
+/* harmony import */ var _jdk__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../jdk */ "./src/app/bulu/middle.troops/java/toolkit/jdk.ts");
+
 
 
 
@@ -1281,12 +1365,19 @@ var KitComponent = /** @class */ (function () {
         this.getShowData('jpa-entity');
     };
     KitComponent.prototype.getShowData = function (name) {
+        this.initShow();
         switch (name) {
             case 'jpa-entity':
                 this.showData = _jpa_entity__WEBPACK_IMPORTED_MODULE_2__["jpaEntity"];
                 this.jpaEntityShow = true;
                 break;
+            case 'jdk':
+                this.showData = _jdk__WEBPACK_IMPORTED_MODULE_3__["jdk"];
+                break;
         }
+    };
+    KitComponent.prototype.initShow = function () {
+        this.jpaEntityShow = false;
     };
     KitComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1487,7 +1578,7 @@ var NgbaseComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 detail-lib\">\n    <br> \n      <button type=\"button\" class=\"btn btn-outline-primary btn-lg btn-block\" \n      routerLink = \"angular/ngbase\">Basic Introduction</button>\n      <button type=\"button\" class=\"btn btn-outline-secondary btn-lg btn-block\"\n      routerLink = \"angular/basicuse\">Basic Use</button>\n      <button type=\"button\" class=\"btn btn-outline-success btn-lg btn-block\"\n      routerLink = \"angular/leadin\">Bootstrap</button>\n  </div>\n  <div class=\"col-md-9 detail-font\">\n    <router-outlet></router-outlet>\n  </div>\n</div>\n"
+module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 detail-lib\">\n    <br> \n      <button type=\"button\" class=\"btn btn-primary btn-lg btn-block\" \n      routerLink = \"angular/ngbase\">Basic Introduction</button>\n      <button type=\"button\" class=\"btn btn-secondary btn-lg btn-block\"\n      routerLink = \"angular/basicuse\">Basic Use</button>\n      <button type=\"button\" class=\"btn btn-success btn-lg btn-block\"\n      routerLink = \"angular/leadin\">Bootstrap</button>\n  </div>\n  <div class=\"col-md-9 detail-font\">\n    <router-outlet></router-outlet>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -1715,7 +1806,7 @@ var VuebaseComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 detail-lib\">\n    <br>\n      <button type=\"button\" class=\"btn btn-outline-primary btn-lg btn-block\"\n      (click)=\"goDeatil('intro')\">Basic introduction</button>\n      <button type=\"button\" class=\"btn btn-outline-secondary btn-lg btn-block\"\n      routerLink = \"routeuse\">Basic use of router</button>\n      <button type=\"button\" class=\"btn btn-outline-success btn-lg btn-block\"\n      routerLink = \"axios\">Call the background</button>\n  </div>\n  <div class=\"col-md-9 detail-font\">\n    <router-outlet></router-outlet>\n  </div>\n</div>"
+module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 detail-lib\">\n    <br>\n      <button type=\"button\" class=\"btn btn-primary btn-lg btn-block\"\n      (click)=\"goDeatil('intro')\">Basic introduction</button>\n      <button type=\"button\" class=\"btn btn-secondary btn-lg btn-block\"\n      routerLink = \"routeuse\">Basic use of router</button>\n      <button type=\"button\" class=\"btn btn-success btn-lg btn-block\"\n      routerLink = \"axios\">Call the background</button>\n  </div>\n  <div class=\"col-md-9 detail-font\">\n    <router-outlet></router-outlet>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -1861,7 +1952,7 @@ module.exports = "<div class=\"row bgset\">\n  <div class=\"col-md-12 fontset\">
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".bgset {\n  background-color: #39ec29;\n  height: 50px; }\n\n.fontset {\n  line-height: 50px;\n  font-size: 10px;\n  font-weight: bold;\n  color: darkviolet;\n  text-align: center; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVsdS9yZWFyLmd1YXJkL2Zvb3Rlci9FOlxcdnNjb2RlUHJvamVjdFxcY2hldnlza3kvc3JjXFxhcHBcXGJ1bHVcXHJlYXIuZ3VhcmRcXGZvb3RlclxcZm9vdGVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0kseUJBQWtDO0VBQ2xDLFlBQVksRUFBQTs7QUFHaEI7RUFDSSxpQkFBaUI7RUFDakIsZUFBZTtFQUNmLGlCQUFpQjtFQUNqQixpQkFBaUI7RUFDakIsa0JBQWtCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9idWx1L3JlYXIuZ3VhcmQvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5iZ3NldHsvL+iDjOaZr+iuvue9rlxyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDU3LCAyMzYsIDQxKTtcclxuICAgIGhlaWdodDogNTBweDtcclxufVxyXG5cclxuLmZvbnRzZXR7Ly/lrZfkvZPorr7nva5cclxuICAgIGxpbmUtaGVpZ2h0OiA1MHB4O1xyXG4gICAgZm9udC1zaXplOiAxMHB4O1xyXG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgICBjb2xvcjogZGFya3Zpb2xldDtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxufSJdfQ== */"
+module.exports = ".bgset {\n  background-color: black;\n  height: 50px; }\n\n.fontset {\n  line-height: 50px;\n  font-size: 10px;\n  font-weight: bold;\n  color: darkviolet;\n  text-align: center; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVsdS9yZWFyLmd1YXJkL2Zvb3Rlci9FOlxcdnNjb2RlUHJvamVjdFxcY2hldnlza3kvc3JjXFxhcHBcXGJ1bHVcXHJlYXIuZ3VhcmRcXGZvb3RlclxcZm9vdGVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksdUJBQXVCO0VBQ3ZCLFlBQVksRUFBQTs7QUFHaEI7RUFDSSxpQkFBaUI7RUFDakIsZUFBZTtFQUNmLGlCQUFpQjtFQUNqQixpQkFBaUI7RUFDakIsa0JBQWtCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9idWx1L3JlYXIuZ3VhcmQvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5iZ3NldHsvL+iDjOaZr+iuvue9rlxyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XHJcbiAgICBoZWlnaHQ6IDUwcHg7XHJcbn1cclxuXHJcbi5mb250c2V0ey8v5a2X5L2T6K6+572uXHJcbiAgICBsaW5lLWhlaWdodDogNTBweDtcclxuICAgIGZvbnQtc2l6ZTogMTBweDtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gICAgY29sb3I6IGRhcmt2aW9sZXQ7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn0iXX0= */"
 
 /***/ }),
 
