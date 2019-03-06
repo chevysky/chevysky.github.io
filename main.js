@@ -40,6 +40,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _router_java__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./router/java */ "./src/app/router/java.ts");
 /* harmony import */ var _router_database__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./router/database */ "./src/app/router/database.ts");
 /* harmony import */ var _bulu_middle_troops_carousel_carousel_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./bulu/middle.troops/carousel/carousel.component */ "./src/app/bulu/middle.troops/carousel/carousel.component.ts");
+/* harmony import */ var _bulu_middle_troops_resume_resume_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./bulu/middle.troops/resume/resume.component */ "./src/app/bulu/middle.troops/resume/resume.component.ts");
 
 
 
@@ -47,7 +48,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var routes = _router_web__WEBPACK_IMPORTED_MODULE_3__["webRoute"].concat(_router_java__WEBPACK_IMPORTED_MODULE_4__["javaRoue"], _router_database__WEBPACK_IMPORTED_MODULE_5__["databaseRoute"], [{ path: 'body/homepage', component: _bulu_middle_troops_carousel_carousel_component__WEBPACK_IMPORTED_MODULE_6__["CarouselComponent"] }]);
+
+var routes = _router_web__WEBPACK_IMPORTED_MODULE_3__["webRoute"].concat(_router_java__WEBPACK_IMPORTED_MODULE_4__["javaRoue"], _router_database__WEBPACK_IMPORTED_MODULE_5__["databaseRoute"], [{ path: 'body/homepage', component: _bulu_middle_troops_carousel_carousel_component__WEBPACK_IMPORTED_MODULE_6__["CarouselComponent"] },
+    { path: 'body/resume', component: _bulu_middle_troops_resume_resume_component__WEBPACK_IMPORTED_MODULE_7__["ResumeComponent"] }]);
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
     }
@@ -154,6 +157,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _bulu_middle_troops_database_oracle_oracle_detail_oracle_detail_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./bulu/middle.troops/database/oracle/oracle.detail/oracle.detail.component */ "./src/app/bulu/middle.troops/database/oracle/oracle.detail/oracle.detail.component.ts");
 /* harmony import */ var _bulu_middle_troops_java_distributed_distributed_distributed_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./bulu/middle.troops/java/distributed/distributed/distributed.component */ "./src/app/bulu/middle.troops/java/distributed/distributed/distributed.component.ts");
 /* harmony import */ var _bulu_middle_troops_java_toolkit_kit_kit_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./bulu/middle.troops/java/toolkit/kit/kit.component */ "./src/app/bulu/middle.troops/java/toolkit/kit/kit.component.ts");
+/* harmony import */ var _bulu_middle_troops_resume_resume_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./bulu/middle.troops/resume/resume.component */ "./src/app/bulu/middle.troops/resume/resume.component.ts");
+
 
 
 
@@ -205,6 +210,7 @@ var AppModule = /** @class */ (function () {
                 _bulu_middle_troops_database_oracle_oracle_detail_oracle_detail_component__WEBPACK_IMPORTED_MODULE_23__["OracleDetailComponent"],
                 _bulu_middle_troops_java_distributed_distributed_distributed_component__WEBPACK_IMPORTED_MODULE_24__["DistributedComponent"],
                 _bulu_middle_troops_java_toolkit_kit_kit_component__WEBPACK_IMPORTED_MODULE_25__["KitComponent"],
+                _bulu_middle_troops_resume_resume_component__WEBPACK_IMPORTED_MODULE_26__["ResumeComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -212,7 +218,8 @@ var AppModule = /** @class */ (function () {
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
                 ngx_bootstrap__WEBPACK_IMPORTED_MODULE_5__["AccordionModule"].forRoot(),
                 ngx_bootstrap__WEBPACK_IMPORTED_MODULE_5__["CarouselModule"].forRoot(),
-                ngx_bootstrap__WEBPACK_IMPORTED_MODULE_5__["TabsModule"].forRoot()
+                ngx_bootstrap__WEBPACK_IMPORTED_MODULE_5__["TabsModule"].forRoot(),
+                ngx_bootstrap__WEBPACK_IMPORTED_MODULE_5__["ModalModule"].forRoot()
             ],
             providers: [
                 { provide: ngx_bootstrap_carousel__WEBPACK_IMPORTED_MODULE_6__["CarouselConfig"], useValue: { interval: 2000, noPause: true, showIndicators: true } }
@@ -722,6 +729,59 @@ var domain = '<h4 class="title-font">跨域配置</h4>' +
 
 /***/ }),
 
+/***/ "./src/app/bulu/middle.troops/java/springboot/ehcache.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/java/springboot/ehcache.ts ***!
+  \***************************************************************/
+/*! exports provided: ehcache */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ehcache", function() { return ehcache; });
+var ehcache = '<h4 class="title-font">Ehcache Configuration</h4>' +
+    '<span class="small-title">application.properties</span><br><br>' +
+    'spring.cache.ehcache.config=classpath:ehcache.xml<br>' +
+    '<span class="small-title">ehcache.xml</span><br>' +
+    '&lt;ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../config/ehcache.xsd"><br><br>' +
+    '&lt;diskStore path="java.io.tmpdir/Tmp_EhCache"/><br><br>' +
+    '&lt;!--<br>' +
+    'eternal:对象是否永久有效，设置后，timeout将不起作用;<br>' +
+    'memoryStoreEvictionPolicy:当达到最大存储限制时，根据指定策略清理内存LRU(Least Recently Used最近很少使用)，FIFO（先进先出），LFU(Least Frequently Used较少使用);<br>' +
+    'timeToIdleSeconds:设置对象在失效前的允许闲置时间(单位：秒);<br>' +
+    'timeToLiveSeconds:设置对象在失效前允许存活时间(单位：秒);<br>' +
+    'maxElementsOnDisk:硬盘最大缓存个数;<br>' +
+    'diskExpiryThreadIntervalSeconds:磁盘失效线程运行时间间隔，默认是120秒;<br>' +
+    'clearOnFlush:内存数量最大时是否清除;<br>' +
+    'diskPersistent:是否缓存虚拟机重启期数据;<br>' +
+    'diskSpoolBufferSizeMB:这个参数设置DiskStore（磁盘缓存）的缓存区大小。默认是30MB。每个Cache都应该有自己的一个缓冲区;<br>' +
+    'overflowToDisk:当内存中对象数量达到maxElementsInMemory时，Ehcache将会对象写到磁盘中;<br>' +
+    '--><br>' +
+    '&lt;defaultCache<br>' +
+    'maxElementsInMemory="10000"<br>' +
+    'eternal="false"<br>' +
+    'timeToIdleSeconds="120"<br>' +
+    'timeToLiveSeconds="120"<br>' +
+    'maxElementsOnDisk="10000000"<br>' +
+    'diskExpiryThreadIntervalSeconds="120"<br>' +
+    'memoryStoreEvictionPolicy="LRU"><br>' +
+    '&lt;persistence strategy="localTempSwap"/><br>' +
+    '&lt;/defaultCache><br><br>' +
+    '&lt;cache name="users"<br>' +
+    'maxElementsInMemory="10000"<br>' +
+    'eternal="false"<br>' +
+    'timeToIdleSeconds="120"<br>' +
+    'timeToLiveSeconds="120"<br>' +
+    'maxElementsOnDisk="10000000"<br>' +
+    'diskExpiryThreadIntervalSeconds="120"<br>' +
+    'memoryStoreEvictionPolicy="LRU"><br>' +
+    '&lt;persistence strategy="localTempSwap"/><br>' +
+    '&lt;/cache><br>' +
+    '&lt;/ehcache>';
+
+
+/***/ }),
+
 /***/ "./src/app/bulu/middle.troops/java/springboot/exception.ts":
 /*!*****************************************************************!*\
   !*** ./src/app/bulu/middle.troops/java/springboot/exception.ts ***!
@@ -1164,7 +1224,7 @@ var SpdetailComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 detail-lib\">\n    <br>\n      <button type=\"button\" class=\"btn btn-primary btn-lg btn-block\" \n      (click)=\"goDeatil('domain')\">Cross domain config</button>\n      <button type=\"button\" class=\"btn btn-secondary btn-lg btn-block\" \n      (click)=\"goDeatil('interceptor')\">interceptor</button>\n      <button type=\"button\" class=\"btn btn-success btn-lg btn-block\"\n      (click)=\"goDeatil('shiro')\">shiro</button>\n      <button type=\"button\" class=\"btn btn-danger btn-lg btn-block\"\n      (click)=\"goDeatil('exception')\">exception</button>\n  </div>\n  <div class=\"col-md-9 detail-font\">\n    <div *ngIf = \"shiroShow\">\n      <h4 style=\"color:black\">SHIRO基本使用</h4>\n      <a href=\"https://github.com/chevysky/fireworm.git\">github代码所在地</a>\n      <div>\n          <tabset>\n              <tab heading=\"controller\" id=\"tab1\"><div [innerHTML] = 'part1'></div>></tab>\n              <tab heading=\"shiroRealm\"><div [innerHTML] = 'part2'></div></tab>\n              <tab heading=\"shiro configuration\"><div [innerHTML] = 'part3'></div></tab>\n            </tabset>\n      </div>\n    </div>\n    <div [innerHTML] = 'showData'></div>\n    <router-outlet></router-outlet>\n  </div>\n</div>"
+module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 detail-lib\">\n    <br>\n      <button type=\"button\" class=\"btn btn-primary btn-lg btn-block\" \n      (click)=\"goDeatil('domain')\">Cross domain config</button>\n      <button type=\"button\" class=\"btn btn-secondary btn-lg btn-block\" \n      (click)=\"goDeatil('interceptor')\">interceptor</button>\n      <button type=\"button\" class=\"btn btn-success btn-lg btn-block\"\n      (click)=\"goDeatil('shiro')\">shiro</button>\n      <button type=\"button\" class=\"btn btn-danger btn-lg btn-block\"\n      (click)=\"goDeatil('exception')\">exception</button>\n      <button type=\"button\" class=\"btn btn-warning btn-lg btn-block\"\n      (click)=\"goDeatil('ehcache')\">ehcache</button>\n  </div>\n  <div class=\"col-md-9 detail-font\">\n    <div *ngIf = \"shiroShow\">\n      <h4 style=\"color:black\">SHIRO基本使用</h4>\n      <a href=\"https://github.com/chevysky/fireworm.git\">github代码所在地</a>\n      <div>\n          <tabset>\n              <tab heading=\"controller\" id=\"tab1\"><div [innerHTML] = 'part1'></div>></tab>\n              <tab heading=\"shiroRealm\"><div [innerHTML] = 'part2'></div></tab>\n              <tab heading=\"shiro configuration\"><div [innerHTML] = 'part3'></div></tab>\n            </tabset>\n      </div>\n    </div>\n    <div [innerHTML] = 'showData'></div>\n    <router-outlet></router-outlet>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -1198,6 +1258,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shiro_realm__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shiro.realm */ "./src/app/bulu/middle.troops/java/springboot/shiro.realm.ts");
 /* harmony import */ var _shiro_config__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../shiro.config */ "./src/app/bulu/middle.troops/java/springboot/shiro.config.ts");
 /* harmony import */ var _exception__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../exception */ "./src/app/bulu/middle.troops/java/springboot/exception.ts");
+/* harmony import */ var _ehcache__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../ehcache */ "./src/app/bulu/middle.troops/java/springboot/ehcache.ts");
+
 
 
 
@@ -1237,6 +1299,9 @@ var SplibComponent = /** @class */ (function () {
                 break;
             case 'exception':
                 this.showData = _exception__WEBPACK_IMPORTED_MODULE_8__["exception"];
+                break;
+            case 'ehcache':
+                this.showData = _ehcache__WEBPACK_IMPORTED_MODULE_9__["ehcache"];
                 break;
             default:
                 this.showData = _domain__WEBPACK_IMPORTED_MODULE_3__["domain"];
@@ -1388,6 +1453,71 @@ var KitComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
     ], KitComponent);
     return KitComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/resume/resume.component.html":
+/*!*****************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/resume/resume.component.html ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n<img src=\"../../../../assets/bulu/resume.jpg\">\n"
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/resume/resume.component.scss":
+/*!*****************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/resume/resume.component.scss ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2J1bHUvbWlkZGxlLnRyb29wcy9yZXN1bWUvcmVzdW1lLmNvbXBvbmVudC5zY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/bulu/middle.troops/resume/resume.component.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/bulu/middle.troops/resume/resume.component.ts ***!
+  \***************************************************************/
+/*! exports provided: ResumeComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ResumeComponent", function() { return ResumeComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
+
+
+var ResumeComponent = /** @class */ (function () {
+    function ResumeComponent(routerinfo, router) {
+        this.routerinfo = routerinfo;
+        this.router = router;
+    }
+    ResumeComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.routerinfo.queryParams.subscribe(function (queryParams) {
+            if (!(queryParams.queryCode == 9420))
+                _this.router.navigate(['body/homepage']);
+        });
+    };
+    ResumeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-resume',
+            template: __webpack_require__(/*! ./resume.component.html */ "./src/app/bulu/middle.troops/resume/resume.component.html"),
+            styles: [__webpack_require__(/*! ./resume.component.scss */ "./src/app/bulu/middle.troops/resume/resume.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+    ], ResumeComponent);
+    return ResumeComponent;
 }());
 
 
@@ -1941,7 +2071,7 @@ var VuerouteComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row bgset\">\n  <div class=\"col-md-12 fontset\">\n    <span>微微草色恸，何处觅相知</span>\n    <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>\n    <span>version : 0.0.1</span>\n  </div>\n</div>\n"
+module.exports = "<div class=\"row bgset\">\n  <div class=\"col-md-12 fontset\">\n    <span>微微草色恸，何处觅相知</span>\n    <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>\n    <span>version : 0.0.1</span>\n    <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>\n    <img src='../../../../assets/bulu/wechat.png' width=\"2%\">\n    <span>&nbsp;&nbsp;微信账号：&nbsp;&nbsp;chevysky</span>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -1997,7 +2127,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row bgimg\">\n  <div class=\"col-md-8 offset-md-1 welfont\">BULU小窝欢迎小伙伴们微踩</div>\n  <div class=\"col-md-3 userfont\">\n      <span (click) = 'goHomePage()'>首页&nbsp;&nbsp;</span>\n    |&nbsp;&nbsp;\n    <span>provider&nbsp;:&nbsp;chevysky</span>\n  </div>\n</div>\n"
+module.exports = "<div class=\"row bgimg\">\n  <div class=\"col-md-5 offset-md-1 welfont\">BULU小窝欢迎小伙伴们微踩</div>\n  <div class=\"col-md-3 time\">{{nowTime}}</div>\n  <div class=\"col-md-3 font\">\n      <span (click) = 'goHomePage()' class=\"home-font\">首页&nbsp;&nbsp;</span>\n    |&nbsp;&nbsp;\n    <span class=\"userfont\" (click)=\"openModal(resume)\">provider&nbsp;:&nbsp;chevysky</span>\n  </div>\n</div>\n\n<ng-template #resume>\n    <div class=\"modal-header\">\n      <span>请输入查询码</span>\n      <button type=\"button\" class=\"close pull-right\" aria-label=\"Close\" (click)=\"modalRef.hide()\">\n        <span aria-hidden=\"true\">&times;</span>\n      </button>\n    </div>\n    <div class=\"modal-body\">\n     <input [(ngModel)] = 'queryCode' type='password' class=\"form-control\"> \n     <span style=\"color:rgb(235, 46, 39);\" *ngIf=\"codeShow\">输入的查询码错误</span>\n     <br>\n    <div style=\"width:100%;text-align:right\">\n        <button (click)=\"cancle()\" class=\"btn btn-primary\">取消</button>\n        &nbsp; &nbsp; \n        <button (click)=\"query()\" class=\"btn btn-warning\">确定</button>\n        &nbsp; &nbsp; &nbsp; &nbsp;\n    </div>\n    </div>\n  </ng-template>"
 
 /***/ }),
 
@@ -2008,7 +2138,7 @@ module.exports = "<div class=\"row bgimg\">\n  <div class=\"col-md-8 offset-md-1
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".bgimg {\n  background-image: url('header.jpg');\n  background-repeat: no-repeat;\n  background-size: 100% 100%;\n  height: 150px; }\n\n.welfont {\n  line-height: 100px;\n  font-size: 40px;\n  font-weight: bold;\n  color: darkorange;\n  font-family: 'Courier New', Courier, monospace; }\n\n.userfont {\n  line-height: 50px;\n  font-size: 16px;\n  color: white;\n  cursor: pointer;\n  text-align: right; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVsdS9zcGVhcmhlYWQvaGVhZGVyL0U6XFx2c2NvZGVQcm9qZWN0XFxjaGV2eXNreS9zcmNcXGFwcFxcYnVsdVxcc3BlYXJoZWFkXFxoZWFkZXJcXGhlYWRlci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLG1DQUEyRDtFQUMzRCw0QkFBNEI7RUFDNUIsMEJBQTBCO0VBQzFCLGFBQWEsRUFBQTs7QUFHakI7RUFDSSxrQkFBa0I7RUFDbEIsZUFBZTtFQUNmLGlCQUFpQjtFQUNqQixpQkFBaUI7RUFDakIsOENBQThDLEVBQUE7O0FBR2xEO0VBQ0ksaUJBQWlCO0VBQ2pCLGVBQWU7RUFDZixZQUFXO0VBQ1gsZUFBZTtFQUNmLGlCQUFpQixFQUFBIiwiZmlsZSI6InNyYy9hcHAvYnVsdS9zcGVhcmhlYWQvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5iZ2ltZ3svL+iDjOaZr+WbvlxyXG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCcuLi8uLi8uLi8uLi9hc3NldHMvYnVsdS9oZWFkZXIuanBnJyk7XHJcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gICAgYmFja2dyb3VuZC1zaXplOiAxMDAlIDEwMCU7XHJcbiAgICBoZWlnaHQ6IDE1MHB4O1xyXG59XHJcblxyXG4ud2VsZm9udHsvL+asoui/juivjeWtl+S9k+iuvue9rlxyXG4gICAgbGluZS1oZWlnaHQ6IDEwMHB4O1xyXG4gICAgZm9udC1zaXplOiA0MHB4O1xyXG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgICBjb2xvcjogZGFya29yYW5nZTtcclxuICAgIGZvbnQtZmFtaWx5OiAnQ291cmllciBOZXcnLCBDb3VyaWVyLCBtb25vc3BhY2U7XHJcbn1cclxuXHJcbi51c2VyZm9udHsvL+eUqOaIt+Wtl+S9k+iuvue9rlxyXG4gICAgbGluZS1oZWlnaHQ6IDUwcHg7XHJcbiAgICBmb250LXNpemU6IDE2cHg7XHJcbiAgICBjb2xvcjp3aGl0ZTtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxuICAgIHRleHQtYWxpZ246IHJpZ2h0O1xyXG59Il19 */"
+module.exports = ".bgimg {\n  background-image: url('header.jpg');\n  background-repeat: no-repeat;\n  background-size: 100% 100%;\n  height: 150px; }\n\n.welfont {\n  line-height: 100px;\n  font-size: 40px;\n  font-weight: bold;\n  color: darkorange;\n  font-family: 'Courier New', Courier, monospace; }\n\n.userfont {\n  color: #85098a; }\n\n.font {\n  line-height: 50px;\n  font-size: 16px;\n  cursor: pointer;\n  text-align: right;\n  font-weight: bold; }\n\n.home-font {\n  color: #12d433; }\n\n.time {\n  line-height: 140px;\n  color: #000; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVsdS9zcGVhcmhlYWQvaGVhZGVyL0U6XFx2c2NvZGVQcm9qZWN0XFxjaGV2eXNreS9zcmNcXGFwcFxcYnVsdVxcc3BlYXJoZWFkXFxoZWFkZXJcXGhlYWRlci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLG1DQUEyRDtFQUMzRCw0QkFBNEI7RUFDNUIsMEJBQTBCO0VBQzFCLGFBQWEsRUFBQTs7QUFHakI7RUFDSSxrQkFBa0I7RUFDbEIsZUFBZTtFQUNmLGlCQUFpQjtFQUNqQixpQkFBaUI7RUFDakIsOENBQThDLEVBQUE7O0FBR2xEO0VBQ0ksY0FBc0IsRUFBQTs7QUFHMUI7RUFDSSxpQkFBaUI7RUFDakIsZUFBZTtFQUNmLGVBQWU7RUFDZixpQkFBaUI7RUFDakIsaUJBQWlCLEVBQUE7O0FBR3JCO0VBQ0ksY0FBc0IsRUFBQTs7QUFHMUI7RUFDSSxrQkFBa0I7RUFDbEIsV0FBVyxFQUFBIiwiZmlsZSI6InNyYy9hcHAvYnVsdS9zcGVhcmhlYWQvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5iZ2ltZ3svL+iDjOaZr+WbvlxyXG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCcuLi8uLi8uLi8uLi9hc3NldHMvYnVsdS9oZWFkZXIuanBnJyk7XHJcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gICAgYmFja2dyb3VuZC1zaXplOiAxMDAlIDEwMCU7XHJcbiAgICBoZWlnaHQ6IDE1MHB4O1xyXG59XHJcblxyXG4ud2VsZm9udHsvL+asoui/juivjeWtl+S9k+iuvue9rlxyXG4gICAgbGluZS1oZWlnaHQ6IDEwMHB4O1xyXG4gICAgZm9udC1zaXplOiA0MHB4O1xyXG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgICBjb2xvcjogZGFya29yYW5nZTtcclxuICAgIGZvbnQtZmFtaWx5OiAnQ291cmllciBOZXcnLCBDb3VyaWVyLCBtb25vc3BhY2U7XHJcbn1cclxuXHJcbi51c2VyZm9udHsvL+eUqOaIt+Wtl+S9k+iuvue9rlxyXG4gICAgY29sb3I6cmdiKDEzMywgOSwgMTM4KTtcclxufVxyXG5cclxuLmZvbnR7XHJcbiAgICBsaW5lLWhlaWdodDogNTBweDtcclxuICAgIGZvbnQtc2l6ZTogMTZweDtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxuICAgIHRleHQtYWxpZ246IHJpZ2h0O1xyXG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbn1cclxuXHJcbi5ob21lLWZvbnR7XHJcbiAgICBjb2xvcjpyZ2IoMTgsIDIxMiwgNTEpO1xyXG59XHJcblxyXG4udGltZXtcclxuICAgIGxpbmUtaGVpZ2h0OiAxNDBweDtcclxuICAgIGNvbG9yOiAjMDAwO1xyXG59Il19 */"
 
 /***/ }),
 
@@ -2025,17 +2155,56 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
+
 
 
 
 var HeaderComponent = /** @class */ (function () {
-    function HeaderComponent(router) {
+    function HeaderComponent(router, modalService) {
         this.router = router;
+        this.modalService = modalService;
+        this.weekArray = new Array('星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六');
+        this.codeShow = false;
     }
     HeaderComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var week = this.weekArray[new Date().getDay()];
+        setInterval(function () {
+            var time = new Date().toLocaleString();
+            _this.nowTime = week.concat(' ').concat(time);
+        }, 1000);
     };
     HeaderComponent.prototype.goHomePage = function () {
         this.router.navigateByUrl('body/homepage');
+    };
+    HeaderComponent.prototype.ngOnDestory = function () {
+        clearInterval(this.nowTime);
+    };
+    HeaderComponent.prototype.openModal = function (template) {
+        this.modalRef = this.modalService.show(template);
+    };
+    HeaderComponent.prototype.query = function () {
+        if (this.queryCode == 9420) {
+            this.queryCode = '';
+            this.modalRef.hide();
+            this.goResume(9420);
+        }
+        else {
+            this.codeShow = true;
+        }
+    };
+    HeaderComponent.prototype.goResume = function (code) {
+        this.router.navigate(['body/resume'], {
+            queryParams: {
+                queryCode: code
+            }
+        });
+    };
+    HeaderComponent.prototype.cancle = function () {
+        this.codeShow = false;
+        this.queryCode = '';
+        this.modalRef.hide();
     };
     HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -2043,7 +2212,7 @@ var HeaderComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./header.component.html */ "./src/app/bulu/spearhead/header/header.component.html"),
             styles: [__webpack_require__(/*! ./header.component.scss */ "./src/app/bulu/spearhead/header/header.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_3__["BsModalService"]])
     ], HeaderComponent);
     return HeaderComponent;
 }());
