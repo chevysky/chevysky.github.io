@@ -37,10 +37,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _homepage_homepage_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./homepage/homepage.component */ "./src/app/homepage/homepage.component.ts");
-/* harmony import */ var _frontend_frontend_frontend_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./frontend/frontend/frontend.component */ "./src/app/frontend/frontend/frontend.component.ts");
-/* harmony import */ var _database_database_database_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./database/database/database.component */ "./src/app/database/database/database.component.ts");
-/* harmony import */ var _essays_essays_essays_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./essays/essays/essays.component */ "./src/app/essays/essays/essays.component.ts");
-/* harmony import */ var _router_backend__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./router/backend */ "./src/app/router/backend.ts");
+/* harmony import */ var _database_database_database_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./database/database/database.component */ "./src/app/database/database/database.component.ts");
+/* harmony import */ var _essays_essays_essays_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./essays/essays/essays.component */ "./src/app/essays/essays/essays.component.ts");
+/* harmony import */ var _router_backend__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./router/backend */ "./src/app/router/backend.ts");
+/* harmony import */ var _router_frontend__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./router/frontend */ "./src/app/router/frontend.ts");
 
 
 
@@ -49,20 +49,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var routes = _router_backend__WEBPACK_IMPORTED_MODULE_7__["backendRouter"].concat([{ path: 'homepage', component: _homepage_homepage_component__WEBPACK_IMPORTED_MODULE_3__["HomepageComponent"] },
-    {
-        path: 'frontend',
-        component: _frontend_frontend_frontend_component__WEBPACK_IMPORTED_MODULE_4__["FrontendComponent"],
-        children: []
-    },
+var routes = _router_backend__WEBPACK_IMPORTED_MODULE_6__["backendRouter"].concat(_router_frontend__WEBPACK_IMPORTED_MODULE_7__["frontendRouter"], [{ path: 'homepage', component: _homepage_homepage_component__WEBPACK_IMPORTED_MODULE_3__["HomepageComponent"] },
     {
         path: 'database',
-        component: _database_database_database_component__WEBPACK_IMPORTED_MODULE_5__["DatabaseComponent"],
+        component: _database_database_database_component__WEBPACK_IMPORTED_MODULE_4__["DatabaseComponent"],
         children: []
     },
     {
         path: 'essays',
-        component: _essays_essays_essays_component__WEBPACK_IMPORTED_MODULE_6__["EssaysComponent"],
+        component: _essays_essays_essays_component__WEBPACK_IMPORTED_MODULE_5__["EssaysComponent"],
         children: []
     }]);
 var AppRoutingModule = /** @class */ (function () {
@@ -154,22 +149,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var ngx_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-bootstrap */ "./node_modules/ngx-bootstrap/esm5/ngx-bootstrap.js");
-/* harmony import */ var _toolkit_safePipe__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./toolkit/safePipe */ "./src/app/toolkit/safePipe.ts");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _homepage_homepage_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./homepage/homepage.component */ "./src/app/homepage/homepage.component.ts");
-/* harmony import */ var _backend_backend_backend_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./backend/backend/backend.component */ "./src/app/backend/backend/backend.component.ts");
-/* harmony import */ var _frontend_frontend_frontend_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./frontend/frontend/frontend.component */ "./src/app/frontend/frontend/frontend.component.ts");
-/* harmony import */ var _database_database_database_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./database/database/database.component */ "./src/app/database/database/database.component.ts");
-/* harmony import */ var _essays_essays_essays_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./essays/essays/essays.component */ "./src/app/essays/essays/essays.component.ts");
-/* harmony import */ var _backend_basic_configuration_domain_domain_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./backend/basic.configuration/domain/domain.component */ "./src/app/backend/basic.configuration/domain/domain.component.ts");
-/* harmony import */ var _backend_basic_configuration_interceptor_interceptor_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./backend/basic.configuration/interceptor/interceptor.component */ "./src/app/backend/basic.configuration/interceptor/interceptor.component.ts");
-/* harmony import */ var _backend_basic_configuration_exception_exception_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./backend/basic.configuration/exception/exception.component */ "./src/app/backend/basic.configuration/exception/exception.component.ts");
-/* harmony import */ var _backend_plug_ehcache_ehcache_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./backend/plug/ehcache/ehcache.component */ "./src/app/backend/plug/ehcache/ehcache.component.ts");
-/* harmony import */ var _backend_plug_shiro_shiro_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./backend/plug/shiro/shiro.component */ "./src/app/backend/plug/shiro/shiro.component.ts");
-/* harmony import */ var _backend_plug_dubbo_dubbo_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./backend/plug/dubbo/dubbo.component */ "./src/app/backend/plug/dubbo/dubbo.component.ts");
-/* harmony import */ var _backend_plug_rabbitmq_rabbitmq_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./backend/plug/rabbitmq/rabbitmq.component */ "./src/app/backend/plug/rabbitmq/rabbitmq.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var ngx_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-bootstrap */ "./node_modules/ngx-bootstrap/esm5/ngx-bootstrap.js");
+/* harmony import */ var _toolkit_safePipe__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./toolkit/safePipe */ "./src/app/toolkit/safePipe.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _homepage_homepage_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./homepage/homepage.component */ "./src/app/homepage/homepage.component.ts");
+/* harmony import */ var _backend_backend_backend_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./backend/backend/backend.component */ "./src/app/backend/backend/backend.component.ts");
+/* harmony import */ var _frontend_frontend_frontend_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./frontend/frontend/frontend.component */ "./src/app/frontend/frontend/frontend.component.ts");
+/* harmony import */ var _database_database_database_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./database/database/database.component */ "./src/app/database/database/database.component.ts");
+/* harmony import */ var _essays_essays_essays_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./essays/essays/essays.component */ "./src/app/essays/essays/essays.component.ts");
+/* harmony import */ var _backend_basic_configuration_domain_domain_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./backend/basic.configuration/domain/domain.component */ "./src/app/backend/basic.configuration/domain/domain.component.ts");
+/* harmony import */ var _backend_basic_configuration_interceptor_interceptor_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./backend/basic.configuration/interceptor/interceptor.component */ "./src/app/backend/basic.configuration/interceptor/interceptor.component.ts");
+/* harmony import */ var _backend_basic_configuration_exception_exception_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./backend/basic.configuration/exception/exception.component */ "./src/app/backend/basic.configuration/exception/exception.component.ts");
+/* harmony import */ var _backend_plug_ehcache_ehcache_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./backend/plug/ehcache/ehcache.component */ "./src/app/backend/plug/ehcache/ehcache.component.ts");
+/* harmony import */ var _backend_plug_shiro_shiro_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./backend/plug/shiro/shiro.component */ "./src/app/backend/plug/shiro/shiro.component.ts");
+/* harmony import */ var _backend_plug_dubbo_dubbo_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./backend/plug/dubbo/dubbo.component */ "./src/app/backend/plug/dubbo/dubbo.component.ts");
+/* harmony import */ var _backend_plug_rabbitmq_rabbitmq_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./backend/plug/rabbitmq/rabbitmq.component */ "./src/app/backend/plug/rabbitmq/rabbitmq.component.ts");
+/* harmony import */ var _frontend_ngcreate_ngcreate_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./frontend/ngcreate/ngcreate.component */ "./src/app/frontend/ngcreate/ngcreate.component.ts");
+/* harmony import */ var _frontend_nguse_nguse_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./frontend/nguse/nguse.component */ "./src/app/frontend/nguse/nguse.component.ts");
+/* harmony import */ var _frontend_vuecreate_vuecreate_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./frontend/vuecreate/vuecreate.component */ "./src/app/frontend/vuecreate/vuecreate.component.ts");
+/* harmony import */ var _frontend_vueuse_vueuse_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./frontend/vueuse/vueuse.component */ "./src/app/frontend/vueuse/vueuse.component.ts");
+
+
+
+
+
 
 
 
@@ -195,29 +200,35 @@ var AppModule = /** @class */ (function () {
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
-                _homepage_homepage_component__WEBPACK_IMPORTED_MODULE_7__["HomepageComponent"],
-                _backend_backend_backend_component__WEBPACK_IMPORTED_MODULE_8__["BackendComponent"],
-                _frontend_frontend_frontend_component__WEBPACK_IMPORTED_MODULE_9__["FrontendComponent"],
-                _database_database_database_component__WEBPACK_IMPORTED_MODULE_10__["DatabaseComponent"],
-                _essays_essays_essays_component__WEBPACK_IMPORTED_MODULE_11__["EssaysComponent"],
-                _toolkit_safePipe__WEBPACK_IMPORTED_MODULE_4__["safePipe"],
-                _backend_basic_configuration_domain_domain_component__WEBPACK_IMPORTED_MODULE_12__["DomainComponent"],
-                _backend_basic_configuration_interceptor_interceptor_component__WEBPACK_IMPORTED_MODULE_13__["InterceptorComponent"],
-                _backend_basic_configuration_exception_exception_component__WEBPACK_IMPORTED_MODULE_14__["ExceptionComponent"],
-                _backend_plug_ehcache_ehcache_component__WEBPACK_IMPORTED_MODULE_15__["EhcacheComponent"],
-                _backend_plug_shiro_shiro_component__WEBPACK_IMPORTED_MODULE_16__["ShiroComponent"],
-                _backend_plug_dubbo_dubbo_component__WEBPACK_IMPORTED_MODULE_17__["DubboComponent"],
-                _backend_plug_rabbitmq_rabbitmq_component__WEBPACK_IMPORTED_MODULE_18__["RabbitmqComponent"],
+                _app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"],
+                _homepage_homepage_component__WEBPACK_IMPORTED_MODULE_8__["HomepageComponent"],
+                _backend_backend_backend_component__WEBPACK_IMPORTED_MODULE_9__["BackendComponent"],
+                _frontend_frontend_frontend_component__WEBPACK_IMPORTED_MODULE_10__["FrontendComponent"],
+                _database_database_database_component__WEBPACK_IMPORTED_MODULE_11__["DatabaseComponent"],
+                _essays_essays_essays_component__WEBPACK_IMPORTED_MODULE_12__["EssaysComponent"],
+                _toolkit_safePipe__WEBPACK_IMPORTED_MODULE_5__["safePipe"],
+                _backend_basic_configuration_domain_domain_component__WEBPACK_IMPORTED_MODULE_13__["DomainComponent"],
+                _backend_basic_configuration_interceptor_interceptor_component__WEBPACK_IMPORTED_MODULE_14__["InterceptorComponent"],
+                _backend_basic_configuration_exception_exception_component__WEBPACK_IMPORTED_MODULE_15__["ExceptionComponent"],
+                _backend_plug_ehcache_ehcache_component__WEBPACK_IMPORTED_MODULE_16__["EhcacheComponent"],
+                _backend_plug_shiro_shiro_component__WEBPACK_IMPORTED_MODULE_17__["ShiroComponent"],
+                _backend_plug_dubbo_dubbo_component__WEBPACK_IMPORTED_MODULE_18__["DubboComponent"],
+                _backend_plug_rabbitmq_rabbitmq_component__WEBPACK_IMPORTED_MODULE_19__["RabbitmqComponent"],
+                _frontend_ngcreate_ngcreate_component__WEBPACK_IMPORTED_MODULE_20__["NgcreateComponent"],
+                _frontend_nguse_nguse_component__WEBPACK_IMPORTED_MODULE_21__["NguseComponent"],
+                _frontend_vuecreate_vuecreate_component__WEBPACK_IMPORTED_MODULE_22__["VuecreateComponent"],
+                _frontend_vueuse_vueuse_component__WEBPACK_IMPORTED_MODULE_23__["VueuseComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"],
-                ngx_bootstrap__WEBPACK_IMPORTED_MODULE_3__["AccordionModule"].forRoot(),
-                ngx_bootstrap__WEBPACK_IMPORTED_MODULE_3__["TabsModule"].forRoot()
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+                ngx_bootstrap__WEBPACK_IMPORTED_MODULE_4__["AccordionModule"].forRoot(),
+                ngx_bootstrap__WEBPACK_IMPORTED_MODULE_4__["TabsModule"].forRoot(),
+                ngx_bootstrap__WEBPACK_IMPORTED_MODULE_4__["BsDatepickerModule"].forRoot(),
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -245,7 +256,7 @@ module.exports = "<div class=\"row\">\n  <div class=\"col-md-12 head-background\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".head-background {\n  background: linear-gradient(to right top, #0a0000, #292013);\n  height: 30px;\n  color: azure;\n  text-align: right; }\n\n.interval-box {\n  background: linear-gradient(to right, rgba(0, 0, 255, 0.863), #92b6d8, rgba(0, 0, 255, 0.863), #92b6d8);\n  height: 4px; }\n\n.body-background {\n  background: linear-gradient(to right top, #0e0101, #47473c);\n  height: 577px; }\n\n.go-home {\n  font-size: 20px;\n  color: white;\n  font-weight: bold;\n  margin: 20px 0px 20px 20px; }\n\n.menu-head {\n  background-color: #0b010f;\n  text-align: left; }\n\n.menus {\n  opacity: 0.7; }\n\n.menu {\n  color: darkolivegreen;\n  cursor: pointer;\n  background-color: #0b010f;\n  opacity: 1; }\n\n.menu:hover {\n  color: #f12a07; }\n\n.icons {\n  margin-left: 30px; }\n\n.icon {\n  margin-left: 60px; }\n\n.left-bg {\n  background-image: url('menu.jpg');\n  background-size: 97% 100%; }\n\n.text-content {\n  margin-top: 10px;\n  width: 100%;\n  height: 560px;\n  color: azure;\n  overflow: auto; }\n\n.wechat {\n  width: 2%;\n  height: 22px;\n  margin-top: 2px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYmFja2VuZC9iYWNrZW5kL2Q6XFxnaXRcXGNoZXZ5c2t5L3NyY1xcYXBwXFxiYWNrZW5kXFxiYWNrZW5kXFxiYWNrZW5kLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksMkRBQXVFO0VBQ3ZFLFlBQVk7RUFDWixZQUFZO0VBQ1osaUJBQWlCLEVBQUE7O0FBR3JCO0VBQ0ksdUdBQXlIO0VBQ3pILFdBQVcsRUFBQTs7QUFHZjtFQUNJLDJEQUF1RTtFQUN2RSxhQUFZLEVBQUE7O0FBR2hCO0VBQ0ksZUFBZTtFQUNmLFlBQVk7RUFDWixpQkFBaUI7RUFDakIsMEJBQTBCLEVBQUE7O0FBRzlCO0VBQ0kseUJBQWdDO0VBQ2hDLGdCQUFnQixFQUFBOztBQUdwQjtFQUNJLFlBQVksRUFBQTs7QUFHaEI7RUFDRyxxQkFBcUI7RUFDckIsZUFBZTtFQUNmLHlCQUFnQztFQUNoQyxVQUFVLEVBQUE7O0FBR2I7RUFDSSxjQUFxQixFQUFBOztBQUd6QjtFQUNJLGlCQUFpQixFQUFBOztBQUdyQjtFQUNJLGlCQUFpQixFQUFBOztBQUdyQjtFQUNJLGlDQUF5RDtFQUN6RCx5QkFBeUIsRUFBQTs7QUFHN0I7RUFDSSxnQkFBZ0I7RUFDaEIsV0FBVztFQUNYLGFBQWE7RUFDYixZQUFZO0VBQ1osY0FBYSxFQUFBOztBQUdqQjtFQUNJLFNBQVM7RUFDVCxZQUFZO0VBQ1osZUFBZSxFQUFBIiwiZmlsZSI6InNyYy9hcHAvYmFja2VuZC9iYWNrZW5kL2JhY2tlbmQuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaGVhZC1iYWNrZ3JvdW5ke1xyXG4gICAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KHRvIHJpZ2h0IHRvcCxyZ2IoMTAsIDAsIDApLHJnYig0MSwgMzIsIDE5KSk7XHJcbiAgICBoZWlnaHQ6IDMwcHg7XHJcbiAgICBjb2xvcjogYXp1cmU7XHJcbiAgICB0ZXh0LWFsaWduOiByaWdodDtcclxufVxyXG5cclxuLmludGVydmFsLWJveHtcclxuICAgIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCh0byByaWdodCxyZ2JhKDAsIDAsIDI1NSwgMC44NjMpLHJnYigxNDYsIDE4MiwgMjE2KSxyZ2JhKDAsIDAsIDI1NSwgMC44NjMpLHJnYigxNDYsIDE4MiwgMjE2KSk7XHJcbiAgICBoZWlnaHQ6IDRweDtcclxufVxyXG5cclxuLmJvZHktYmFja2dyb3VuZHtcclxuICAgIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCh0byByaWdodCB0b3AscmdiKDE0LCAxLCAxKSxyZ2IoNzEsIDcxLCA2MCkpO1xyXG4gICAgaGVpZ2h0OjU3N3B4O1xyXG59XHJcblxyXG4uZ28taG9tZXtcclxuICAgIGZvbnQtc2l6ZTogMjBweDtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gICAgbWFyZ2luOiAyMHB4IDBweCAyMHB4IDIwcHg7XHJcbn1cclxuXHJcbi5tZW51LWhlYWR7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMTEsIDEsIDE1KTtcclxuICAgIHRleHQtYWxpZ246IGxlZnQ7XHJcbn1cclxuXHJcbi5tZW51c3tcclxuICAgIG9wYWNpdHk6IDAuNztcclxufVxyXG5cclxuLm1lbnV7XHJcbiAgIGNvbG9yOiBkYXJrb2xpdmVncmVlbjtcclxuICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMTEsIDEsIDE1KTtcclxuICAgb3BhY2l0eTogMTtcclxufVxyXG5cclxuLm1lbnU6aG92ZXJ7XHJcbiAgICBjb2xvcjpyZ2IoMjQxLCA0MiwgNyk7XHJcbn1cclxuXHJcbi5pY29uc3tcclxuICAgIG1hcmdpbi1sZWZ0OiAzMHB4O1xyXG59XHJcblxyXG4uaWNvbntcclxuICAgIG1hcmdpbi1sZWZ0OiA2MHB4O1xyXG59XHJcblxyXG4ubGVmdC1iZ3tcclxuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnLi4vLi4vLi4vYXNzZXRzL2JhY2tlbmQvbWVudS5qcGcnKTtcclxuICAgIGJhY2tncm91bmQtc2l6ZTogOTclIDEwMCU7XHJcbn1cclxuXHJcbi50ZXh0LWNvbnRlbnR7XHJcbiAgICBtYXJnaW4tdG9wOiAxMHB4O1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBoZWlnaHQ6IDU2MHB4O1xyXG4gICAgY29sb3I6IGF6dXJlO1xyXG4gICAgb3ZlcmZsb3c6YXV0bztcclxufVxyXG5cclxuLndlY2hhdHtcclxuICAgIHdpZHRoOiAyJTtcclxuICAgIGhlaWdodDogMjJweDtcclxuICAgIG1hcmdpbi10b3A6IDJweDtcclxufSJdfQ== */"
+module.exports = ".head-background {\n  background: linear-gradient(to right top, #0a0000, #292013);\n  height: 30px;\n  color: azure;\n  text-align: right; }\n\n.interval-box {\n  background: linear-gradient(to right, rgba(0, 0, 255, 0.863), #92b6d8, rgba(0, 0, 255, 0.863), #92b6d8);\n  height: 4px; }\n\n.body-background {\n  background: linear-gradient(to right top, #0e0101, #47473c);\n  height: 577px; }\n\n.go-home {\n  font-size: 20px;\n  color: white;\n  font-weight: bold;\n  margin: 20px 0px 20px 20px; }\n\n.menu-head {\n  background-color: #0b010f;\n  text-align: left; }\n\n.menus {\n  opacity: 0.7; }\n\n.menu {\n  color: darkolivegreen;\n  cursor: pointer;\n  background-color: #0b010f;\n  opacity: 1; }\n\n.menu:hover {\n  color: #f12a07; }\n\n.icons {\n  margin-left: 30px; }\n\n.icon {\n  margin-left: 60px; }\n\n.left-bg {\n  background-image: url('menu.jpg');\n  background-size: 97% 100%; }\n\n.text-content {\n  margin-top: 10px;\n  width: 100%;\n  height: 560px;\n  color: azure;\n  overflow: auto; }\n\n.wechat {\n  width: 2%;\n  height: 22px;\n  margin-top: 2px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYmFja2VuZC9iYWNrZW5kL0Q6XFxnaXRcXGNoZXZ5c2t5L3NyY1xcYXBwXFxiYWNrZW5kXFxiYWNrZW5kXFxiYWNrZW5kLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksMkRBQXVFO0VBQ3ZFLFlBQVk7RUFDWixZQUFZO0VBQ1osaUJBQWlCLEVBQUE7O0FBR3JCO0VBQ0ksdUdBQXlIO0VBQ3pILFdBQVcsRUFBQTs7QUFHZjtFQUNJLDJEQUF1RTtFQUN2RSxhQUFZLEVBQUE7O0FBR2hCO0VBQ0ksZUFBZTtFQUNmLFlBQVk7RUFDWixpQkFBaUI7RUFDakIsMEJBQTBCLEVBQUE7O0FBRzlCO0VBQ0kseUJBQWdDO0VBQ2hDLGdCQUFnQixFQUFBOztBQUdwQjtFQUNJLFlBQVksRUFBQTs7QUFHaEI7RUFDRyxxQkFBcUI7RUFDckIsZUFBZTtFQUNmLHlCQUFnQztFQUNoQyxVQUFVLEVBQUE7O0FBR2I7RUFDSSxjQUFxQixFQUFBOztBQUd6QjtFQUNJLGlCQUFpQixFQUFBOztBQUdyQjtFQUNJLGlCQUFpQixFQUFBOztBQUdyQjtFQUNJLGlDQUF5RDtFQUN6RCx5QkFBeUIsRUFBQTs7QUFHN0I7RUFDSSxnQkFBZ0I7RUFDaEIsV0FBVztFQUNYLGFBQWE7RUFDYixZQUFZO0VBQ1osY0FBYSxFQUFBOztBQUdqQjtFQUNJLFNBQVM7RUFDVCxZQUFZO0VBQ1osZUFBZSxFQUFBIiwiZmlsZSI6InNyYy9hcHAvYmFja2VuZC9iYWNrZW5kL2JhY2tlbmQuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaGVhZC1iYWNrZ3JvdW5ke1xyXG4gICAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KHRvIHJpZ2h0IHRvcCxyZ2IoMTAsIDAsIDApLHJnYig0MSwgMzIsIDE5KSk7XHJcbiAgICBoZWlnaHQ6IDMwcHg7XHJcbiAgICBjb2xvcjogYXp1cmU7XHJcbiAgICB0ZXh0LWFsaWduOiByaWdodDtcclxufVxyXG5cclxuLmludGVydmFsLWJveHtcclxuICAgIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCh0byByaWdodCxyZ2JhKDAsIDAsIDI1NSwgMC44NjMpLHJnYigxNDYsIDE4MiwgMjE2KSxyZ2JhKDAsIDAsIDI1NSwgMC44NjMpLHJnYigxNDYsIDE4MiwgMjE2KSk7XHJcbiAgICBoZWlnaHQ6IDRweDtcclxufVxyXG5cclxuLmJvZHktYmFja2dyb3VuZHtcclxuICAgIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCh0byByaWdodCB0b3AscmdiKDE0LCAxLCAxKSxyZ2IoNzEsIDcxLCA2MCkpO1xyXG4gICAgaGVpZ2h0OjU3N3B4O1xyXG59XHJcblxyXG4uZ28taG9tZXtcclxuICAgIGZvbnQtc2l6ZTogMjBweDtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gICAgbWFyZ2luOiAyMHB4IDBweCAyMHB4IDIwcHg7XHJcbn1cclxuXHJcbi5tZW51LWhlYWR7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMTEsIDEsIDE1KTtcclxuICAgIHRleHQtYWxpZ246IGxlZnQ7XHJcbn1cclxuXHJcbi5tZW51c3tcclxuICAgIG9wYWNpdHk6IDAuNztcclxufVxyXG5cclxuLm1lbnV7XHJcbiAgIGNvbG9yOiBkYXJrb2xpdmVncmVlbjtcclxuICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMTEsIDEsIDE1KTtcclxuICAgb3BhY2l0eTogMTtcclxufVxyXG5cclxuLm1lbnU6aG92ZXJ7XHJcbiAgICBjb2xvcjpyZ2IoMjQxLCA0MiwgNyk7XHJcbn1cclxuXHJcbi5pY29uc3tcclxuICAgIG1hcmdpbi1sZWZ0OiAzMHB4O1xyXG59XHJcblxyXG4uaWNvbntcclxuICAgIG1hcmdpbi1sZWZ0OiA2MHB4O1xyXG59XHJcblxyXG4ubGVmdC1iZ3tcclxuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnLi4vLi4vLi4vYXNzZXRzL2JhY2tlbmQvbWVudS5qcGcnKTtcclxuICAgIGJhY2tncm91bmQtc2l6ZTogOTclIDEwMCU7XHJcbn1cclxuXHJcbi50ZXh0LWNvbnRlbnR7XHJcbiAgICBtYXJnaW4tdG9wOiAxMHB4O1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBoZWlnaHQ6IDU2MHB4O1xyXG4gICAgY29sb3I6IGF6dXJlO1xyXG4gICAgb3ZlcmZsb3c6YXV0bztcclxufVxyXG5cclxuLndlY2hhdHtcclxuICAgIHdpZHRoOiAyJTtcclxuICAgIGhlaWdodDogMjJweDtcclxuICAgIG1hcmdpbi10b3A6IDJweDtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -268,14 +279,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var BackendComponent = /** @class */ (function () {
-    function BackendComponent(data, router) {
+    function BackendComponent(data, router, route) {
         this.data = data;
         this.router = router;
+        this.route = route;
         this.defimg = true;
     }
     BackendComponent.prototype.ngOnInit = function () {
+        var _this = this;
         this.menus = this.data.getMenus();
         this.getNowTime();
+        this.route.queryParams.subscribe(function (queryParams) {
+            if (queryParams.showDef)
+                _this.defimg = false;
+        });
     };
     BackendComponent.prototype.getNowTime = function () {
         var _this = this;
@@ -295,7 +312,7 @@ var BackendComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./backend.component.html */ "./src/app/backend/backend/backend.component.html"),
             styles: [__webpack_require__(/*! ./backend.component.scss */ "./src/app/backend/backend/backend.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
     ], BackendComponent);
     return BackendComponent;
 }());
@@ -436,7 +453,7 @@ module.exports = "<tabset [justified]=\"true\" type=\"pills\">\n  <tab>\n    <ng
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".customClass {\n  background-color: black; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYmFja2VuZC9iYXNpYy5jb25maWd1cmF0aW9uL2ludGVyY2VwdG9yL2Q6XFxnaXRcXGNoZXZ5c2t5L3NyY1xcYXBwXFxiYWNrZW5kXFxiYXNpYy5jb25maWd1cmF0aW9uXFxpbnRlcmNlcHRvclxcaW50ZXJjZXB0b3IuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSx1QkFBdUIsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2JhY2tlbmQvYmFzaWMuY29uZmlndXJhdGlvbi9pbnRlcmNlcHRvci9pbnRlcmNlcHRvci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jdXN0b21DbGFzc3tcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xyXG59Il19 */"
+module.exports = ".customClass {\n  background-color: black; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYmFja2VuZC9iYXNpYy5jb25maWd1cmF0aW9uL2ludGVyY2VwdG9yL0Q6XFxnaXRcXGNoZXZ5c2t5L3NyY1xcYXBwXFxiYWNrZW5kXFxiYXNpYy5jb25maWd1cmF0aW9uXFxpbnRlcmNlcHRvclxcaW50ZXJjZXB0b3IuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSx1QkFBdUIsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2JhY2tlbmQvYmFzaWMuY29uZmlndXJhdGlvbi9pbnRlcmNlcHRvci9pbnRlcmNlcHRvci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jdXN0b21DbGFzc3tcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xyXG59Il19 */"
 
 /***/ }),
 
@@ -740,7 +757,13 @@ var DataService = /** @class */ (function () {
             { id: 11, tier: 3, parentId: 6, menuName: 'shiro 安全框架', path: 'shiro' },
             { id: 12, tier: 3, parentId: 6, menuName: 'ehcache 缓存', path: 'ehcache' },
             { id: 13, tier: 3, parentId: 6, menuName: 'dubbo 分布式', path: 'dubbo' },
-            { id: 14, tier: 3, parentId: 6, menuName: 'RabbitMQ 消息中间件', path: 'rabbitmq' }
+            { id: 14, tier: 3, parentId: 6, menuName: 'RabbitMQ 消息中间件', path: 'rabbitmq' },
+            { id: 15, tier: 2, parentId: 2, menuName: 'Angular/Vue', path: '' },
+            { id: 16, tier: 3, parentId: 15, menuName: 'Angular 项目创建', path: 'ngcreate' },
+            { id: 17, tier: 3, parentId: 15, menuName: 'Angular 基本运用', path: 'nguse' },
+            { id: 18, tier: 3, parentId: 15, menuName: 'Vue 项目创建', path: 'vuecreate' },
+            { id: 19, tier: 3, parentId: 15, menuName: 'Vue 基本运用', path: 'vueuse' },
+            { id: 20, tier: 2, parentId: 2, menuName: '前端工具', path: '' },
         ];
     }
     DataService.prototype.getMenus = function () {
@@ -748,6 +771,34 @@ var DataService = /** @class */ (function () {
     };
     DataService.prototype.getNowWeek = function () {
         return this.weekArray[new Date().getDay()]; //获取星期
+    };
+    DataService.prototype.getCalender = function () {
+        var nowDate = new Date();
+        var date = new Date(nowDate.getFullYear(), nowDate.getMonth() + 1, 0);
+        var monthHasDays = date.getDate(); // 本月天数
+        var firstDayWeek = new Date(nowDate.setDate(1)).getDay();
+        var calender = [['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']];
+        var count = 1;
+        for (var i = 1; count <= monthHasDays; i++) {
+            var arr = new Array();
+            for (var j = 0; j < 7; j++) {
+                if (i == 1) {
+                    if (firstDayWeek <= j) {
+                        arr[j] = count++;
+                    }
+                    else {
+                        arr[j] = '';
+                    }
+                }
+                else {
+                    if (count <= monthHasDays) {
+                        arr[j] = count++;
+                    }
+                }
+            }
+            calender[i] = arr;
+        }
+        return calender;
     };
     DataService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
@@ -881,7 +932,7 @@ var EssaysComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  frontend works!\n</p>\n"
+module.exports = "<div class='row frontbg'>\n  <div class=\"col-md-3 left-body\">\n      <a routerLink = \"/homepage\" class=\"go-home\">返回首页</a>\n      <br>\n      <div>{{nowTime}}</div>\n      <div>\n          <img src='../../../assets/homepage/wechat.png' class=\"wechat\">\n          &nbsp; &nbsp;chevysky\n      </div>\n      <br>\n      <div *ngFor = 'let days of calender ; index as i'>\n        <div *ngFor = \"let day of days\">\n          <div class=\"day\" [ngClass] = \"{'week': i == 0 ?  true:false,'now-day': nowDay == day ? true:false}\">{{day}}</div>\n        </div>\n      </div>         \n  </div>\n  <div class=\"col-md-8\">\n    <div class=\"row\">\n      <div class=\"col-md-12 headbg\">\n        <span *ngFor = \"let menu of menus\">\n          <span *ngIf = \"menu.parentId == 2\" (click)=\"openSonMenu(menu.id)\" class=\"menus\">{{menu.menuName}}</span>\n        </span>\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12 bodybg\">\n        <div *ngIf = \"showLib\">\n          <br>\n            <div *ngFor = \"let menu of menus\">\n                <div *ngIf = \"menu.parentId == menuId\" class=\"lib\" (click) = \"openContent(menu.path)\">{{menu.menuName}}</div>\n            </div>\n        </div>\n        <router-outlet *ngIf = \"showContent\"></router-outlet>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -892,7 +943,7 @@ module.exports = "<p>\n  frontend works!\n</p>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Zyb250ZW5kL2Zyb250ZW5kL2Zyb250ZW5kLmNvbXBvbmVudC5zY3NzIn0= */"
+module.exports = ".frontbg {\n  background-image: url('bgimg.jpg');\n  background-size: 100%;\n  height: 610px; }\n\n.headbg {\n  height: 40px;\n  margin-top: 30px;\n  background-color: darkgreen; }\n\n.bodybg {\n  border-style: groove;\n  border-width: 15px;\n  margin-top: 20px;\n  height: 500px;\n  border-radius: 15px 15px 15px 15px;\n  border-color: #00ff0d;\n  overflow: auto; }\n\n.lib {\n  margin: 15px 200px 0px 200px;\n  text-align: center;\n  border: 2px solid;\n  border-radius: 25px;\n  border-color: #66cfe9;\n  cursor: pointer; }\n\n.lib:hover {\n  border-color: #e728be;\n  color: #e4ab11; }\n\n.menus {\n  color: aliceblue;\n  line-height: 40px;\n  margin-left: 20px;\n  cursor: pointer; }\n\n.menus:hover {\n  color: aqua; }\n\n.left-body {\n  margin: 30px 0px 0px 40px; }\n\n.day {\n  height: 40px;\n  float: left;\n  width: 40px;\n  text-align: center;\n  line-height: 40px;\n  cursor: pointer; }\n\n.day:hover {\n  color: #eb832e; }\n\n.week {\n  color: white;\n  background-color: #1eff31; }\n\n.now-day {\n  background-color: #1eff4f;\n  color: azure;\n  font-weight: bold; }\n\n.go-home {\n  font-weight: bold;\n  font-size: 18px; }\n\n.wechat {\n  width: 10%;\n  height: 22px;\n  margin-top: 2px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZnJvbnRlbmQvZnJvbnRlbmQvRDpcXGdpdFxcY2hldnlza3kvc3JjXFxhcHBcXGZyb250ZW5kXFxmcm9udGVuZFxcZnJvbnRlbmQuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxrQ0FBMkQ7RUFDM0QscUJBQXFCO0VBQ3JCLGFBQWEsRUFBQTs7QUFHakI7RUFDSSxZQUFXO0VBQ1gsZ0JBQWdCO0VBQ2hCLDJCQUEyQixFQUFBOztBQUcvQjtFQUNJLG9CQUFvQjtFQUNwQixrQkFBa0I7RUFDbEIsZ0JBQWU7RUFDZixhQUFhO0VBQ2Isa0NBQWtDO0VBQ2xDLHFCQUE2QjtFQUM3QixjQUFhLEVBQUE7O0FBR2pCO0VBQ0ksNEJBQTRCO0VBQzVCLGtCQUFrQjtFQUNsQixpQkFBZ0I7RUFDaEIsbUJBQWtCO0VBQ2xCLHFCQUFnQztFQUNoQyxlQUFlLEVBQUE7O0FBR25CO0VBQ0kscUJBQStCO0VBQy9CLGNBQXVCLEVBQUE7O0FBRzNCO0VBQ0ksZ0JBQWdCO0VBQ2hCLGlCQUFpQjtFQUNqQixpQkFBaUI7RUFDakIsZUFBYyxFQUFBOztBQUdsQjtFQUNJLFdBQVcsRUFBQTs7QUFHZjtFQUNJLHlCQUF5QixFQUFBOztBQUc3QjtFQUNJLFlBQVk7RUFDWixXQUFXO0VBQ1gsV0FBVztFQUNYLGtCQUFrQjtFQUNsQixpQkFBaUI7RUFDakIsZUFBZSxFQUFBOztBQUduQjtFQUNHLGNBQXVCLEVBQUE7O0FBRzFCO0VBQ0ksWUFBVztFQUNYLHlCQUFrQyxFQUFBOztBQUd0QztFQUNJLHlCQUFrQztFQUNsQyxZQUFZO0VBQ1osaUJBQWlCLEVBQUE7O0FBR3JCO0VBQ0ksaUJBQWlCO0VBQ2pCLGVBQWUsRUFBQTs7QUFHbkI7RUFDSSxVQUFVO0VBQ1YsWUFBWTtFQUNaLGVBQWUsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2Zyb250ZW5kL2Zyb250ZW5kL2Zyb250ZW5kLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmZyb250Ymd7XHJcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4uLy4uLy4uL2Fzc2V0cy9mcm9udGVuZC9iZ2ltZy5qcGcnKTtcclxuICAgIGJhY2tncm91bmQtc2l6ZTogMTAwJTtcclxuICAgIGhlaWdodDogNjEwcHg7XHJcbn1cclxuXHJcbi5oZWFkYmd7XHJcbiAgICBoZWlnaHQ6NDBweDtcclxuICAgIG1hcmdpbi10b3A6IDMwcHg7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBkYXJrZ3JlZW47XHJcbn1cclxuXHJcbi5ib2R5Ymd7XHJcbiAgICBib3JkZXItc3R5bGU6IGdyb292ZTtcclxuICAgIGJvcmRlci13aWR0aDogMTVweDtcclxuICAgIG1hcmdpbi10b3A6MjBweDtcclxuICAgIGhlaWdodDogNTAwcHg7XHJcbiAgICBib3JkZXItcmFkaXVzOiAxNXB4IDE1cHggMTVweCAxNXB4O1xyXG4gICAgYm9yZGVyLWNvbG9yOiByZ2IoMCwgMjU1LCAxMyk7XHJcbiAgICBvdmVyZmxvdzphdXRvO1xyXG59XHJcblxyXG4ubGlie1xyXG4gICAgbWFyZ2luOiAxNXB4IDIwMHB4IDBweCAyMDBweDtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIGJvcmRlcjoycHggc29saWQ7XHJcbiAgICBib3JkZXItcmFkaXVzOjI1cHg7XHJcbiAgICBib3JkZXItY29sb3I6IHJnYigxMDIsIDIwNywgMjMzKTtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxufVxyXG5cclxuLmxpYjpob3ZlcntcclxuICAgIGJvcmRlci1jb2xvcjogcmdiKDIzMSwgNDAsIDE5MCk7XHJcbiAgICBjb2xvcjpyZ2IoMjI4LCAxNzEsIDE3KTtcclxufVxyXG5cclxuLm1lbnVze1xyXG4gICAgY29sb3I6IGFsaWNlYmx1ZTtcclxuICAgIGxpbmUtaGVpZ2h0OiA0MHB4O1xyXG4gICAgbWFyZ2luLWxlZnQ6IDIwcHg7XHJcbiAgICBjdXJzb3I6cG9pbnRlcjtcclxufVxyXG5cclxuLm1lbnVzOmhvdmVye1xyXG4gICAgY29sb3I6IGFxdWE7XHJcbn1cclxuXHJcbi5sZWZ0LWJvZHl7XHJcbiAgICBtYXJnaW46IDMwcHggMHB4IDBweCA0MHB4O1xyXG59XHJcblxyXG4uZGF5e1xyXG4gICAgaGVpZ2h0OiA0MHB4O1xyXG4gICAgZmxvYXQ6IGxlZnQ7XHJcbiAgICB3aWR0aDogNDBweDtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIGxpbmUtaGVpZ2h0OiA0MHB4O1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG59XHJcblxyXG4uZGF5OmhvdmVye1xyXG4gICBjb2xvcjpyZ2IoMjM1LCAxMzEsIDQ2KTtcclxufVxyXG5cclxuLndlZWt7XHJcbiAgICBjb2xvcjp3aGl0ZTtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigzMCwgMjU1LCA0OSk7XHJcbn1cclxuXHJcbi5ub3ctZGF5e1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDMwLCAyNTUsIDc5KTtcclxuICAgIGNvbG9yOiBhenVyZTtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG59XHJcblxyXG4uZ28taG9tZXtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gICAgZm9udC1zaXplOiAxOHB4O1xyXG59XHJcblxyXG4ud2VjaGF0e1xyXG4gICAgd2lkdGg6IDEwJTtcclxuICAgIGhlaWdodDogMjJweDtcclxuICAgIG1hcmdpbi10b3A6IDJweDtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -908,12 +959,46 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FrontendComponent", function() { return FrontendComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../data.service */ "./src/app/data.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
+
 
 
 var FrontendComponent = /** @class */ (function () {
-    function FrontendComponent() {
+    function FrontendComponent(data, router) {
+        this.data = data;
+        this.router = router;
+        this.showLib = false;
+        this.showContent = false;
+        this.nowDay = new Date().getDate();
+        this.bsValue = new Date();
+        this.maxDate = new Date();
     }
     FrontendComponent.prototype.ngOnInit = function () {
+        this.menus = this.data.getMenus();
+        this.maxDate.setDate(this.maxDate.getDate() + 7);
+        this.bsRangeValue = [this.bsValue, this.maxDate];
+        this.calender = this.data.getCalender();
+        this.getNowTime();
+    };
+    FrontendComponent.prototype.openSonMenu = function (id) {
+        this.menuId = id;
+        this.showLib = true;
+        this.showContent = false;
+    };
+    FrontendComponent.prototype.openContent = function (path) {
+        this.showLib = false;
+        this.showContent = true;
+        this.router.navigate(['frontend/'.concat(path)]);
+    };
+    FrontendComponent.prototype.getNowTime = function () {
+        var _this = this;
+        var week = this.data.getNowWeek();
+        setInterval(function () {
+            var time = new Date().toLocaleString();
+            _this.nowTime = week.concat(' ').concat(time);
+        });
     };
     FrontendComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -921,9 +1006,251 @@ var FrontendComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./frontend.component.html */ "./src/app/frontend/frontend/frontend.component.html"),
             styles: [__webpack_require__(/*! ./frontend.component.scss */ "./src/app/frontend/frontend/frontend.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
     ], FrontendComponent);
     return FrontendComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/frontend/ngcreate/ngcreate.component.html":
+/*!***********************************************************!*\
+  !*** ./src/app/frontend/ngcreate/ngcreate.component.html ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"content\">\n采用angular-cli创建项目，首先需要的工具nodejs中的npm(npm建议采用最新版本)<br>\n<div class=\"stitle\">Angular-cli</div>\nnpm install angular/cli 全局安装<br>\nng -v 查看版本<br>\nnpm install -g @angular/cli@1.7.4 安装版本为1.7.4<br>\nnpm install -g @angular/cli@latest 安装最新版本<br>\nangular项目升级<br>\nnpm uninstall -g @angular/cli; 1、全局卸载<br>\nnpm cache verify; 2、清理<br>\nnpm uninstall --save-dev @angular/cli; 3、在项目路径下卸载<br>\nnpm install --save-dev @angular/cli@1.7.4; 4、在项目路径下安装指定版本<br>\nnpm install 或 yarn install; 5、项目路径下安装模块<br>\nangular project<br>\nng new projectName 创建项目<br>\nng serve --open / npm start / ng serve 启动项目<br>\nng generate component componentName 创建组件<br>\nng generate service serviceName 创建服务<br>\ncreate router<br>\nng generate module routeName --flat --module=app --flat把这个文件放在了src/app中，而不是单独的目录下； --module=app 告诉 CLI 把它注册到 AppModule 的 imports 数组中。 典型的 Angular 路由（Route）有两个属性：path：一个用于匹配浏览器地址栏中 URL 的字符串。 component：当导航到此路由时，路由器应该创建哪个组件。<br>\n<div>安装内存WEB API</div>\nnpm install angular-in-memory-web-api --save<br>\n若出现500服务器内部错误，则降低版本试试0.5+的版本:npm install angular-in-memory-web-api@0.5.4 --save<br>\nng build --prod 编译工程，编译到dist目录，将其变为可用js5.0代码和相关html、css等文件<br>\n<div class=\"stitle\">Ngx-bootstranp</div>\n首先下载ngx-bootstrap：npm install ngx-bootstrap --save<br>\n下载后，在module.ts中导入ngx-bootstrap/modal类<br>\nimport {{brace}} ModalModule {{bracer}} from 'ngx-bootstrap'<br>\n<div class=\"stitle\">引入bootstrap样式</div>\n方法一：在style.scss或style.css根样式中引入：@import url(\"../node_modules/bootstrap/dist/css/bootstrap.min.css\")<br>\n方法二：在package.json或angular.json中引入：在styles数组中添加\"./node_modules/bootstrap/dist/css/bootstrap.min.css\"\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/frontend/ngcreate/ngcreate.component.scss":
+/*!***********************************************************!*\
+  !*** ./src/app/frontend/ngcreate/ngcreate.component.scss ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Zyb250ZW5kL25nY3JlYXRlL25nY3JlYXRlLmNvbXBvbmVudC5zY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/frontend/ngcreate/ngcreate.component.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/frontend/ngcreate/ngcreate.component.ts ***!
+  \*********************************************************/
+/*! exports provided: NgcreateComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgcreateComponent", function() { return NgcreateComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var NgcreateComponent = /** @class */ (function () {
+    function NgcreateComponent() {
+        this.brace = '{';
+        this.bracer = '}';
+    }
+    NgcreateComponent.prototype.ngOnInit = function () {
+    };
+    NgcreateComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-ngcreate',
+            template: __webpack_require__(/*! ./ngcreate.component.html */ "./src/app/frontend/ngcreate/ngcreate.component.html"),
+            styles: [__webpack_require__(/*! ./ngcreate.component.scss */ "./src/app/frontend/ngcreate/ngcreate.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], NgcreateComponent);
+    return NgcreateComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/frontend/nguse/nguse.component.html":
+/*!*****************************************************!*\
+  !*** ./src/app/frontend/nguse/nguse.component.html ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"content\">\n    <div class=\"stitle\"></div>循环ngFor\n    *ngFor = \"let name of objectName\" 页面中循环的使用<br>\n    <div class=\"stitle\">条件判断ngIf</div>\n    *ngIf = \"variable\" 页面中使用ngIf,variable 为Boolean值时 false隐藏 true显示, 当为其它变量时,变量不为undefind显示;<br>\n    <div class=\"stitle\">绑定点击事件</div>\n    (click) = \"incident()\" 绑定点击事件<br>\n    <div class=\"stitle\">从组件接收主组件传递的数据</div>\n    {{lefta}}app-hero-detail [hero] = \"selectHero\" [isClicked] = \"isClicked\">{{lefta}}/app-hero-detail><br>\n    从组件的ts中定义变量用@Input装饰：<br>\n    @Input() hero : variableType;<br>\n    @Input() isClicked : boolean;<br>\n    <div class=\"stitle\">文本格式化</div>\n    {{brace}}hero | uppercase}} 将变量hero的值全部大写<br>\n    <div class=\"stitle\">数据双向绑定</div>\n    {{lefta}}input [(ngModel)]=\"hero.name\" placeholder=\"name\">在组件的class中直接写变量名，不需什么$scope操作使用数据双向绑定要在app.module.ts中导入import {{bracel}} FormsModule {{bracer}} from \"@angular/forms\";并将FormsModule 加入到imports数组中每一个组件都必须申明在app.module.ts的@Ng-Module中<br>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/frontend/nguse/nguse.component.scss":
+/*!*****************************************************!*\
+  !*** ./src/app/frontend/nguse/nguse.component.scss ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Zyb250ZW5kL25ndXNlL25ndXNlLmNvbXBvbmVudC5zY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/frontend/nguse/nguse.component.ts":
+/*!***************************************************!*\
+  !*** ./src/app/frontend/nguse/nguse.component.ts ***!
+  \***************************************************/
+/*! exports provided: NguseComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NguseComponent", function() { return NguseComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var NguseComponent = /** @class */ (function () {
+    function NguseComponent() {
+        this.lefta = "<";
+        this.brace = "{{";
+        this.bracel = '{';
+        this.bracer = '}';
+    }
+    NguseComponent.prototype.ngOnInit = function () {
+    };
+    NguseComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-nguse',
+            template: __webpack_require__(/*! ./nguse.component.html */ "./src/app/frontend/nguse/nguse.component.html"),
+            styles: [__webpack_require__(/*! ./nguse.component.scss */ "./src/app/frontend/nguse/nguse.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], NguseComponent);
+    return NguseComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/frontend/vuecreate/vuecreate.component.html":
+/*!*************************************************************!*\
+  !*** ./src/app/frontend/vuecreate/vuecreate.component.html ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"content\">\n    <div class=\"stitle\">VUE 项目的安装和启动</div>\n    npm 安装vue-cli脚手架 : npm install -g vue-cli<br>\n    查看版本: vue -V<br>\n    <br>\n    使用脚手架安装项目： vue init webpack demo 项目是基于webpack的<br>\n    Project name（工程名）:回车<br>\n    Project description（工程介绍）：回车<br>\n    Author：作者名<br>\n    Vue build（是否安装编译器）:回车<br>\n    Install vue-router（是否安装Vue路由）：回车<br>\n    Use ESLint to lint your code（是否使用ESLint检查js代码）：n<br>\n    Set up unit tests（安装单元测试工具）：n<br>\n    Setup e2e tests with Nightwatch（是否安装端到端测试工具）：n<br>\n    Should we run npm install for you after the project has been created? (recommended)：回车。<br>\n    <br>\n    进入项目目录：cd demo<br>\n    安装项目所需要的依赖：npm install<br>\n    启动项目：npm run dev<br>\n    启动项目遇到的问题<br>\n    You may use special comments to disable some warnings.<br>\n    Use // eslint-disable-next-line to ignore the next line.<br>\n    Use /* eslint-disable */ to ignore all warnings in a file.<br>\n    解决方法<br>\n    注释build/webpack.base.conf.js文件module->rules中有关eslint的规则<br>\n    ...(config.dev.useEslint ? [createLintingRule()] : []),<br>\n    ElementUI引入<br>\n    npm install element-ui -save<br>\n    在main.js中添加代码<br>\n    import ElementUI from 'element-ui'<br>\n    Vue.use(ElementUI)<br>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/frontend/vuecreate/vuecreate.component.scss":
+/*!*************************************************************!*\
+  !*** ./src/app/frontend/vuecreate/vuecreate.component.scss ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Zyb250ZW5kL3Z1ZWNyZWF0ZS92dWVjcmVhdGUuY29tcG9uZW50LnNjc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/frontend/vuecreate/vuecreate.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/frontend/vuecreate/vuecreate.component.ts ***!
+  \***********************************************************/
+/*! exports provided: VuecreateComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VuecreateComponent", function() { return VuecreateComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var VuecreateComponent = /** @class */ (function () {
+    function VuecreateComponent() {
+    }
+    VuecreateComponent.prototype.ngOnInit = function () {
+    };
+    VuecreateComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-vuecreate',
+            template: __webpack_require__(/*! ./vuecreate.component.html */ "./src/app/frontend/vuecreate/vuecreate.component.html"),
+            styles: [__webpack_require__(/*! ./vuecreate.component.scss */ "./src/app/frontend/vuecreate/vuecreate.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], VuecreateComponent);
+    return VuecreateComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/frontend/vueuse/vueuse.component.html":
+/*!*******************************************************!*\
+  !*** ./src/app/frontend/vueuse/vueuse.component.html ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"content\">\n<div class=\"stitle\">VUE路由</div>\nmain.js中引入路由 import router from './router'<br>\nnew Vue({{brace}}<br>\nel: '#app',<br>\nrouter,<br>\ncomponents: {{brace}} App },<br>\ntemplate: '{{lefta}}App/>'})<br>\n在src/router/index.js中给各个组件配置路由<br>\n<br>\n{{lefta}}template>中路由跳转：{{lefta}}router-link to='/path'>{{lefta}}/router-link><br>\n默认渲染成带有正确链接的 {{lefta}}a> 标签，可以通过配置 tag 属性生成别的标签.<br>\n{{lefta}}router-link to='/path' tag='li'>{{lefta}}/router-link><br>\n<br>\n{{lefta}}script>中路由跳转：this.$router.push('/path');<br>\n路由跳转组件显示的位置 {{lefta}}router-view>{{lefta}}/router-view><br>\n<br>\n页面布局可以参考AngularJS的router<br>\n一个页面的head/body/foot 对应vue里路由的视图命名。<br>\ntext_1<br>\npath:'/body',<br>\nname:'bodyer',<br>\ncomponents:{{brace}}<br>\nhead:headhtml,<br>\nbody:bodyhtml,<br>\nfoot:foothtml<br>\n}<br>\n}<br>\n<span class=\"keyword\">备注说明：例如在App.vue中有路由{{lefta}}router-view name='head'>/{{lefta}}router-view name='body'>而在App.vue中又引入了其它模块，那么在其它模块中的路由调用是可以影响到App.vue中的路由显示的。</span><br>\n<br>\n</div>\n<div class=\"content\">\n<div class=\"stitle\">VUE用AXIOS实现与JAVA后端调用</div>\n安装AXIOS npm install axios<br>\n在main.js中引入axios：import axios from 'axios'<br>\n由于axios不能直接使用Vue.use()，所以可以在引入axios后修改原型链，或者结合Vuex封装一个action;<br>\n修改原型链<br>\nVue.prototype.$ajax = axios<br>\naxios 配置<br>\naxios.defaults.timeout = 5000;<br>\n<div class=\"explain\">//axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';</div>\naxios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8';\n<div class=\"explain\">// axios.defaults.headers.post['Content-Type'] = 'json';</div>\n<div class=\"explain\">// axios.defaults.baseURL = 'http://localhost:8080/项目名/';</div>\naxios.defaults.baseURL = 'http://localhost:8080/';<br>\n向后端发送请求<br>\nmethods:{{brace}}<br>\n<div class=\"scontent\">\n    sendAjax(){{brace}}<br>\n    this.$ajax.post('/user/vue',{{brace}}<br>\n    name:'chevysky',<br>\n    sex:'man',<br>\n    age:16<br>\n    }).then(function(res){{brace}}<br>\n    console.log(res);<br>\n    console.log(res.data);<br>\n    alert(res.data);<br>\n    })<br>\n    },<br>\n    sendNoParams(){{brace}}<br>\n    this.$ajax.post('/user/vues').then(function(res){{brace}}<br>\n    alert('请求成功');<br>\n    })<br>\n    }<br>\n</div>\n}<br>\n\n<a href=\"javascrips:0\" (click) = \"openPath('backend/cross/domain')\">这个时候会出现跨域访问的问题，参考SpringBoot的跨域配置。</a>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/frontend/vueuse/vueuse.component.scss":
+/*!*******************************************************!*\
+  !*** ./src/app/frontend/vueuse/vueuse.component.scss ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Zyb250ZW5kL3Z1ZXVzZS92dWV1c2UuY29tcG9uZW50LnNjc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/frontend/vueuse/vueuse.component.ts":
+/*!*****************************************************!*\
+  !*** ./src/app/frontend/vueuse/vueuse.component.ts ***!
+  \*****************************************************/
+/*! exports provided: VueuseComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VueuseComponent", function() { return VueuseComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
+
+
+var VueuseComponent = /** @class */ (function () {
+    function VueuseComponent(router) {
+        this.router = router;
+        this.brace = "{";
+        this.lefta = "<";
+    }
+    VueuseComponent.prototype.ngOnInit = function () {
+    };
+    VueuseComponent.prototype.openPath = function (path) {
+        this.router.navigate([path], {
+            queryParams: {
+                showDef: false
+            }
+        });
+    };
+    VueuseComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-vueuse',
+            template: __webpack_require__(/*! ./vueuse.component.html */ "./src/app/frontend/vueuse/vueuse.component.html"),
+            styles: [__webpack_require__(/*! ./vueuse.component.scss */ "./src/app/frontend/vueuse/vueuse.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+    ], VueuseComponent);
+    return VueuseComponent;
 }());
 
 
@@ -948,7 +1275,7 @@ module.exports = "<div class='row'>\n  <div class='col-md-12 background'>\n    <
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".background {\n  background-image: url('homepage1.jpg');\n  height: 610px;\n  background-repeat: no-repeat;\n  background-size: 100%; }\n\n.interval {\n  height: 180px; }\n\n.interval-middle {\n  height: 85px; }\n\n.interval-small {\n  height: 10px; }\n\n.title-text {\n  color: black;\n  font-size: 27px;\n  text-align: center;\n  font-weight: bold;\n  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }\n\n.explain-text {\n  color: black;\n  font-size: 12px;\n  font-family: Arial, Helvetica, sans-serif;\n  text-align: center; }\n\n.text-right {\n  text-align: right; }\n\n.text-center {\n  text-align: center; }\n\n.button-style {\n  width: 100px;\n  opacity: 0.6;\n  color: black; }\n\n.button-style:hover {\n  opacity: 1;\n  color: #ffcdea;\n  background-color: #0f0a01; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZXBhZ2UvZDpcXGdpdFxcY2hldnlza3kvc3JjXFxhcHBcXGhvbWVwYWdlXFxob21lcGFnZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLHNDQUE0RDtFQUM1RCxhQUFhO0VBQ2IsNEJBQTRCO0VBQzVCLHFCQUFxQixFQUFBOztBQUd6QjtFQUNJLGFBQWEsRUFBQTs7QUFHakI7RUFDSSxZQUFZLEVBQUE7O0FBR2hCO0VBQ0ksWUFBWSxFQUFBOztBQUdoQjtFQUNJLFlBQVk7RUFDWixlQUFlO0VBQ2Ysa0JBQWtCO0VBQ2xCLGlCQUFpQjtFQUNqQixzRUFFSixFQUFBOztBQUVBO0VBQ0ksWUFBVztFQUNYLGVBQWU7RUFDZix5Q0FBeUM7RUFDekMsa0JBQWtCLEVBQUE7O0FBR3RCO0VBQ0ksaUJBQWlCLEVBQUE7O0FBR3JCO0VBQ0ksa0JBQWtCLEVBQUE7O0FBR3RCO0VBQ0ksWUFBWTtFQUNaLFlBQVk7RUFDWixZQUFZLEVBQUE7O0FBR2hCO0VBQ0ksVUFBVTtFQUNWLGNBQXlCO0VBQ3pCLHlCQUFnQyxFQUFBIiwiZmlsZSI6InNyYy9hcHAvaG9tZXBhZ2UvaG9tZXBhZ2UuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYmFja2dyb3VuZHtcclxuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnLi4vLi4vYXNzZXRzL2hvbWVwYWdlL2hvbWVwYWdlMS5qcGcnKTtcclxuICAgIGhlaWdodDogNjEwcHg7XHJcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gICAgYmFja2dyb3VuZC1zaXplOiAxMDAlO1xyXG59XHJcblxyXG4uaW50ZXJ2YWx7XHJcbiAgICBoZWlnaHQ6IDE4MHB4O1xyXG59XHJcblxyXG4uaW50ZXJ2YWwtbWlkZGxle1xyXG4gICAgaGVpZ2h0OiA4NXB4O1xyXG59XHJcblxyXG4uaW50ZXJ2YWwtc21hbGx7XHJcbiAgICBoZWlnaHQ6IDEwcHg7XHJcbn1cclxuXHJcbi50aXRsZS10ZXh0e1xyXG4gICAgY29sb3I6IGJsYWNrO1xyXG4gICAgZm9udC1zaXplOiAyN3B4O1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgICBmb250LWZhbWlseTogQ2FtYnJpYSwgQ29jaGluLCBHZW9yZ2lhLCBUaW1lcywgJ1RpbWVzIE5ldyBSb21hbicsIHNlcmlmXHJcbiAgIFxyXG59XHJcblxyXG4uZXhwbGFpbi10ZXh0e1xyXG4gICAgY29sb3I6YmxhY2s7XHJcbiAgICBmb250LXNpemU6IDEycHg7XHJcbiAgICBmb250LWZhbWlseTogQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZjtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG5cclxuLnRleHQtcmlnaHR7XHJcbiAgICB0ZXh0LWFsaWduOiByaWdodDtcclxufVxyXG5cclxuLnRleHQtY2VudGVye1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcblxyXG4uYnV0dG9uLXN0eWxle1xyXG4gICAgd2lkdGg6IDEwMHB4O1xyXG4gICAgb3BhY2l0eTogMC42O1xyXG4gICAgY29sb3I6IGJsYWNrO1xyXG59XHJcblxyXG4uYnV0dG9uLXN0eWxlOmhvdmVye1xyXG4gICAgb3BhY2l0eTogMTtcclxuICAgIGNvbG9yOiByZ2IoMjU1LCAyMDUsIDIzNCk7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMTUsIDEwLCAxKTtcclxufSJdfQ== */"
+module.exports = ".background {\n  background-image: url('homepage1.jpg');\n  height: 610px;\n  background-repeat: no-repeat;\n  background-size: 100%; }\n\n.interval {\n  height: 180px; }\n\n.interval-middle {\n  height: 85px; }\n\n.interval-small {\n  height: 10px; }\n\n.title-text {\n  color: black;\n  font-size: 27px;\n  text-align: center;\n  font-weight: bold;\n  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }\n\n.explain-text {\n  color: black;\n  font-size: 12px;\n  font-family: Arial, Helvetica, sans-serif;\n  text-align: center; }\n\n.text-right {\n  text-align: right; }\n\n.text-center {\n  text-align: center; }\n\n.button-style {\n  width: 100px;\n  opacity: 0.6;\n  color: black; }\n\n.button-style:hover {\n  opacity: 1;\n  color: #ffcdea;\n  background-color: #0f0a01; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZXBhZ2UvRDpcXGdpdFxcY2hldnlza3kvc3JjXFxhcHBcXGhvbWVwYWdlXFxob21lcGFnZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLHNDQUE0RDtFQUM1RCxhQUFhO0VBQ2IsNEJBQTRCO0VBQzVCLHFCQUFxQixFQUFBOztBQUd6QjtFQUNJLGFBQWEsRUFBQTs7QUFHakI7RUFDSSxZQUFZLEVBQUE7O0FBR2hCO0VBQ0ksWUFBWSxFQUFBOztBQUdoQjtFQUNJLFlBQVk7RUFDWixlQUFlO0VBQ2Ysa0JBQWtCO0VBQ2xCLGlCQUFpQjtFQUNqQixzRUFFSixFQUFBOztBQUVBO0VBQ0ksWUFBVztFQUNYLGVBQWU7RUFDZix5Q0FBeUM7RUFDekMsa0JBQWtCLEVBQUE7O0FBR3RCO0VBQ0ksaUJBQWlCLEVBQUE7O0FBR3JCO0VBQ0ksa0JBQWtCLEVBQUE7O0FBR3RCO0VBQ0ksWUFBWTtFQUNaLFlBQVk7RUFDWixZQUFZLEVBQUE7O0FBR2hCO0VBQ0ksVUFBVTtFQUNWLGNBQXlCO0VBQ3pCLHlCQUFnQyxFQUFBIiwiZmlsZSI6InNyYy9hcHAvaG9tZXBhZ2UvaG9tZXBhZ2UuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYmFja2dyb3VuZHtcclxuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnLi4vLi4vYXNzZXRzL2hvbWVwYWdlL2hvbWVwYWdlMS5qcGcnKTtcclxuICAgIGhlaWdodDogNjEwcHg7XHJcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gICAgYmFja2dyb3VuZC1zaXplOiAxMDAlO1xyXG59XHJcblxyXG4uaW50ZXJ2YWx7XHJcbiAgICBoZWlnaHQ6IDE4MHB4O1xyXG59XHJcblxyXG4uaW50ZXJ2YWwtbWlkZGxle1xyXG4gICAgaGVpZ2h0OiA4NXB4O1xyXG59XHJcblxyXG4uaW50ZXJ2YWwtc21hbGx7XHJcbiAgICBoZWlnaHQ6IDEwcHg7XHJcbn1cclxuXHJcbi50aXRsZS10ZXh0e1xyXG4gICAgY29sb3I6IGJsYWNrO1xyXG4gICAgZm9udC1zaXplOiAyN3B4O1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgICBmb250LWZhbWlseTogQ2FtYnJpYSwgQ29jaGluLCBHZW9yZ2lhLCBUaW1lcywgJ1RpbWVzIE5ldyBSb21hbicsIHNlcmlmXHJcbiAgIFxyXG59XHJcblxyXG4uZXhwbGFpbi10ZXh0e1xyXG4gICAgY29sb3I6YmxhY2s7XHJcbiAgICBmb250LXNpemU6IDEycHg7XHJcbiAgICBmb250LWZhbWlseTogQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZjtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG5cclxuLnRleHQtcmlnaHR7XHJcbiAgICB0ZXh0LWFsaWduOiByaWdodDtcclxufVxyXG5cclxuLnRleHQtY2VudGVye1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcblxyXG4uYnV0dG9uLXN0eWxle1xyXG4gICAgd2lkdGg6IDEwMHB4O1xyXG4gICAgb3BhY2l0eTogMC42O1xyXG4gICAgY29sb3I6IGJsYWNrO1xyXG59XHJcblxyXG4uYnV0dG9uLXN0eWxlOmhvdmVye1xyXG4gICAgb3BhY2l0eTogMTtcclxuICAgIGNvbG9yOiByZ2IoMjU1LCAyMDUsIDIzNCk7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMTUsIDEwLCAxKTtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -1029,6 +1356,42 @@ var backendRouter = [
             { path: 'shiro', component: _backend_plug_shiro_shiro_component__WEBPACK_IMPORTED_MODULE_6__["ShiroComponent"] },
             { path: 'dubbo', component: _backend_plug_dubbo_dubbo_component__WEBPACK_IMPORTED_MODULE_5__["DubboComponent"] },
             { path: 'rabbitmq', component: _backend_plug_rabbitmq_rabbitmq_component__WEBPACK_IMPORTED_MODULE_7__["RabbitmqComponent"] }
+        ]
+    }
+];
+
+
+/***/ }),
+
+/***/ "./src/app/router/frontend.ts":
+/*!************************************!*\
+  !*** ./src/app/router/frontend.ts ***!
+  \************************************/
+/*! exports provided: frontendRouter */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "frontendRouter", function() { return frontendRouter; });
+/* harmony import */ var _frontend_frontend_frontend_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../frontend/frontend/frontend.component */ "./src/app/frontend/frontend/frontend.component.ts");
+/* harmony import */ var _frontend_ngcreate_ngcreate_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../frontend/ngcreate/ngcreate.component */ "./src/app/frontend/ngcreate/ngcreate.component.ts");
+/* harmony import */ var _frontend_nguse_nguse_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../frontend/nguse/nguse.component */ "./src/app/frontend/nguse/nguse.component.ts");
+/* harmony import */ var _frontend_vuecreate_vuecreate_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../frontend/vuecreate/vuecreate.component */ "./src/app/frontend/vuecreate/vuecreate.component.ts");
+/* harmony import */ var _frontend_vueuse_vueuse_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../frontend/vueuse/vueuse.component */ "./src/app/frontend/vueuse/vueuse.component.ts");
+
+
+
+
+
+var frontendRouter = [
+    {
+        path: 'frontend',
+        component: _frontend_frontend_frontend_component__WEBPACK_IMPORTED_MODULE_0__["FrontendComponent"],
+        children: [
+            { path: 'ngcreate', component: _frontend_ngcreate_ngcreate_component__WEBPACK_IMPORTED_MODULE_1__["NgcreateComponent"] },
+            { path: 'nguse', component: _frontend_nguse_nguse_component__WEBPACK_IMPORTED_MODULE_2__["NguseComponent"] },
+            { path: 'vuecreate', component: _frontend_vuecreate_vuecreate_component__WEBPACK_IMPORTED_MODULE_3__["VuecreateComponent"] },
+            { path: 'vueuse', component: _frontend_vueuse_vueuse_component__WEBPACK_IMPORTED_MODULE_4__["VueuseComponent"] }
         ]
     }
 ];
@@ -1131,7 +1494,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! d:\git\chevysky\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! D:\git\chevysky\src\main.ts */"./src/main.ts");
 
 
 /***/ })
