@@ -172,6 +172,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _frontend_vueuse_vueuse_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./frontend/vueuse/vueuse.component */ "./src/app/frontend/vueuse/vueuse.component.ts");
 /* harmony import */ var _backend_code_source_map_string_map_string_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./backend/code.source/map.string/map.string.component */ "./src/app/backend/code.source/map.string/map.string.component.ts");
 /* harmony import */ var _backend_development_kit_idea_idea_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./backend/development.kit/idea/idea.component */ "./src/app/backend/development.kit/idea/idea.component.ts");
+/* harmony import */ var _backend_code_source_springmvc_springmvc_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./backend/code.source/springmvc/springmvc.component */ "./src/app/backend/code.source/springmvc/springmvc.component.ts");
+/* harmony import */ var _backend_code_source_service_service_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./backend/code.source/service/service.component */ "./src/app/backend/code.source/service/service.component.ts");
+/* harmony import */ var _backend_code_source_thread_thread_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./backend/code.source/thread/thread.component */ "./src/app/backend/code.source/thread/thread.component.ts");
+/* harmony import */ var _backend_plug_swagger_swagger_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./backend/plug/swagger/swagger.component */ "./src/app/backend/plug/swagger/swagger.component.ts");
+
+
+
+
 
 
 
@@ -224,6 +232,10 @@ var AppModule = /** @class */ (function () {
                 _frontend_vueuse_vueuse_component__WEBPACK_IMPORTED_MODULE_23__["VueuseComponent"],
                 _backend_code_source_map_string_map_string_component__WEBPACK_IMPORTED_MODULE_24__["MapStringComponent"],
                 _backend_development_kit_idea_idea_component__WEBPACK_IMPORTED_MODULE_25__["IdeaComponent"],
+                _backend_code_source_springmvc_springmvc_component__WEBPACK_IMPORTED_MODULE_26__["SpringmvcComponent"],
+                _backend_code_source_service_service_component__WEBPACK_IMPORTED_MODULE_27__["ServiceComponent"],
+                _backend_code_source_thread_thread_component__WEBPACK_IMPORTED_MODULE_28__["ThreadComponent"],
+                _backend_plug_swagger_swagger_component__WEBPACK_IMPORTED_MODULE_29__["SwaggerComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -262,7 +274,7 @@ module.exports = "<div class=\"row\">\n  <div class=\"col-md-12 head-background\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".head-background {\n  background: linear-gradient(to right top, #0a0000, #292013);\n  height: 30px;\n  color: azure;\n  text-align: right; }\n\n.interval-box {\n  background: linear-gradient(to right, rgba(0, 0, 255, 0.863), #92b6d8, rgba(0, 0, 255, 0.863), #92b6d8);\n  height: 4px; }\n\n.body-background {\n  background: linear-gradient(to right top, #0e0101, #47473c);\n  height: 577px; }\n\n.go-home {\n  font-size: 20px;\n  color: white;\n  font-weight: bold;\n  margin: 20px 0px 20px 20px; }\n\n.menu-head {\n  background-color: #0b010f;\n  text-align: left; }\n\n.menus {\n  opacity: 0.7; }\n\n.menu {\n  color: darkolivegreen;\n  cursor: pointer;\n  background-color: #0b010f;\n  opacity: 1; }\n\n.menu:hover {\n  color: #f12a07; }\n\n.icons {\n  margin-left: 30px; }\n\n.icon {\n  margin-left: 60px; }\n\n.left-bg {\n  background-image: url('menu.jpg');\n  background-size: 97% 100%; }\n\n.text-content {\n  margin-top: 10px;\n  margin-left: 35px;\n  width: 98%;\n  height: 560px;\n  color: azure;\n  overflow: auto; }\n\n.wechat {\n  width: 2%;\n  height: 22px;\n  margin-top: 2px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYmFja2VuZC9iYWNrZW5kL0Q6XFxnaXRcXGNoZXZ5c2t5L3NyY1xcYXBwXFxiYWNrZW5kXFxiYWNrZW5kXFxiYWNrZW5kLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksMkRBQXVFO0VBQ3ZFLFlBQVk7RUFDWixZQUFZO0VBQ1osaUJBQWlCLEVBQUE7O0FBR3JCO0VBQ0ksdUdBQXlIO0VBQ3pILFdBQVcsRUFBQTs7QUFHZjtFQUNJLDJEQUF1RTtFQUN2RSxhQUFZLEVBQUE7O0FBR2hCO0VBQ0ksZUFBZTtFQUNmLFlBQVk7RUFDWixpQkFBaUI7RUFDakIsMEJBQTBCLEVBQUE7O0FBRzlCO0VBQ0kseUJBQWdDO0VBQ2hDLGdCQUFnQixFQUFBOztBQUdwQjtFQUNJLFlBQVksRUFBQTs7QUFHaEI7RUFDRyxxQkFBcUI7RUFDckIsZUFBZTtFQUNmLHlCQUFnQztFQUNoQyxVQUFVLEVBQUE7O0FBR2I7RUFDSSxjQUFxQixFQUFBOztBQUd6QjtFQUNJLGlCQUFpQixFQUFBOztBQUdyQjtFQUNJLGlCQUFpQixFQUFBOztBQUdyQjtFQUNJLGlDQUF5RDtFQUN6RCx5QkFBeUIsRUFBQTs7QUFHN0I7RUFDSSxnQkFBZ0I7RUFDaEIsaUJBQWlCO0VBQ2pCLFVBQVU7RUFDVixhQUFhO0VBQ2IsWUFBWTtFQUNaLGNBQWEsRUFBQTs7QUFHakI7RUFDSSxTQUFTO0VBQ1QsWUFBWTtFQUNaLGVBQWUsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2JhY2tlbmQvYmFja2VuZC9iYWNrZW5kLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmhlYWQtYmFja2dyb3VuZHtcclxuICAgIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCh0byByaWdodCB0b3AscmdiKDEwLCAwLCAwKSxyZ2IoNDEsIDMyLCAxOSkpO1xyXG4gICAgaGVpZ2h0OiAzMHB4O1xyXG4gICAgY29sb3I6IGF6dXJlO1xyXG4gICAgdGV4dC1hbGlnbjogcmlnaHQ7XHJcbn1cclxuXHJcbi5pbnRlcnZhbC1ib3h7XHJcbiAgICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQscmdiYSgwLCAwLCAyNTUsIDAuODYzKSxyZ2IoMTQ2LCAxODIsIDIxNikscmdiYSgwLCAwLCAyNTUsIDAuODYzKSxyZ2IoMTQ2LCAxODIsIDIxNikpO1xyXG4gICAgaGVpZ2h0OiA0cHg7XHJcbn1cclxuXHJcbi5ib2R5LWJhY2tncm91bmR7XHJcbiAgICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQgdG9wLHJnYigxNCwgMSwgMSkscmdiKDcxLCA3MSwgNjApKTtcclxuICAgIGhlaWdodDo1NzdweDtcclxufVxyXG5cclxuLmdvLWhvbWV7XHJcbiAgICBmb250LXNpemU6IDIwcHg7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIG1hcmdpbjogMjBweCAwcHggMjBweCAyMHB4O1xyXG59XHJcblxyXG4ubWVudS1oZWFke1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDExLCAxLCAxNSk7XHJcbiAgICB0ZXh0LWFsaWduOiBsZWZ0O1xyXG59XHJcblxyXG4ubWVudXN7XHJcbiAgICBvcGFjaXR5OiAwLjc7XHJcbn1cclxuXHJcbi5tZW51e1xyXG4gICBjb2xvcjogZGFya29saXZlZ3JlZW47XHJcbiAgIGN1cnNvcjogcG9pbnRlcjtcclxuICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDExLCAxLCAxNSk7XHJcbiAgIG9wYWNpdHk6IDE7XHJcbn1cclxuXHJcbi5tZW51OmhvdmVye1xyXG4gICAgY29sb3I6cmdiKDI0MSwgNDIsIDcpO1xyXG59XHJcblxyXG4uaWNvbnN7XHJcbiAgICBtYXJnaW4tbGVmdDogMzBweDtcclxufVxyXG5cclxuLmljb257XHJcbiAgICBtYXJnaW4tbGVmdDogNjBweDtcclxufVxyXG5cclxuLmxlZnQtYmd7XHJcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4uLy4uLy4uL2Fzc2V0cy9iYWNrZW5kL21lbnUuanBnJyk7XHJcbiAgICBiYWNrZ3JvdW5kLXNpemU6IDk3JSAxMDAlO1xyXG59XHJcblxyXG4udGV4dC1jb250ZW50e1xyXG4gICAgbWFyZ2luLXRvcDogMTBweDtcclxuICAgIG1hcmdpbi1sZWZ0OiAzNXB4O1xyXG4gICAgd2lkdGg6IDk4JTtcclxuICAgIGhlaWdodDogNTYwcHg7XHJcbiAgICBjb2xvcjogYXp1cmU7XHJcbiAgICBvdmVyZmxvdzphdXRvO1xyXG59XHJcblxyXG4ud2VjaGF0e1xyXG4gICAgd2lkdGg6IDIlO1xyXG4gICAgaGVpZ2h0OiAyMnB4O1xyXG4gICAgbWFyZ2luLXRvcDogMnB4O1xyXG59Il19 */"
+module.exports = ".head-background {\n  background: linear-gradient(to right top, #0a0000, #292013);\n  height: 30px;\n  color: azure;\n  text-align: right; }\n\n.interval-box {\n  background: linear-gradient(to right, rgba(0, 0, 255, 0.863), #92b6d8, rgba(0, 0, 255, 0.863), #92b6d8);\n  height: 4px; }\n\n.body-background {\n  background: linear-gradient(to right top, #0e0101, #47473c);\n  height: 577px; }\n\n.go-home {\n  font-size: 20px;\n  color: white;\n  font-weight: bold;\n  margin: 20px 0px 20px 20px; }\n\n.menu-head {\n  background-color: #0b010f;\n  text-align: left; }\n\n.menus {\n  opacity: 0.7; }\n\n.menu {\n  color: darkolivegreen;\n  cursor: pointer;\n  background-color: #0b010f;\n  opacity: 1; }\n\n.menu:hover {\n  color: #f12a07; }\n\n.icons {\n  margin-left: 30px; }\n\n.icon {\n  margin-left: 60px; }\n\n.left-bg {\n  background-image: url('menu.jpg');\n  background-size: 97% 100%; }\n\n.text-content {\n  margin-top: 10px;\n  margin-left: 35px;\n  width: 98%;\n  height: 560px;\n  color: azure;\n  overflow: auto; }\n\n.wechat {\n  width: 2%;\n  height: 22px;\n  margin-top: 2px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYmFja2VuZC9iYWNrZW5kL2Q6XFxnaXRcXGNoZXZ5c2t5L3NyY1xcYXBwXFxiYWNrZW5kXFxiYWNrZW5kXFxiYWNrZW5kLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksMkRBQXVFO0VBQ3ZFLFlBQVk7RUFDWixZQUFZO0VBQ1osaUJBQWlCLEVBQUE7O0FBR3JCO0VBQ0ksdUdBQXlIO0VBQ3pILFdBQVcsRUFBQTs7QUFHZjtFQUNJLDJEQUF1RTtFQUN2RSxhQUFZLEVBQUE7O0FBR2hCO0VBQ0ksZUFBZTtFQUNmLFlBQVk7RUFDWixpQkFBaUI7RUFDakIsMEJBQTBCLEVBQUE7O0FBRzlCO0VBQ0kseUJBQWdDO0VBQ2hDLGdCQUFnQixFQUFBOztBQUdwQjtFQUNJLFlBQVksRUFBQTs7QUFHaEI7RUFDRyxxQkFBcUI7RUFDckIsZUFBZTtFQUNmLHlCQUFnQztFQUNoQyxVQUFVLEVBQUE7O0FBR2I7RUFDSSxjQUFxQixFQUFBOztBQUd6QjtFQUNJLGlCQUFpQixFQUFBOztBQUdyQjtFQUNJLGlCQUFpQixFQUFBOztBQUdyQjtFQUNJLGlDQUF5RDtFQUN6RCx5QkFBeUIsRUFBQTs7QUFHN0I7RUFDSSxnQkFBZ0I7RUFDaEIsaUJBQWlCO0VBQ2pCLFVBQVU7RUFDVixhQUFhO0VBQ2IsWUFBWTtFQUNaLGNBQWEsRUFBQTs7QUFHakI7RUFDSSxTQUFTO0VBQ1QsWUFBWTtFQUNaLGVBQWUsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2JhY2tlbmQvYmFja2VuZC9iYWNrZW5kLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmhlYWQtYmFja2dyb3VuZHtcclxuICAgIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCh0byByaWdodCB0b3AscmdiKDEwLCAwLCAwKSxyZ2IoNDEsIDMyLCAxOSkpO1xyXG4gICAgaGVpZ2h0OiAzMHB4O1xyXG4gICAgY29sb3I6IGF6dXJlO1xyXG4gICAgdGV4dC1hbGlnbjogcmlnaHQ7XHJcbn1cclxuXHJcbi5pbnRlcnZhbC1ib3h7XHJcbiAgICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQscmdiYSgwLCAwLCAyNTUsIDAuODYzKSxyZ2IoMTQ2LCAxODIsIDIxNikscmdiYSgwLCAwLCAyNTUsIDAuODYzKSxyZ2IoMTQ2LCAxODIsIDIxNikpO1xyXG4gICAgaGVpZ2h0OiA0cHg7XHJcbn1cclxuXHJcbi5ib2R5LWJhY2tncm91bmR7XHJcbiAgICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQgdG9wLHJnYigxNCwgMSwgMSkscmdiKDcxLCA3MSwgNjApKTtcclxuICAgIGhlaWdodDo1NzdweDtcclxufVxyXG5cclxuLmdvLWhvbWV7XHJcbiAgICBmb250LXNpemU6IDIwcHg7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIG1hcmdpbjogMjBweCAwcHggMjBweCAyMHB4O1xyXG59XHJcblxyXG4ubWVudS1oZWFke1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDExLCAxLCAxNSk7XHJcbiAgICB0ZXh0LWFsaWduOiBsZWZ0O1xyXG59XHJcblxyXG4ubWVudXN7XHJcbiAgICBvcGFjaXR5OiAwLjc7XHJcbn1cclxuXHJcbi5tZW51e1xyXG4gICBjb2xvcjogZGFya29saXZlZ3JlZW47XHJcbiAgIGN1cnNvcjogcG9pbnRlcjtcclxuICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDExLCAxLCAxNSk7XHJcbiAgIG9wYWNpdHk6IDE7XHJcbn1cclxuXHJcbi5tZW51OmhvdmVye1xyXG4gICAgY29sb3I6cmdiKDI0MSwgNDIsIDcpO1xyXG59XHJcblxyXG4uaWNvbnN7XHJcbiAgICBtYXJnaW4tbGVmdDogMzBweDtcclxufVxyXG5cclxuLmljb257XHJcbiAgICBtYXJnaW4tbGVmdDogNjBweDtcclxufVxyXG5cclxuLmxlZnQtYmd7XHJcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4uLy4uLy4uL2Fzc2V0cy9iYWNrZW5kL21lbnUuanBnJyk7XHJcbiAgICBiYWNrZ3JvdW5kLXNpemU6IDk3JSAxMDAlO1xyXG59XHJcblxyXG4udGV4dC1jb250ZW50e1xyXG4gICAgbWFyZ2luLXRvcDogMTBweDtcclxuICAgIG1hcmdpbi1sZWZ0OiAzNXB4O1xyXG4gICAgd2lkdGg6IDk4JTtcclxuICAgIGhlaWdodDogNTYwcHg7XHJcbiAgICBjb2xvcjogYXp1cmU7XHJcbiAgICBvdmVyZmxvdzphdXRvO1xyXG59XHJcblxyXG4ud2VjaGF0e1xyXG4gICAgd2lkdGg6IDIlO1xyXG4gICAgaGVpZ2h0OiAyMnB4O1xyXG4gICAgbWFyZ2luLXRvcDogMnB4O1xyXG59Il19 */"
 
 /***/ }),
 
@@ -459,7 +471,7 @@ module.exports = "<tabset [justified]=\"true\" type=\"pills\">\n  <tab>\n    <ng
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".customClass {\n  background-color: black; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYmFja2VuZC9iYXNpYy5jb25maWd1cmF0aW9uL2ludGVyY2VwdG9yL0Q6XFxnaXRcXGNoZXZ5c2t5L3NyY1xcYXBwXFxiYWNrZW5kXFxiYXNpYy5jb25maWd1cmF0aW9uXFxpbnRlcmNlcHRvclxcaW50ZXJjZXB0b3IuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSx1QkFBdUIsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2JhY2tlbmQvYmFzaWMuY29uZmlndXJhdGlvbi9pbnRlcmNlcHRvci9pbnRlcmNlcHRvci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jdXN0b21DbGFzc3tcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xyXG59Il19 */"
+module.exports = ".customClass {\n  background-color: black; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYmFja2VuZC9iYXNpYy5jb25maWd1cmF0aW9uL2ludGVyY2VwdG9yL2Q6XFxnaXRcXGNoZXZ5c2t5L3NyY1xcYXBwXFxiYWNrZW5kXFxiYXNpYy5jb25maWd1cmF0aW9uXFxpbnRlcmNlcHRvclxcaW50ZXJjZXB0b3IuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSx1QkFBdUIsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2JhY2tlbmQvYmFzaWMuY29uZmlndXJhdGlvbi9pbnRlcmNlcHRvci9pbnRlcmNlcHRvci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jdXN0b21DbGFzc3tcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xyXG59Il19 */"
 
 /***/ }),
 
@@ -550,6 +562,177 @@ var MapStringComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
     ], MapStringComponent);
     return MapStringComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/backend/code.source/service/service.component.html":
+/*!********************************************************************!*\
+  !*** ./src/app/backend/code.source/service/service.component.html ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<tabset [justified]=\"true\" type=\"pills\">\n    <tab>\n      <ng-template tabHeading>\n        <div class=\"stitle\">IOC / DI</div>\n      </ng-template>\n      <br>\n      <div class=\"stitle\">IOC(Inverse Of Control)控制反转的简单定义</div>\n      new对象的权利从程序员变为了spring框架(又称为容器),或者说,控制权变为了第三方.<br>\n      ioc的思想最核心的地方在于，资源不由使用资源的双方管理，而由不使用资源的第三方管理，这可以带来很多好处。第一，资源集中管理，实现资源的可配置和易管理。第二，降低了使用资源双方的依赖程度，也就是我们说的藕合度。<br>\n      <div class=\"stitle\">DI(Dependency Injection)->依赖注入</div>\n      依赖注入的实现原理很类似懒加载,要使用的对象,在使用那一刻通过spring容器注入,而不是在new的时候创建.<br>\n      <span class=\"sign\">对象生成时间</span>:<br>\n      加载spring配置文件的时候,就已经生成了一个.<br>\n      <span class=\"sign\">类对象什么时候被注入</span>:<br>\n      <span class=\"keyword\">private</span> UserDao user;在真正要使用的时候 user.getUser()<br>\n      <span class=\"sign\">优势</span>：<br>\n      降低内存消耗、降低藕合度、试程序更灵活。\n    </tab>\n    <tab>\n      <ng-template tabHeading>\n        <div class=\"stitle\">声明式事务</div>\n      </ng-template>\n      <br>\n      如果在Service层的这个方法中，除了调用了Dao层的方法之外，还调用了本类的其他的Service方法(相当于开启了两个事务)，那么在调用其他的Service方法的时候，这个事务是怎么规定的呢，我必须保证我在我方法里掉用的这个方法与我本身的方法处在同一个事务中，否则不能保证事物的一致性.<br>\n      在配置事务的时候，一般是把事务边界设置到service层，也就是你的业务逻辑层，因为很多时候都是在业务逻辑层来完成一些列的数据操作，如果放到Dao数据层，其粒度太小了。另外，如果把事务配置在业务逻辑层的话，对二级缓存也是有好处的。<br>\n      <div class=\"stitle\">事务的传播特性取值</div>\n      <table class=\"table table-bordered table-dark\">\n          <tbody>\n            <tr>\n              <td>PROPAGATION_REQUIRED</td>\n              <td>如果存在一个事务，则支持当前事务。如果没有事务则开启(一般用这个)</td>\n            </tr>\n            <tr>\n              <td>PROPAGATION_SUPPORTS</td>\n              <td>如果存在一个事务，支持当前事务。如果没有事务，则非事务的执行</td>\n            </tr>\n            <tr>\n              <td>PROPAGATION_MANDATORY</td>\n              <td>如果已经存在一个事务，支持当前事务。如果没有一个活动的事务，则抛出异常</td>\n            </tr>\n            <tr>\n              <td>PROPAGATION_REQUIRES_NEW</td>\n              <td>总是开启一个新的事务。如果一个事务已经存在，则将这个存在的事务挂起</td>\n            </tr>   \n            <tr>\n              <td>PROPAGATION_NOT_SUPPORTED</td>\n              <td>总是非事务地执行，并挂起任何存在的事务</td>\n            </tr> \n            <tr>\n              <td>PROPAGATION_NEVER</td>\n              <td>总是非事务地执行，如果存在一个活动事务，则抛出异常</td>\n            </tr>\n            <tr>\n              <td>PROPAGATION_NESTED</td>\n              <td>如果一个活动的事务存在，则运行在一个嵌套的事务中. 如果没有活动事务, 则按TransactionDefinition.PROPAGATION_REQUIRED 属性执行。</td>\n            </tr>\n          </tbody>    \n      </table>\n      <div>实例：<span class=\"note\">@Transactional</span>(propagation = <span class=\"keyword\">REQUIRED</span>)</div>\n      <div class=\"stitle\">Read-only(只读事务)</div>\n      从这一点设置的时间点开始（时间点a）到这个事务结束的过程中，其他事务所提交的数据，该事务将看不见！（查询中不会出现别人在时间点a之后提交的数据）<br>\n      <div class=\"keyword\">应用场合</div>\n      如果你一次执行单条查询语句，则没有必要启用事务支持，数据库默认支持SQL执行期间的读一致性； 如果你一次执行多条查询语句，例如统计查询，报表查询，在这种场景下，多条查询SQL必须保证整体的读一致性，否则，在前条SQL查询之后，后条SQL查询之前，数据被其他用户改变，则该次整体的统计查询将会出现读数据不一致的状态，此时，应该启用事务支持。<br>\n      <div class=\"explain\">【注意是一次执行多次查询来统计某些信息，这时为了保证数据整体的一致性，要用只读事务】</div>\n      在将事务设置成只读后，相当于将数据库设置成只读数据库，此时若要进行写的操作，会出现错误。\n    </tab>\n</tabset>  \n"
+
+/***/ }),
+
+/***/ "./src/app/backend/code.source/service/service.component.scss":
+/*!********************************************************************!*\
+  !*** ./src/app/backend/code.source/service/service.component.scss ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2JhY2tlbmQvY29kZS5zb3VyY2Uvc2VydmljZS9zZXJ2aWNlLmNvbXBvbmVudC5zY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/backend/code.source/service/service.component.ts":
+/*!******************************************************************!*\
+  !*** ./src/app/backend/code.source/service/service.component.ts ***!
+  \******************************************************************/
+/*! exports provided: ServiceComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ServiceComponent", function() { return ServiceComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var ServiceComponent = /** @class */ (function () {
+    function ServiceComponent() {
+    }
+    ServiceComponent.prototype.ngOnInit = function () {
+    };
+    ServiceComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-service',
+            template: __webpack_require__(/*! ./service.component.html */ "./src/app/backend/code.source/service/service.component.html"),
+            styles: [__webpack_require__(/*! ./service.component.scss */ "./src/app/backend/code.source/service/service.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], ServiceComponent);
+    return ServiceComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/backend/code.source/springmvc/springmvc.component.html":
+/*!************************************************************************!*\
+  !*** ./src/app/backend/code.source/springmvc/springmvc.component.html ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<tabset [justified]=\"true\" type=\"pills\">\n  <tab>\n    <ng-template tabHeading>\n      <div class=\"stitle\">SpringMVC</div>\n    </ng-template>\n    <br>\n    <span class=\"keyword\">MVC</span> (Model 模型 View 视图 Controller 控制器)，用一种业务逻辑、数据、界面等分离的方法来设计程序架构，组织程序代码。<br>\n    SpringMVC 是spring的一个模块， 其思想是抛弃Struts2，依靠spring框架自身注解，利用AOP思想和拦截器机制来实现MVC设计理念。<br>\n    <div class=\"stitle\">Spring web mvc 请求流程</div>\n    1、用户发送请求至<span class=\"keyword\">前端控制器</span> DispatcherServlet<br>\n    2、DispatcherServlet收到请求调用HandlerMapping<span class=\"keyword\">处理器映射器</span>。<br>\n    3、处理器映射器根据请求url找到具体的处理器，生成处理器对象及处理器拦截器(如果有则生成)一并返回给DispatcherServlet。<br>\n    4、DispatcherServlet通过HandlerAdapter<span class=\"keyword\">处理器适配器</span>调用处理器<br>\n    5、<span class=\"keyword\">执行处理器</span>(Controller，也叫后端控制器)。<br>\n    6、Controller执行完成返回ModelAndView<br>\n    7、HandlerAdapter将controller执行结果ModelAndView返回给DispatcherServlet<br>\n    8、DispatcherServlet将ModelAndView传给ViewReslover<span class=\"keyword\">视图解析器</span><br>\n    9、ViewReslover解析后返回具体View<br>\n    10、DispatcherServlet对View进行渲染视图（即将模型数据填充至视图中,即response中）。<br>\n    11、DispatcherServlet响应用户<br>\n    <div class=\"stitle\">组件说明</div>\n    DispatcherServlet：前端控制器<br>\n    用户请求到达前端控制器，它就相当于mvc模式中的c，dispatcherServlet是整个流程控制的中心，由它调用其它组件处理用户的请求，dispatcherServlet的存在降低了组件之间的藕合性。<br>\n    HandlerMapping：处理器映射器<br>\n    HandlerMapping负责根据用户请求找到Handler即处理器，springmvc提供了不同的映射器实现不同的映射方式，例如：配置文件方式，实现接口方式，注解方式等。<br>\n    Handler：处理器<br>\n    Handler 是继DispatcherServlet前端控制器的后端控制器，在DispatcherServlet的控制下Handler对具体的用户请求进行处理。<br>\n    由于Handler涉及到具体的用户业务请求，所以一般情况需要程序员根据业务需求开发Handler。<br>\n    HandlAdapter：处理器适配器<br>\n    通过HandlerAdapter对处理器进行执行，这是适配器模式的应用，通过扩展适配器可以对更多类型的处理器进行执行。<br>\n    ViewResolver：视图解析器<br>\n    ViewResolver负责将处理结果生成View视图，ViewResolver首先根据逻辑视图名解析成物理视图名即具体的页面地址，再生成View视图对象，最后对View进行渲染将处理结果通过页面展示给用户。 springmvc框架提供了很多的View视图类型，包括：jstlView、freemarkerView、pdfView等。<br>\n    一般情况下需要通过页面标签或页面模版技术将模型数据通过页面展示给用户，需要由程序员根据业务需求开发具体的页面。<br>\n  </tab>\n  <tab>\n    <ng-template tabHeading>\n      <div class=\"stitle\">AOP 基本知识</div>\n    </ng-template>\n    <br>\n    <a href=\"https://github.com/chevysky/fireworm\">点击查看 github 代码分享，路径：package com.bulu.fireworm.configuration.AspectModel.java;</a><br>\n    <div class=\"stitle\">AOP</div>\n    AOP(Aspect-Oriented Programming)，面向切面编程，其基本单元是 Aspect(切面)；OOP(Object-Oriented Programming), 面向对象编程，其基本单元是Class(类)。<br>\n    AOP可以说是对OOP的补充和完善，OOP引入封装、继承、多态等概念来建立一种对象层级结构，允许开发者定义纵向关系，而并不适合定义横向关系，AOP着重实现横向关系。<br>\n    aspect 由 pointcount 和 advice 组成, 它既包含了横切逻辑的定义, 也包括了连接点的定义. Spring AOP就是负责实施切面的框架, 它将切面所定义的横切逻辑织入到切面所指定的连接点中. \n    AOP的工作重心在于如何将增强织入目标对象的连接点上, 这里包含两个工作:1、如何通过 pointcut 和 advice 定位到特定的 joinpoint 上 ；2、如何在 advice 中编写切面代码。\n    可以简单地认为, 使用 @Aspect 注解的类就是切面.<br>\n    AOP常应用于日志记录，性能统计，安全控制，权限控制，事务处理等方面。<br>\n    <div class=\"stitle\">advice(增强)</div>\n    由 aspect 添加到特定的 join point(即满足 point cut 规则的 join point) 的一段代码. \n    许多 AOP框架, 包括 Spring AOP, 会将 advice 模拟为一个拦截器(interceptor), 并且在 join point 上维护多个 advice, 进行层层拦截. <br>\n    <div class=\"stitle\">AOP几个相关的概念 </div>\n    <table class=\"table table-bordered table-dark\">\n      <thead>\n          <tr>\n              <th scope=\"col\">名称</th>\n              <th scope=\"col\">说明</th>\n          </tr>    \n      </thead>\n      <tbody>\n        <tr>\n          <td>切面（Aspect）</td>\n          <td>一个关注点的模块化，这个关注点可能会横切多个对象，可以通过@Aspect定义切面\n              类</td>\n        </tr>\n        <tr>\n          <td>连接点（Joinpoint）</td>\n          <td>程序执行过程中的某个特定的点。在spring AOP中，一个连接点总是代表一个方法的执行。</td>\n        </tr>\n        <tr>\n          <td>通知（Advice）</td>\n          <td>在切面的某个特定的连接点上执行的动作</td>\n        </tr>\n        <tr>\n          <td>切入点（Pointcut）</td>\n          <td>匹配连接点的断言，在AOP中通知和一个切入点的表达式</td>\n        </tr>\n        <tr>\n          <td>引入（Introduction）</td>\n          <td>在不修改类代码的前提下，为类添加新的方法和属性</td>\n        </tr>\n        <tr>\n          <td>目标对象(Target Object)</td>\n          <td>被一个或多个切面所通知的对象</td>\n        </tr>\n        <tr>\n            <td>AOP代理（AOP Proxy）</td>\n            <td>AOP框架创建的对象，用来实现切面契约（aspect contract）(包括通知方法执行等功能)</td>\n        </tr>\n        <tr>\n          <td>织入（Weaving）</td>\n          <td>把切面连接到其他的应用程序类型或者对象上，并创建一个被通知的对象，   \n                分为：编译时织入、类加载时织入、执行时织入</td>\n        </tr>\n      </tbody>\n    </table>\n    <a href=\"https://blog.csdn.net/anurnomeru/article/details/79798659\">参考链接</a>\n  </tab>\n  <tab>\n    <ng-template tabHeading>\n      <div class=\"stitle\">AOP 简单的配置类</div>\n    </ng-template>\n    <br>\n    <div class=\"function\">pom.xml</div>\n    <div class=\"function-div sign\">{{lefta}}dependency></div>\n    <div class=\"content\"><span class=\"sign\">{{lefta}}groupId></span>org.springframework.boot<span class=\"sign\">{{lefta}}/groupId></span></div>\n    <div class=\"content\"><span class=\"sign\">{{lefta}}artifactId></span>spring-boot-starter-aop<span class=\"sign\">{{lefta}}/artifactId></span></div>\n    <div class=\"function-div sign\">{{lefta}}/dependency></div>\n    加入了springboot 对于切面的依赖就不需要加@EnableAspectJAutoProxy注解，因为该已经实现了该功能。\n    <div class=\"stitle\">AspectModel.java</div>\n    <div class=\"note\">@Component</div>\n    <div class=\"note\">@Aspect</div>\n    <div><span class=\"keyword\">public class </span>AspectModel {{brace}}</div>\n    <br>\n    <div class=\"function-div explain\">\n      表达式示例:<br>\n      任意公共方法的执行：<br>\n      execution(public * *(..))<br>\n      任何一个以“set”开始的方法的执行：<br>\n      execution(* set*(..))<br>\n      AccountService 接口的任意方法的执行：<br>\n      execution(* com.xyz.service.AccountService.*(..))<br>\n      定义在service包里的任意方法的执行：<br>\n      execution(* com.xyz.service.*.*(..))<br>\n      定义在service包和所有子包里的任意类的任意方法的执行：<br>\n      execution(* com.xyz.service..*.*(..))<br>\n      定义在pointcutexp包和所有子包里的JoinPointObjP2类的任意方法的执行：<br>\n      execution(* com.test.spring.aop.pointcutexp..JoinPointObjP2.*(..))\")<br>\n      匹配由指定注解标注的方法<br>\n      @Pointcut(\"@annotation(com.xys.demo1.AuthChecker)\")这里的注解是AuthChecker\n     </div>\n    <div class=\"function-div\"><span class=\"note\">@Pointcut</span>(\"execution(public * com.bulu.fireworm.serviceimpl.TestAop.get*(..))\")</div>\n    <div class=\"function-div\">\n      <span class=\"keyword\">public void </span><span class=\"function\">pointCut</span>() {{brace}}<br>\n       <div class=\"function-div\">System.out.println(\"执行的切面主程序\");</div>\n      }\n    </div>\n    <br>\n    <div class=\"function-div\">\n      <span class=\"note\">@Before</span>(\"pointCut()\")<span class=\"explain\">可以注入JoinPoint对象，从而获取各种数据</span><br>\n      <span class=\"keyword\">public void </span><span class=\"function\">before</span>(JoinPoint joinPoint) {{brace}}<br>\n      <div class=\"function-div\">\n        System.out.println(\"方法运行前\");<br>\n        <div class=\"explain\">\n          Object[] args = joinPoint.getArgs()<br>\n          joinPoint.getSignature().getDeclaringType();<br>\n          joinPoint.getTarget();<br>\n        </div>\n      </div>\n    }\n    </div>\n    <br>\n    <div class=\"function-div\">\n      <div class=\"explain\">匹配参数为map的方法</div>\n      <span class=\"note\">@Before</span>(\"pointCut() && args(map)\")<br>\n      <span class=\"keyword\">public void </span><span class=\"function\">before</span>(Map map)\n    </div>\n    <br>\n    <div class=\"function-div\">\n      <div class=\"explain\">匹配第一个参数为map的方法</div>\n      <span class=\"note\">@Before</span>(\"pointCut() && args(map,..)\")<br>\n      <span class=\"keyword\">public void </span><span class=\"function\">before</span>(Map map)\n    </div>\n    <br>\n    <div class=\"function-div\">\n      <div class=\"explain\">匹配第二个参数为map的方法</div>\n      <span class=\"note\">@Before</span>(\"pointCut() && args(*,map,..)\")<br>\n      <span class=\"keyword\">public void </span><span class=\"function\">before</span>(Map map)\n    </div>\n    <br>\n    <div class=\"function-div\">\n      <span class=\"note\">@After</span>(\"pointCut()\")<br>\n      <span class=\"keyword\">public void </span><span class=\"function\">after</span>(JoinPoint joinPoint) {{brace}}<br>\n      <div class=\"function-div\">\n        System.out.println(\"方法运行之后\");\n      </div>\n    }\n    </div>\n    <br>\n    <div class=\"function-div\">\n      <span class=\"note\">@AfterReturning</span>(\"pointCut()\")<br>\n      <span class=\"keyword\">public void </span><span class=\"function\">afterReturn</span>(JoinPoint joinPoint) {{brace}}<br>\n      <div class=\"function-div\">\n        System.out.println(\"方法返回\");\n      </div>\n    }\n    </div>\n    <br>\n    <div class=\"function-div\">\n      <span class=\"note\">@Around</span>(\"pointCut()\")<br>\n      <span class=\"keyword\">public void </span><span class=\"function\">around</span>(ProceedingJoinPoint pjp) throws Throwable {{brace}}<br>\n      <div class=\"function-div\">\n        System.out.println(\"around start..\");<br>\n        <span class=\"keyword\">try </span>{{brace}}\n        <div class=\"explain\">\n          Object proceed() throws Throwable //执行目标方法<br>\n          Object proceed(Object[] var1) throws Throwable //传入的新的参数去执行目标方法\n        </div>\n        Object returnArg = pjp.proceed();<br>\n            System.out.println(\"返回值\" + returnArg);<br>\n      }<span class=\"keyword\">catch</span> (Throwable ex){{brace}}<br>\n      System.out.println(\"error in around\");<br>\n      <span class=\"keyword\">throw</span>ex;<br>\n    }<br>\n    System.out.println(\"around end\");\n      </div>\n    }\n    </div>\n    <br>\n    <div class=\"function-div\">\n      <span class=\"note\">@AfterThrowing</span>(\"pointCut()\", throwing = \"error\")<br>\n      <span class=\"keyword\">public void </span><span class=\"function\">afterThrowing</span>(JoinPoint joinPoint,Throwable error) {{brace}}<br>\n      <div class=\"function-div\">\n        System.out.println(\"error:\" + error + \"jp\" + joinPoint);\n      </div>\n    }\n    </div>\n    <br>\n    <div>}</div>\n  </tab>\n</tabset>  \n"
+
+/***/ }),
+
+/***/ "./src/app/backend/code.source/springmvc/springmvc.component.scss":
+/*!************************************************************************!*\
+  !*** ./src/app/backend/code.source/springmvc/springmvc.component.scss ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2JhY2tlbmQvY29kZS5zb3VyY2Uvc3ByaW5nbXZjL3NwcmluZ212Yy5jb21wb25lbnQuc2NzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/backend/code.source/springmvc/springmvc.component.ts":
+/*!**********************************************************************!*\
+  !*** ./src/app/backend/code.source/springmvc/springmvc.component.ts ***!
+  \**********************************************************************/
+/*! exports provided: SpringmvcComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SpringmvcComponent", function() { return SpringmvcComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var SpringmvcComponent = /** @class */ (function () {
+    function SpringmvcComponent() {
+        this.brace = '{';
+        this.lefta = '<';
+    }
+    SpringmvcComponent.prototype.ngOnInit = function () {
+    };
+    SpringmvcComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-springmvc',
+            template: __webpack_require__(/*! ./springmvc.component.html */ "./src/app/backend/code.source/springmvc/springmvc.component.html"),
+            styles: [__webpack_require__(/*! ./springmvc.component.scss */ "./src/app/backend/code.source/springmvc/springmvc.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], SpringmvcComponent);
+    return SpringmvcComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/backend/code.source/thread/thread.component.html":
+/*!******************************************************************!*\
+  !*** ./src/app/backend/code.source/thread/thread.component.html ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<tabset [justified]=\"true\" type=\"pills\">\n  <tab>\n    <ng-template tabHeading>\n      <div class=\"stitle\">基础知识A</div>\n    </ng-template>\n    <br>\n    <span class=\"note\">线程</span>是程序执行流的最小单位。<br>\n    <span class=\"note\">进程</span>是系统进行资源分配和调度的一个独立单位。<br>\n    <div class=\"stitle\">并发模型</div>\n    <span class=\"keyword\">工作者模型</span>：就是将传入的作业分配给不同的工作者合力完成。<br>\n    <span class=\"keyword\">流水线模式</span>：每个工作者只负责作业中的部分工作。当完成了自己的这部分工作时工作者会将\n    作业转发给下一个工作者。每个工作者在自己的线程中运行，并且不会和其他工作者共享状态。有时也被成为无共享并行模型。\n    通常使用非阻塞的IO来设计使用流水线并发模型的系统。非阻塞IO意味着，一旦某个工作者开始一个IO操作的时候，这个工作者\n    不会一直等待IO操作的结束。当IO操作完成的时候，IO操作的结果被传递给下一个工作者。采用流水线并发模型的系统有时候也\n    称为反应器系统或事件驱动系统。<br>\n    <span class=\"keyword\">函数式并行</span>：函数式并行的基本思想是采用函数调用实现程序。<br>\n    <div class=\"stitle\">创建线程 java.lang.Thread</div>\n    <div>case 1 ：创建一个类 MyThread 继承extends Thread类 然后重写 run() 方法；Tread thread = new MyThread(); 启动 thread.start()去调用run();</div>\n    <div>case 2 : 创建一个匿名子类</div>\n    <div class=\"function-div\">\n      Thread thread = <span class=\"keyword\">new</span> Thread(){{brace}}<br>\n      <div class=\"function-div\">\n        <span class=\"keyword\">public void</span> run(){{brace}}<br>\n        <div class=\"function-div\">\n          具体执行的操作...\n        </div>\n      }\n      </div>\n    }\n    </div>\n   <div>case 3 : 创建一个类 MyThread 实现implements Runnable接口 重写 run()；Thread thread = new Thread(new MyRunnable());</div>\n   <div>case 4 : 实现了Runnable接口的匿名类</div>\n   <div><span class=\"keyword\">获取当前线程的名字</span>：String threadName = Thread.currentThread().getName();</div>\n   <div class=\"stitle\">线程安全与资源共享</div>\n   <div>不同的浏览器session是不会共享的，当打开浏览器时会生成属于你的唯一sessionID</div>\n   <div><span class=\"note\">局部变量</span>存储在线程自己的栈中。也就是说，局部变量永远也不会被多个线程共享。所以，基础类型的局部变量是线程安全的。</div>\n   <div class=\"keyword\">保证线程安全四种策略</div>\n   <div><span class=\"function\">限制数据共享（Confinement）</span>1、将可变数据限制在单一线程内部，避免竞争。2、不允许任何线程直接读写该数据。\n    3、核心思想： 线程之间不共享mutable数据类型。4、避免全局变量</div>\n   <div><span class=\"function\">共享不可变数据（Immutability）</span>使用不可变数据类型和不可变引用，避免多线程之间的race condition。 关于不可变的更强定义：\n    （1）无mutator方法;（2）所有属性均为private和final的;（3）没有表示泄露;（4）表示中没有对可变类型的变化，甚至有益的变化也不允许</div>\n   <div><span class=\"function\">共享线程安全的可变数据（Threadsafe data type）</span>  如果必须要用mutable的数据类型在多线程之间共享数据，要使用线程安全的数据类型。\n    一般来说， JDK同时提供两个相同功能的类，一个是threadsafe，另一个不是。 原因：threadsafe的类一般性能上受影响 。\n    集合类都是线程不安全的。因此Java API提供了进一步的decorator。 在使用synchronizedMap(hashMap)之后，不要再把参数hashMap\n    共享给其他线程，不要保留别名，一定要彻底销毁。即使在线程安全的集合类上，使用iterator也是不安全的，除非使用lock机制</div>\n   <div><span class=\"function\">同步机制（Synchronization）</span></div>\n   <div>\n    <table class=\"table table-bordered table-dark\">\n      <thead>\n          <tr>\n              <th scope=\"col\">类别类别</th>\n              <th scope=\"col\">synchronized</th>\n              <th scope=\"col\">Lock</th>\n          </tr>    \n      </thead>\n      <tbody>\n        <tr>\n          <td>存在层次</td>\n          <td>Java的关键字，在jvm层面上</td>\n          <td>是一个类</td>\n        </tr>\n        <tr>\n            <td>锁的释放</td>\n            <td>1、以获取锁的线程执行完同步代码，释放锁 2、线程执行发生异常，jvm会让线程释放锁</td>\n            <td>在finally中必须释放锁，不然容易造成线程死锁</td>\n          </tr>\n          <tr>\n              <td>锁的获取</td>\n              <td>假设A线程获得锁，B线程等待。如果A线程阻塞，B线程会一直等待</td>\n              <td>分情况而定，Lock有多个锁获取的方式，可以尝试获得锁，线程可以不用一直等待</td>\n            </tr>\n            <tr>\n                <td>锁状态</td>\n                <td>无法判断</td>\n                <td>可以判断</td>\n              </tr>\n              <tr>\n                  <td>锁类型</td>\n                  <td>可重入 不可中断 非公平</td>\n                  <td>可重入 可判断 可公平（两者皆可）</td>\n                </tr>\n                <tr>\n                    <td>性能</td>\n                    <td>少量同步</td>\n                    <td>大量同步</td>\n                </tr>\n                <tr>\n                    <td>使用</td>\n                    <td>在类或方法前加 synchronized</td>\n                    <td>Lock lock = new Lock()<br>\n                       lock.lock()<br>\n                       ...执行同步块<br>\n                       lock.unlock()\n                    </td>\n                </tr>\n      </tbody>\n    </table>\n   </div>\n   <div class=\"stitle\">Thread 常用方法</div>\n   <div>start()方法，调用该方法开始执行该线程;</div>\n   <div>stop()方法，调用该方法强制结束该线程执行;</div>\n   <div>join方法，调用该方法等待该线程结束;</div>\n   <div>sleep()方法，调用该方法该线程进入等待;</div>\n   <div>wait()与notify()方法是Object的方法，不是Thread的方法，wait()与notify()配合使用，分别表示线程挂起和线程恢复</div>\n   <div>wait()会释放对象锁而sleep()不会释放对象锁。</div>\n   <div class=\"stitle\">Java 内存模型</div>\n   <div>Java内存模型把Java虚拟机内部划分为线程栈和堆。每一个运行在Java虚拟机里的线程都拥有自己的线程栈。</div>\n   <div>一个线程仅能访问自己的线程栈。一个线程创建的本地变量对其它线程不可见，仅自己可见。即使两个线程执行同样的代码，\n     这两个线程任然在在自己的线程栈中的代码来创建本地变量。因此，每个线程拥有每个本地变量的独有版本。</div>\n   <div>所有原始类型的本地变量都存放在线程栈上，因此对其它线程不可见。一个线程可能向另一个线程传递一个原始类型变量的拷贝，但是它不能共享这个原始类型变量自身。</div>\n   <div>\n      <span class=\"keyword\">Java虚拟机JVM内存划分</span><br>\n      堆内存：开辟空间给地址，赋默认值，当不存在引用时变成垃圾等待回收，存储所有被new的对象，和成员变量<br>\n      栈内存：先进后出，存储局部变量和被调用的方法。<br>\n      方法区<br>\n      本地方法区（与系统相关）<br>\n      寄存器（跟硬件相关）<br>\n   </div>\n  </tab>\n  <tab>\n    <ng-template tabHeading>\n      <div class=\"stitle\">基础知识B</div>\n    </ng-template>\n    <br>\n    <div class=\"stitle\">线程通信</div>\n    <div class=\"sign\">通过共享对象通信 忙等待(Busy Wait)</div>\n    <div>创建一个共享对象(不是基本数据类型)，设置一个变量，并给出get set方法。</div>\n    <div>线程A设置这个变量值</div>\n    <div>线程B监测这个变量值为某一条件时执行B线程中的逻辑 <span class=\"function\">while(condition)</span>...</div>\n    <div class=\"sign\">wait(),notify()和notifyAll()</div>\n    <div>忙等待没有对运行等待线程的CPU进行有效的利用，除非平均等待时间非常短。否则，让等待线程进入睡眠或者非运行状态更为明智，直到它接收到它等待的信号。</div>\n    <div>在使用wait()/notify()/notifyAll()时需要通过<span class=\"function\">synchronized</span>关键字获取锁。执行这几个方法时是在\n    同步代码块中。</div>\n    <br>\n    <div class=\"row\">\n      <div class=\"col-md-5\">\n    <div class=\"function-div\">\n      <div class=\"explain\">封装一个类用于实现线程的挂起和唤醒</div>\n      <div><span class=\"keyword\">public class </span>ControllerThread {{brace}}</div>\n      <br>\n      <div class=\"function-div\">\n        <span class=\"keyword\">public void </span>waitThread(Object lock) {{brace}}<br>\n        <div class=\"function-div\">\n          <span class=\"keyword\">synchronized </span>(lock) {{brace}}<br>\n          <div class=\"function-div\">\n            <span class=\"keyword\">try </span>{{brace}}<br>\n            <div class=\"function-div\">lock.wait()</div>\n            <div>} <span class=\"keyword\">catch </span>(InterruptedException e) {{brace}}</div>\n            <div class=\"function-div\">e.printStackTrace()</div>\n            <div>}</div>\n          </div>\n          <div>}</div>\n        </div>\n        <div>}</div>\n      </div>\n      <br>\n      <div class=\"function-div\">\n          <span class=\"keyword\">public void </span>notifyThread(Object lock) {{brace}}<br>\n          <div class=\"function-div\">\n              <span class=\"keyword\">synchronized </span>(lock) {{brace}}<br>\n              <div class=\"function-div\">lock.notify()</div>\n              <div>}</div>\n          </div>\n          <div>}</div>\n      </div>\n      <div>}</div>\n    </div>\n  </div>\n  <div class=\"col-md-7\">\n    <div class=\"function-div\"><span class=\"explain\">测试，注意挂起和唤醒的lock引用必须一致</span><br>\n      <span class=\"keyword\">public void </span>testThread() {{brace}}<br>\n       <div class=\"function-div\">ControllerThread ctrlThread = new ControllerThread()<br>\n      <div> Object lock = new Object() <span class=\"explain\">这里的锁数据类型不能为基本数据类型</span></div>\n      <br>\n      <div>Runnable threadA = new Runnable() {{brace}}</div>\n      <div class=\"function-div\">\n        <div class=\"note\">@Override</div>\n        <div><span class=\"keyword\">public void </span> run () {{brace}}</div>\n        <div class=\"function-div\">\n          <div>ctrlThread.waitThread(lock);</div>\n          <div> System.out.println(\"线程一\");</div>\n        </div>\n        <div>}</div>\n      </div>\n      <div>}</div>\n      <br>\n      <div>Runnable threadB = new Runnable() {{brace}}</div>\n      <div class=\"function-div\">\n        <div class=\"note\">@Override</div>\n        <div><span class=\"keyword\">public void </span> run () {{brace}}</div>\n        <div class=\"function-div\">\n          <div> System.out.println(\"线程二\");</div>\n          <div>ctrlThread.notifyThread(lock);</div>\n        </div>\n        <div>}</div>\n      </div>\n      <div>}</div>\n      <br>\n      Thread a = new Thread(threadA);<br>\n      a.start();<br>\n      Thread b = new Thread(threadB);<br>\n      b.start();<br>\n      </div>\n      <div>}</div>\n    </div>\n    </div>\n  </div>\n\n    <div class=\"sign\">丢失的信号（Missed Signals）</div>\n    <div>在实际运行中，可能会出现wait()方法还没被调用，而notify()方法先调用，导致出现后调用wait()线程一致处于等待的状态，\n      这就是丢失了信号。解决此类方法可以在ControllerThread类中设置一个成员变量，在每次调用wait()方法时进行判定，只有\n      notify()方法还没被调用时，才能执行wait()方法。</div>\n     <div>在用成员变量来判断时应当将成员变量放入 while()中 而不是if() 这样形成自旋锁，有效的避免出现假唤醒。</div> \n    <div class=\"sign\">不要在字符串常量或全局对象中调用wait()</div>\n    <div class=\"stitle\">ThreadLocal对象</div>\n    <div>private ThreadLocal myThreadLocal = new ThreadLocal();</div>\n    <div>实例化了一个ThreadLocal对象。每个线程仅需要实例化一次即可。虽然不同的线程执行同一段代码时，访问同一个\n      ThreadLocal变量，但是每个线程只能看到私有的ThreadLocal实例。所以不同的线程在给ThreadLocal对象设置不同的值时，\n      他们也不能看到彼此的修改。</div>\n    <div class=\"stitle\">Java中的读/写锁</div>\n    <div>lockRead()/lockWrite()/unlockRead()/unlockWrite()</div>\n    <div class=\"stitle\">Semaphore 信号量</div>\n    permits:初始化可用的许可数目。<br> \n    fair: 若该信号量保证在征用时按FIFO的顺序授予许可，则为true，否则为false； <br>\n    <a href=\"https://www.cnblogs.com/XHJT/p/3910406.html\">信号量的参考使用</a>\n  </tab>\n  <tab>\n    <ng-template tabHeading>\n      <div class=\"stitle\">线程池</div>\n    </ng-template>\n    <br>\n    <div class=\"stitle\">newCachedThreadPool 缓存线程池</div>\n    <div>ExecutorService cachedThreadPool = Executors.newCachedThreadPool();</div>\n    <div>cachedThreadPool.execute(new Runnable()</div>\n    <div>cachedThreadPool.shutdown();</div>\n    <div class=\"stitle\">newFixedThreadPool 指定线程数量的线程池</div>\n    <div>ExecutorService fixedThreadPool = Executors.newFixedThreadPool(3);</div>\n    <div class=\"stitle\">newSingleThreadExecutor</div>\n    <div>创建唯一的工作者线程来执行任务，它只会用唯一的工作线程来执行任务，保证所有任务按照指定顺序(FIFO, LIFO, 优先级)执行。\n      如果这个线程异常结束，会有另一个取代它，保证顺序执行。单工作线程最大的特点是可保证顺序地执行各个任务，并且在任意给定的时间不会有多个线程是活动的。</div>\n    <div>ExecutorService singleThreadExecutor = Executors.newSingleThreadExecutor();</div>  \n    <div class=\"stitle\">newScheduleThreadPool</div>\n    <div>创建一个定长的线程池，而且支持定时的以及周期性的任务执行，支持定时及周期性任务执行</div>\n    <div>ScheduledExecutorService scheduledThreadPool = Executors.newScheduledThreadPool(5);</div>\n    <div class=\"stitle\">CountDownLatch 用于判断线程是否全部执行完</div>\n    <div>CountDownLatch count = new CountDownLatch(num);<span class=\"explain\">num 表示线程的个数</span></div>\n    <div>每一个线程执行完调用一次  count.countDown() 相当于计数器减一</div>\n    <div>count.await() 等待所有线程执行完毕，就可以执行它之后的代码了</div>\n  </tab>\n</tabset>  \n<br>  \n<a href=\"http://ifeve.com/java-concurrency-thread-directory/\">参考链接一</a>&nbsp;&nbsp;\n<a href=\"https://blog.csdn.net/qq_38969070/article/details/80767370\">参考链接二</a>&nbsp;&nbsp;\n<a href=\"https://blog.csdn.net/u012403290/article/details/64910926?locationNum=11&fps=1\">参考链接三</a>&nbsp;&nbsp;\n"
+
+/***/ }),
+
+/***/ "./src/app/backend/code.source/thread/thread.component.scss":
+/*!******************************************************************!*\
+  !*** ./src/app/backend/code.source/thread/thread.component.scss ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2JhY2tlbmQvY29kZS5zb3VyY2UvdGhyZWFkL3RocmVhZC5jb21wb25lbnQuc2NzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/backend/code.source/thread/thread.component.ts":
+/*!****************************************************************!*\
+  !*** ./src/app/backend/code.source/thread/thread.component.ts ***!
+  \****************************************************************/
+/*! exports provided: ThreadComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ThreadComponent", function() { return ThreadComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var ThreadComponent = /** @class */ (function () {
+    function ThreadComponent() {
+        this.brace = '{';
+    }
+    ThreadComponent.prototype.ngOnInit = function () {
+    };
+    ThreadComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-thread',
+            template: __webpack_require__(/*! ./thread.component.html */ "./src/app/backend/code.source/thread/thread.component.html"),
+            styles: [__webpack_require__(/*! ./thread.component.scss */ "./src/app/backend/code.source/thread/thread.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], ThreadComponent);
+    return ThreadComponent;
 }());
 
 
@@ -846,6 +1029,63 @@ var ShiroComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/backend/plug/swagger/swagger.component.html":
+/*!*************************************************************!*\
+  !*** ./src/app/backend/plug/swagger/swagger.component.html ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"function\">pom.xml</div>\n    <div class=\"function-div sign\">{{lefta}}dependency></div>\n    <div class=\"content\"><span class=\"sign\">{{lefta}}groupId></span>io.springfox<span class=\"sign\">{{lefta}}/groupId></span></div>\n    <div class=\"content\"><span class=\"sign\">{{lefta}}artifactId></span>springfox-swagger2<span class=\"sign\">{{lefta}}/artifactId></span></div>\n    <div class=\"content\"><span class=\"sign\">{{lefta}}version></span>2.9.2<span class=\"sign\">{{lefta}}/version></span></div>\n    <div class=\"function-div sign\">{{lefta}}/dependency></div>\n    <br>\n    <div class=\"function-div sign\">{{lefta}}dependency></div>\n    <div class=\"content\"><span class=\"sign\">{{lefta}}groupId></span>io.springfox<span class=\"sign\">{{lefta}}/groupId></span></div>\n    <div class=\"content\"><span class=\"sign\">{{lefta}}artifactId></span>springfox-swagger-ui<span class=\"sign\">{{lefta}}/artifactId></span></div>\n    <div class=\"content\"><span class=\"sign\">{{lefta}}version></span>2.9.2<span class=\"sign\">{{lefta}}/version></span></div>\n    <div class=\"function-div sign\">{{lefta}}/dependency></div>\n    <br>\n    <div class=\"keyword\">使用方法</div>\n    <div>在启动类上加注解 <span class=\"note\">@EnableSwagger2</span></div>\n    <div>在Controller中加注解 <span class=\"note\">@Api</span></div>\n    <div>在方法上加注解 <span class=\"note\">@ApiOperation</span></div>"
+
+/***/ }),
+
+/***/ "./src/app/backend/plug/swagger/swagger.component.scss":
+/*!*************************************************************!*\
+  !*** ./src/app/backend/plug/swagger/swagger.component.scss ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2JhY2tlbmQvcGx1Zy9zd2FnZ2VyL3N3YWdnZXIuY29tcG9uZW50LnNjc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/backend/plug/swagger/swagger.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/backend/plug/swagger/swagger.component.ts ***!
+  \***********************************************************/
+/*! exports provided: SwaggerComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SwaggerComponent", function() { return SwaggerComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var SwaggerComponent = /** @class */ (function () {
+    function SwaggerComponent() {
+        this.lefta = '<';
+    }
+    SwaggerComponent.prototype.ngOnInit = function () {
+    };
+    SwaggerComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-swagger',
+            template: __webpack_require__(/*! ./swagger.component.html */ "./src/app/backend/plug/swagger/swagger.component.html"),
+            styles: [__webpack_require__(/*! ./swagger.component.scss */ "./src/app/backend/plug/swagger/swagger.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], SwaggerComponent);
+    return SwaggerComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/data.service.ts":
 /*!*********************************!*\
   !*** ./src/app/data.service.ts ***!
@@ -888,6 +1128,10 @@ var DataService = /** @class */ (function () {
             { id: 21, tier: 3, parentId: 7, menuName: 'Map/String', path: 'mapstring' },
             { id: 22, tier: 2, parentId: 1, menuName: '开发工具', path: '' },
             { id: 23, tier: 3, parentId: 22, menuName: 'IDEA 基本运用', path: 'idea' },
+            { id: 24, tier: 3, parentId: 7, menuName: 'MVC / AOP', path: 'springmvc' },
+            { id: 25, tier: 3, parentId: 7, menuName: '事务 / IOC / DI', path: 'iocdi' },
+            { id: 26, tier: 3, parentId: 7, menuName: '并发 / 线程', path: 'thread' },
+            { id: 27, tier: 3, parentId: 6, menuName: 'swagger 接口测试', path: 'swagger' },
         ];
     }
     DataService.prototype.getMenus = function () {
@@ -1061,7 +1305,7 @@ module.exports = "<div class='row frontbg'>\n  <div class=\"col-md-3 left-body\"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".frontbg {\n  background-image: url('bgimg.jpg');\n  background-size: 100%;\n  height: 610px; }\n\n.headbg {\n  height: 40px;\n  margin-top: 30px;\n  background-color: darkgreen; }\n\n.bodybg {\n  border-style: groove;\n  border-width: 15px;\n  margin-top: 20px;\n  height: 500px;\n  border-radius: 15px 15px 15px 15px;\n  border-color: #00ff0d;\n  overflow: auto; }\n\n.lib {\n  margin: 15px 200px 0px 200px;\n  text-align: center;\n  border: 2px solid;\n  border-radius: 25px;\n  border-color: #66cfe9;\n  cursor: pointer; }\n\n.lib:hover {\n  border-color: #e728be;\n  color: #e4ab11; }\n\n.menus {\n  color: aliceblue;\n  line-height: 40px;\n  margin-left: 20px;\n  cursor: pointer; }\n\n.menus:hover {\n  color: aqua; }\n\n.left-body {\n  margin: 30px 0px 0px 40px; }\n\n.day {\n  height: 40px;\n  float: left;\n  width: 40px;\n  text-align: center;\n  line-height: 40px;\n  cursor: pointer; }\n\n.day:hover {\n  color: #eb832e; }\n\n.week {\n  color: white;\n  background-color: #1eff31; }\n\n.now-day {\n  background-color: #1eff4f;\n  color: azure;\n  font-weight: bold; }\n\n.go-home {\n  font-weight: bold;\n  font-size: 18px; }\n\n.wechat {\n  width: 10%;\n  height: 22px;\n  margin-top: 2px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZnJvbnRlbmQvZnJvbnRlbmQvRDpcXGdpdFxcY2hldnlza3kvc3JjXFxhcHBcXGZyb250ZW5kXFxmcm9udGVuZFxcZnJvbnRlbmQuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxrQ0FBMkQ7RUFDM0QscUJBQXFCO0VBQ3JCLGFBQWEsRUFBQTs7QUFHakI7RUFDSSxZQUFXO0VBQ1gsZ0JBQWdCO0VBQ2hCLDJCQUEyQixFQUFBOztBQUcvQjtFQUNJLG9CQUFvQjtFQUNwQixrQkFBa0I7RUFDbEIsZ0JBQWU7RUFDZixhQUFhO0VBQ2Isa0NBQWtDO0VBQ2xDLHFCQUE2QjtFQUM3QixjQUFhLEVBQUE7O0FBR2pCO0VBQ0ksNEJBQTRCO0VBQzVCLGtCQUFrQjtFQUNsQixpQkFBZ0I7RUFDaEIsbUJBQWtCO0VBQ2xCLHFCQUFnQztFQUNoQyxlQUFlLEVBQUE7O0FBR25CO0VBQ0kscUJBQStCO0VBQy9CLGNBQXVCLEVBQUE7O0FBRzNCO0VBQ0ksZ0JBQWdCO0VBQ2hCLGlCQUFpQjtFQUNqQixpQkFBaUI7RUFDakIsZUFBYyxFQUFBOztBQUdsQjtFQUNJLFdBQVcsRUFBQTs7QUFHZjtFQUNJLHlCQUF5QixFQUFBOztBQUc3QjtFQUNJLFlBQVk7RUFDWixXQUFXO0VBQ1gsV0FBVztFQUNYLGtCQUFrQjtFQUNsQixpQkFBaUI7RUFDakIsZUFBZSxFQUFBOztBQUduQjtFQUNHLGNBQXVCLEVBQUE7O0FBRzFCO0VBQ0ksWUFBVztFQUNYLHlCQUFrQyxFQUFBOztBQUd0QztFQUNJLHlCQUFrQztFQUNsQyxZQUFZO0VBQ1osaUJBQWlCLEVBQUE7O0FBR3JCO0VBQ0ksaUJBQWlCO0VBQ2pCLGVBQWUsRUFBQTs7QUFHbkI7RUFDSSxVQUFVO0VBQ1YsWUFBWTtFQUNaLGVBQWUsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2Zyb250ZW5kL2Zyb250ZW5kL2Zyb250ZW5kLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmZyb250Ymd7XHJcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4uLy4uLy4uL2Fzc2V0cy9mcm9udGVuZC9iZ2ltZy5qcGcnKTtcclxuICAgIGJhY2tncm91bmQtc2l6ZTogMTAwJTtcclxuICAgIGhlaWdodDogNjEwcHg7XHJcbn1cclxuXHJcbi5oZWFkYmd7XHJcbiAgICBoZWlnaHQ6NDBweDtcclxuICAgIG1hcmdpbi10b3A6IDMwcHg7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBkYXJrZ3JlZW47XHJcbn1cclxuXHJcbi5ib2R5Ymd7XHJcbiAgICBib3JkZXItc3R5bGU6IGdyb292ZTtcclxuICAgIGJvcmRlci13aWR0aDogMTVweDtcclxuICAgIG1hcmdpbi10b3A6MjBweDtcclxuICAgIGhlaWdodDogNTAwcHg7XHJcbiAgICBib3JkZXItcmFkaXVzOiAxNXB4IDE1cHggMTVweCAxNXB4O1xyXG4gICAgYm9yZGVyLWNvbG9yOiByZ2IoMCwgMjU1LCAxMyk7XHJcbiAgICBvdmVyZmxvdzphdXRvO1xyXG59XHJcblxyXG4ubGlie1xyXG4gICAgbWFyZ2luOiAxNXB4IDIwMHB4IDBweCAyMDBweDtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIGJvcmRlcjoycHggc29saWQ7XHJcbiAgICBib3JkZXItcmFkaXVzOjI1cHg7XHJcbiAgICBib3JkZXItY29sb3I6IHJnYigxMDIsIDIwNywgMjMzKTtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxufVxyXG5cclxuLmxpYjpob3ZlcntcclxuICAgIGJvcmRlci1jb2xvcjogcmdiKDIzMSwgNDAsIDE5MCk7XHJcbiAgICBjb2xvcjpyZ2IoMjI4LCAxNzEsIDE3KTtcclxufVxyXG5cclxuLm1lbnVze1xyXG4gICAgY29sb3I6IGFsaWNlYmx1ZTtcclxuICAgIGxpbmUtaGVpZ2h0OiA0MHB4O1xyXG4gICAgbWFyZ2luLWxlZnQ6IDIwcHg7XHJcbiAgICBjdXJzb3I6cG9pbnRlcjtcclxufVxyXG5cclxuLm1lbnVzOmhvdmVye1xyXG4gICAgY29sb3I6IGFxdWE7XHJcbn1cclxuXHJcbi5sZWZ0LWJvZHl7XHJcbiAgICBtYXJnaW46IDMwcHggMHB4IDBweCA0MHB4O1xyXG59XHJcblxyXG4uZGF5e1xyXG4gICAgaGVpZ2h0OiA0MHB4O1xyXG4gICAgZmxvYXQ6IGxlZnQ7XHJcbiAgICB3aWR0aDogNDBweDtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIGxpbmUtaGVpZ2h0OiA0MHB4O1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG59XHJcblxyXG4uZGF5OmhvdmVye1xyXG4gICBjb2xvcjpyZ2IoMjM1LCAxMzEsIDQ2KTtcclxufVxyXG5cclxuLndlZWt7XHJcbiAgICBjb2xvcjp3aGl0ZTtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigzMCwgMjU1LCA0OSk7XHJcbn1cclxuXHJcbi5ub3ctZGF5e1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDMwLCAyNTUsIDc5KTtcclxuICAgIGNvbG9yOiBhenVyZTtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG59XHJcblxyXG4uZ28taG9tZXtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gICAgZm9udC1zaXplOiAxOHB4O1xyXG59XHJcblxyXG4ud2VjaGF0e1xyXG4gICAgd2lkdGg6IDEwJTtcclxuICAgIGhlaWdodDogMjJweDtcclxuICAgIG1hcmdpbi10b3A6IDJweDtcclxufSJdfQ== */"
+module.exports = ".frontbg {\n  background-image: url('bgimg.jpg');\n  background-size: 100%;\n  height: 610px; }\n\n.headbg {\n  height: 40px;\n  margin-top: 30px;\n  background-color: darkgreen; }\n\n.bodybg {\n  border-style: groove;\n  border-width: 15px;\n  margin-top: 20px;\n  height: 500px;\n  border-radius: 15px 15px 15px 15px;\n  border-color: #00ff0d;\n  overflow: auto; }\n\n.lib {\n  margin: 15px 200px 0px 200px;\n  text-align: center;\n  border: 2px solid;\n  border-radius: 25px;\n  border-color: #66cfe9;\n  cursor: pointer; }\n\n.lib:hover {\n  border-color: #e728be;\n  color: #e4ab11; }\n\n.menus {\n  color: aliceblue;\n  line-height: 40px;\n  margin-left: 20px;\n  cursor: pointer; }\n\n.menus:hover {\n  color: aqua; }\n\n.left-body {\n  margin: 30px 0px 0px 40px; }\n\n.day {\n  height: 40px;\n  float: left;\n  width: 40px;\n  text-align: center;\n  line-height: 40px;\n  cursor: pointer; }\n\n.day:hover {\n  color: #eb832e; }\n\n.week {\n  color: white;\n  background-color: #1eff31; }\n\n.now-day {\n  background-color: #1eff4f;\n  color: azure;\n  font-weight: bold; }\n\n.go-home {\n  font-weight: bold;\n  font-size: 18px; }\n\n.wechat {\n  width: 10%;\n  height: 22px;\n  margin-top: 2px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZnJvbnRlbmQvZnJvbnRlbmQvZDpcXGdpdFxcY2hldnlza3kvc3JjXFxhcHBcXGZyb250ZW5kXFxmcm9udGVuZFxcZnJvbnRlbmQuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxrQ0FBMkQ7RUFDM0QscUJBQXFCO0VBQ3JCLGFBQWEsRUFBQTs7QUFHakI7RUFDSSxZQUFXO0VBQ1gsZ0JBQWdCO0VBQ2hCLDJCQUEyQixFQUFBOztBQUcvQjtFQUNJLG9CQUFvQjtFQUNwQixrQkFBa0I7RUFDbEIsZ0JBQWU7RUFDZixhQUFhO0VBQ2Isa0NBQWtDO0VBQ2xDLHFCQUE2QjtFQUM3QixjQUFhLEVBQUE7O0FBR2pCO0VBQ0ksNEJBQTRCO0VBQzVCLGtCQUFrQjtFQUNsQixpQkFBZ0I7RUFDaEIsbUJBQWtCO0VBQ2xCLHFCQUFnQztFQUNoQyxlQUFlLEVBQUE7O0FBR25CO0VBQ0kscUJBQStCO0VBQy9CLGNBQXVCLEVBQUE7O0FBRzNCO0VBQ0ksZ0JBQWdCO0VBQ2hCLGlCQUFpQjtFQUNqQixpQkFBaUI7RUFDakIsZUFBYyxFQUFBOztBQUdsQjtFQUNJLFdBQVcsRUFBQTs7QUFHZjtFQUNJLHlCQUF5QixFQUFBOztBQUc3QjtFQUNJLFlBQVk7RUFDWixXQUFXO0VBQ1gsV0FBVztFQUNYLGtCQUFrQjtFQUNsQixpQkFBaUI7RUFDakIsZUFBZSxFQUFBOztBQUduQjtFQUNHLGNBQXVCLEVBQUE7O0FBRzFCO0VBQ0ksWUFBVztFQUNYLHlCQUFrQyxFQUFBOztBQUd0QztFQUNJLHlCQUFrQztFQUNsQyxZQUFZO0VBQ1osaUJBQWlCLEVBQUE7O0FBR3JCO0VBQ0ksaUJBQWlCO0VBQ2pCLGVBQWUsRUFBQTs7QUFHbkI7RUFDSSxVQUFVO0VBQ1YsWUFBWTtFQUNaLGVBQWUsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2Zyb250ZW5kL2Zyb250ZW5kL2Zyb250ZW5kLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmZyb250Ymd7XHJcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4uLy4uLy4uL2Fzc2V0cy9mcm9udGVuZC9iZ2ltZy5qcGcnKTtcclxuICAgIGJhY2tncm91bmQtc2l6ZTogMTAwJTtcclxuICAgIGhlaWdodDogNjEwcHg7XHJcbn1cclxuXHJcbi5oZWFkYmd7XHJcbiAgICBoZWlnaHQ6NDBweDtcclxuICAgIG1hcmdpbi10b3A6IDMwcHg7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBkYXJrZ3JlZW47XHJcbn1cclxuXHJcbi5ib2R5Ymd7XHJcbiAgICBib3JkZXItc3R5bGU6IGdyb292ZTtcclxuICAgIGJvcmRlci13aWR0aDogMTVweDtcclxuICAgIG1hcmdpbi10b3A6MjBweDtcclxuICAgIGhlaWdodDogNTAwcHg7XHJcbiAgICBib3JkZXItcmFkaXVzOiAxNXB4IDE1cHggMTVweCAxNXB4O1xyXG4gICAgYm9yZGVyLWNvbG9yOiByZ2IoMCwgMjU1LCAxMyk7XHJcbiAgICBvdmVyZmxvdzphdXRvO1xyXG59XHJcblxyXG4ubGlie1xyXG4gICAgbWFyZ2luOiAxNXB4IDIwMHB4IDBweCAyMDBweDtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIGJvcmRlcjoycHggc29saWQ7XHJcbiAgICBib3JkZXItcmFkaXVzOjI1cHg7XHJcbiAgICBib3JkZXItY29sb3I6IHJnYigxMDIsIDIwNywgMjMzKTtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxufVxyXG5cclxuLmxpYjpob3ZlcntcclxuICAgIGJvcmRlci1jb2xvcjogcmdiKDIzMSwgNDAsIDE5MCk7XHJcbiAgICBjb2xvcjpyZ2IoMjI4LCAxNzEsIDE3KTtcclxufVxyXG5cclxuLm1lbnVze1xyXG4gICAgY29sb3I6IGFsaWNlYmx1ZTtcclxuICAgIGxpbmUtaGVpZ2h0OiA0MHB4O1xyXG4gICAgbWFyZ2luLWxlZnQ6IDIwcHg7XHJcbiAgICBjdXJzb3I6cG9pbnRlcjtcclxufVxyXG5cclxuLm1lbnVzOmhvdmVye1xyXG4gICAgY29sb3I6IGFxdWE7XHJcbn1cclxuXHJcbi5sZWZ0LWJvZHl7XHJcbiAgICBtYXJnaW46IDMwcHggMHB4IDBweCA0MHB4O1xyXG59XHJcblxyXG4uZGF5e1xyXG4gICAgaGVpZ2h0OiA0MHB4O1xyXG4gICAgZmxvYXQ6IGxlZnQ7XHJcbiAgICB3aWR0aDogNDBweDtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIGxpbmUtaGVpZ2h0OiA0MHB4O1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG59XHJcblxyXG4uZGF5OmhvdmVye1xyXG4gICBjb2xvcjpyZ2IoMjM1LCAxMzEsIDQ2KTtcclxufVxyXG5cclxuLndlZWt7XHJcbiAgICBjb2xvcjp3aGl0ZTtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigzMCwgMjU1LCA0OSk7XHJcbn1cclxuXHJcbi5ub3ctZGF5e1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDMwLCAyNTUsIDc5KTtcclxuICAgIGNvbG9yOiBhenVyZTtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG59XHJcblxyXG4uZ28taG9tZXtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gICAgZm9udC1zaXplOiAxOHB4O1xyXG59XHJcblxyXG4ud2VjaGF0e1xyXG4gICAgd2lkdGg6IDEwJTtcclxuICAgIGhlaWdodDogMjJweDtcclxuICAgIG1hcmdpbi10b3A6IDJweDtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -1099,6 +1343,7 @@ var FrontendComponent = /** @class */ (function () {
         this.bsRangeValue = [this.bsValue, this.maxDate];
         this.calender = this.data.getCalender();
         this.getNowTime();
+        this.openSonMenu(15);
     };
     FrontendComponent.prototype.openSonMenu = function (id) {
         this.menuId = id;
@@ -1393,7 +1638,7 @@ module.exports = "<div class='row'>\n  <div class='col-md-12 background'>\n    <
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".background {\n  background-image: url('homepage1.jpg');\n  height: 610px;\n  background-repeat: no-repeat;\n  background-size: 100%; }\n\n.interval {\n  height: 180px; }\n\n.interval-middle {\n  height: 85px; }\n\n.interval-small {\n  height: 10px; }\n\n.title-text {\n  color: #f0f3f3;\n  font-size: 27px;\n  text-align: center;\n  font-weight: bold;\n  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }\n\n.explain-text {\n  color: #eef5f2;\n  font-size: 12px;\n  font-family: Arial, Helvetica, sans-serif;\n  text-align: center; }\n\n.text-right {\n  text-align: right; }\n\n.text-center {\n  text-align: center; }\n\n.button-style {\n  margin-top: 10px;\n  color: #f7f3ef;\n  cursor: pointer;\n  text-align: center;\n  border-right: 2px white solid;\n  width: 113px; }\n\n.button-style:hover {\n  color: #eaf367; }\n\n.mail {\n  margin-top: 10px;\n  margin-left: 20px;\n  color: #f7f3ef;\n  cursor: pointer; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZXBhZ2UvRDpcXGdpdFxcY2hldnlza3kvc3JjXFxhcHBcXGhvbWVwYWdlXFxob21lcGFnZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLHNDQUE0RDtFQUM1RCxhQUFhO0VBQ2IsNEJBQTRCO0VBQzVCLHFCQUFxQixFQUFBOztBQUd6QjtFQUNJLGFBQWEsRUFBQTs7QUFHakI7RUFDSSxZQUFZLEVBQUE7O0FBR2hCO0VBQ0ksWUFBWSxFQUFBOztBQUdoQjtFQUNJLGNBQXlCO0VBQ3pCLGVBQWU7RUFDZixrQkFBa0I7RUFDbEIsaUJBQWlCO0VBQ2pCLHNFQUVKLEVBQUE7O0FBRUE7RUFDSSxjQUF3QjtFQUN4QixlQUFlO0VBQ2YseUNBQXlDO0VBQ3pDLGtCQUFrQixFQUFBOztBQUd0QjtFQUNJLGlCQUFpQixFQUFBOztBQUdyQjtFQUNJLGtCQUFrQixFQUFBOztBQUd0QjtFQUNJLGdCQUFnQjtFQUNoQixjQUF5QjtFQUN6QixlQUFlO0VBQ2Ysa0JBQWtCO0VBQ2xCLDZCQUE2QjtFQUM3QixZQUFZLEVBQUE7O0FBR2hCO0VBQ0ksY0FBeUIsRUFBQTs7QUFHN0I7RUFDSSxnQkFBZ0I7RUFDaEIsaUJBQWlCO0VBQ2pCLGNBQXlCO0VBQ3pCLGVBQWUsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2hvbWVwYWdlL2hvbWVwYWdlLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmJhY2tncm91bmR7XHJcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4uLy4uL2Fzc2V0cy9ob21lcGFnZS9ob21lcGFnZTEuanBnJyk7XHJcbiAgICBoZWlnaHQ6IDYxMHB4O1xyXG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICAgIGJhY2tncm91bmQtc2l6ZTogMTAwJTtcclxufVxyXG5cclxuLmludGVydmFse1xyXG4gICAgaGVpZ2h0OiAxODBweDtcclxufVxyXG5cclxuLmludGVydmFsLW1pZGRsZXtcclxuICAgIGhlaWdodDogODVweDtcclxufVxyXG5cclxuLmludGVydmFsLXNtYWxse1xyXG4gICAgaGVpZ2h0OiAxMHB4O1xyXG59XHJcblxyXG4udGl0bGUtdGV4dHtcclxuICAgIGNvbG9yOiByZ2IoMjQwLCAyNDMsIDI0Myk7XHJcbiAgICBmb250LXNpemU6IDI3cHg7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIGZvbnQtZmFtaWx5OiBDYW1icmlhLCBDb2NoaW4sIEdlb3JnaWEsIFRpbWVzLCAnVGltZXMgTmV3IFJvbWFuJywgc2VyaWZcclxuICAgXHJcbn1cclxuXHJcbi5leHBsYWluLXRleHR7XHJcbiAgICBjb2xvcjpyZ2IoMjM4LCAyNDUsIDI0Mik7XHJcbiAgICBmb250LXNpemU6IDEycHg7XHJcbiAgICBmb250LWZhbWlseTogQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZjtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG5cclxuLnRleHQtcmlnaHR7XHJcbiAgICB0ZXh0LWFsaWduOiByaWdodDtcclxufVxyXG5cclxuLnRleHQtY2VudGVye1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcblxyXG4uYnV0dG9uLXN0eWxle1xyXG4gICAgbWFyZ2luLXRvcDogMTBweDtcclxuICAgIGNvbG9yOiByZ2IoMjQ3LCAyNDMsIDIzOSk7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBib3JkZXItcmlnaHQ6IDJweCB3aGl0ZSBzb2xpZDtcclxuICAgIHdpZHRoOiAxMTNweDtcclxufVxyXG5cclxuLmJ1dHRvbi1zdHlsZTpob3ZlcntcclxuICAgIGNvbG9yOiByZ2IoMjM0LCAyNDMsIDEwMyk7XHJcbn1cclxuXHJcbi5tYWlse1xyXG4gICAgbWFyZ2luLXRvcDogMTBweDtcclxuICAgIG1hcmdpbi1sZWZ0OiAyMHB4O1xyXG4gICAgY29sb3I6IHJnYigyNDcsIDI0MywgMjM5KTtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxufSJdfQ== */"
+module.exports = ".background {\n  background-image: url('homepage1.jpg');\n  height: 610px;\n  background-repeat: no-repeat;\n  background-size: 100%; }\n\n.interval {\n  height: 180px; }\n\n.interval-middle {\n  height: 85px; }\n\n.interval-small {\n  height: 10px; }\n\n.title-text {\n  color: #f0f3f3;\n  font-size: 27px;\n  text-align: center;\n  font-weight: bold;\n  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }\n\n.explain-text {\n  color: #eef5f2;\n  font-size: 12px;\n  font-family: Arial, Helvetica, sans-serif;\n  text-align: center; }\n\n.text-right {\n  text-align: right; }\n\n.text-center {\n  text-align: center; }\n\n.button-style {\n  margin-top: 10px;\n  color: #f7f3ef;\n  cursor: pointer;\n  text-align: center;\n  border-right: 2px white solid;\n  width: 113px; }\n\n.button-style:hover {\n  color: #eaf367; }\n\n.mail {\n  margin-top: 10px;\n  margin-left: 20px;\n  color: #f7f3ef;\n  cursor: pointer; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZXBhZ2UvZDpcXGdpdFxcY2hldnlza3kvc3JjXFxhcHBcXGhvbWVwYWdlXFxob21lcGFnZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLHNDQUE0RDtFQUM1RCxhQUFhO0VBQ2IsNEJBQTRCO0VBQzVCLHFCQUFxQixFQUFBOztBQUd6QjtFQUNJLGFBQWEsRUFBQTs7QUFHakI7RUFDSSxZQUFZLEVBQUE7O0FBR2hCO0VBQ0ksWUFBWSxFQUFBOztBQUdoQjtFQUNJLGNBQXlCO0VBQ3pCLGVBQWU7RUFDZixrQkFBa0I7RUFDbEIsaUJBQWlCO0VBQ2pCLHNFQUVKLEVBQUE7O0FBRUE7RUFDSSxjQUF3QjtFQUN4QixlQUFlO0VBQ2YseUNBQXlDO0VBQ3pDLGtCQUFrQixFQUFBOztBQUd0QjtFQUNJLGlCQUFpQixFQUFBOztBQUdyQjtFQUNJLGtCQUFrQixFQUFBOztBQUd0QjtFQUNJLGdCQUFnQjtFQUNoQixjQUF5QjtFQUN6QixlQUFlO0VBQ2Ysa0JBQWtCO0VBQ2xCLDZCQUE2QjtFQUM3QixZQUFZLEVBQUE7O0FBR2hCO0VBQ0ksY0FBeUIsRUFBQTs7QUFHN0I7RUFDSSxnQkFBZ0I7RUFDaEIsaUJBQWlCO0VBQ2pCLGNBQXlCO0VBQ3pCLGVBQWUsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2hvbWVwYWdlL2hvbWVwYWdlLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmJhY2tncm91bmR7XHJcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4uLy4uL2Fzc2V0cy9ob21lcGFnZS9ob21lcGFnZTEuanBnJyk7XHJcbiAgICBoZWlnaHQ6IDYxMHB4O1xyXG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICAgIGJhY2tncm91bmQtc2l6ZTogMTAwJTtcclxufVxyXG5cclxuLmludGVydmFse1xyXG4gICAgaGVpZ2h0OiAxODBweDtcclxufVxyXG5cclxuLmludGVydmFsLW1pZGRsZXtcclxuICAgIGhlaWdodDogODVweDtcclxufVxyXG5cclxuLmludGVydmFsLXNtYWxse1xyXG4gICAgaGVpZ2h0OiAxMHB4O1xyXG59XHJcblxyXG4udGl0bGUtdGV4dHtcclxuICAgIGNvbG9yOiByZ2IoMjQwLCAyNDMsIDI0Myk7XHJcbiAgICBmb250LXNpemU6IDI3cHg7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIGZvbnQtZmFtaWx5OiBDYW1icmlhLCBDb2NoaW4sIEdlb3JnaWEsIFRpbWVzLCAnVGltZXMgTmV3IFJvbWFuJywgc2VyaWZcclxuICAgXHJcbn1cclxuXHJcbi5leHBsYWluLXRleHR7XHJcbiAgICBjb2xvcjpyZ2IoMjM4LCAyNDUsIDI0Mik7XHJcbiAgICBmb250LXNpemU6IDEycHg7XHJcbiAgICBmb250LWZhbWlseTogQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZjtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG5cclxuLnRleHQtcmlnaHR7XHJcbiAgICB0ZXh0LWFsaWduOiByaWdodDtcclxufVxyXG5cclxuLnRleHQtY2VudGVye1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcblxyXG4uYnV0dG9uLXN0eWxle1xyXG4gICAgbWFyZ2luLXRvcDogMTBweDtcclxuICAgIGNvbG9yOiByZ2IoMjQ3LCAyNDMsIDIzOSk7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBib3JkZXItcmlnaHQ6IDJweCB3aGl0ZSBzb2xpZDtcclxuICAgIHdpZHRoOiAxMTNweDtcclxufVxyXG5cclxuLmJ1dHRvbi1zdHlsZTpob3ZlcntcclxuICAgIGNvbG9yOiByZ2IoMjM0LCAyNDMsIDEwMyk7XHJcbn1cclxuXHJcbi5tYWlse1xyXG4gICAgbWFyZ2luLXRvcDogMTBweDtcclxuICAgIG1hcmdpbi1sZWZ0OiAyMHB4O1xyXG4gICAgY29sb3I6IHJnYigyNDcsIDI0MywgMjM5KTtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -1456,6 +1701,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _backend_plug_rabbitmq_rabbitmq_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../backend/plug/rabbitmq/rabbitmq.component */ "./src/app/backend/plug/rabbitmq/rabbitmq.component.ts");
 /* harmony import */ var _backend_code_source_map_string_map_string_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../backend/code.source/map.string/map.string.component */ "./src/app/backend/code.source/map.string/map.string.component.ts");
 /* harmony import */ var _backend_development_kit_idea_idea_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../backend/development.kit/idea/idea.component */ "./src/app/backend/development.kit/idea/idea.component.ts");
+/* harmony import */ var _backend_code_source_springmvc_springmvc_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../backend/code.source/springmvc/springmvc.component */ "./src/app/backend/code.source/springmvc/springmvc.component.ts");
+/* harmony import */ var _backend_code_source_service_service_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../backend/code.source/service/service.component */ "./src/app/backend/code.source/service/service.component.ts");
+/* harmony import */ var _backend_code_source_thread_thread_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../backend/code.source/thread/thread.component */ "./src/app/backend/code.source/thread/thread.component.ts");
+/* harmony import */ var _backend_plug_swagger_swagger_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../backend/plug/swagger/swagger.component */ "./src/app/backend/plug/swagger/swagger.component.ts");
+
+
+
+
 
 
 
@@ -1480,6 +1733,10 @@ var backendRouter = [
             { path: 'rabbitmq', component: _backend_plug_rabbitmq_rabbitmq_component__WEBPACK_IMPORTED_MODULE_7__["RabbitmqComponent"] },
             { path: 'mapstring', component: _backend_code_source_map_string_map_string_component__WEBPACK_IMPORTED_MODULE_8__["MapStringComponent"] },
             { path: 'idea', component: _backend_development_kit_idea_idea_component__WEBPACK_IMPORTED_MODULE_9__["IdeaComponent"] },
+            { path: 'springmvc', component: _backend_code_source_springmvc_springmvc_component__WEBPACK_IMPORTED_MODULE_10__["SpringmvcComponent"] },
+            { path: 'iocdi', component: _backend_code_source_service_service_component__WEBPACK_IMPORTED_MODULE_11__["ServiceComponent"] },
+            { path: 'thread', component: _backend_code_source_thread_thread_component__WEBPACK_IMPORTED_MODULE_12__["ThreadComponent"] },
+            { path: 'swagger', component: _backend_plug_swagger_swagger_component__WEBPACK_IMPORTED_MODULE_13__["SwaggerComponent"] },
         ]
     }
 ];
@@ -1618,7 +1875,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\git\chevysky\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! d:\git\chevysky\src\main.ts */"./src/main.ts");
 
 
 /***/ })
